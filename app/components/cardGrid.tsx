@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Card from './card';
 import projects from './projects';
+import { motion, AnimatePresence } from "framer-motion"
+
 
 function CardGrid() {
     return (
