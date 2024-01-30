@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       
-      <body className='m-5 text-white uppercase'>
+      <body className='m-5 text-black uppercase'>
         <Navbar></Navbar>
         {children}
         </body>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Navbar() {
     return (
-        <nav className='w-full h-10 grid grid-cols-2 border-b items-center'>
+        <nav className='w-full h-10 grid grid-cols-2 border-b border-black items-center'>
             <div className='flex'>
                 George Gausden
             </div>
