@@ -45,7 +45,7 @@
   }
 
   #emptyCircle{
-    @apply h-4 w-4 border border-black mr-1 rounded-full;
+    @apply h-4 w-4 border border-black mr-1 ;
   }
 
   #references{
