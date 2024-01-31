@@ -9,7 +9,7 @@ function Navbar() {
             </div>
             <div className='grid grid-cols-3 items-center justify-center'> 
                 <Link href="/" className='flex items-center justify-center hover:italic'>Projects</Link> 
-                <a href="/CV.pdf" download className='flex items-center justify-center hover:italic'>Resume</a>
+                <Link href="/resume" className='flex items-center justify-center hover:italic'>Resume</Link>
                 <Link href="/about" className='flex items-center justify-center hover:italic'>About</Link> 
             </div>
         </nav>
