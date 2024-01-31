@@ -10,9 +10,9 @@ const projects = [
         link: "/humanoid"
     },
     {
-        title: "Project 3",
-        imageSrc: "/0001.png",
-        link: "/"
+        title: "Studio NewKid",
+        imageSrc: "/0002.png",
+        link: "/studionewkid"
     },
     {
         title: "Project 4",
