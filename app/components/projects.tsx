@@ -15,9 +15,9 @@ const projects = [
         link: "/studionewkid"
     },
     {
-        title: "Project 4",
-        imageSrc: "/0001.png",
-        link: "/"
+        title: "Montréal VFX",
+        imageSrc: "/vfx.webp",
+        link: "/vfx"
     },
     {
         title: "Project 5",

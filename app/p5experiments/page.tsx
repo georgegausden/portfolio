@@ -2,17 +2,6 @@
 
 import { useState, useEffect } from 'react';
 
-    
-
-const initialBankOfWords = [
-    'ideas',
-    'experiments',
-    'designs',
-];
-
-
-
-
 function p5Experiments(){
     return(
         <div>
