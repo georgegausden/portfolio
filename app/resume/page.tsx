@@ -11,8 +11,8 @@ const MotionLi = ({ children }: { children: React.ReactNode }) => (
     whileInView="visible"
     transition={{ duration: 2 }}
     variants={{
-      visible: { color: "black" },
-      hidden: { color: "gray"}
+      visible: { color: "black", opacity: 1 },
+      hidden: { color: "gray", opacity: 0.5}
     }}
   >
     {children}
