@@ -18,6 +18,30 @@
   h5{
     @apply font-semibold text-base;
   }
+
+  h6{
+    @apply text-gray-500 ml-5
+  }
+
+  ul{
+    @apply list-disc ml-10 my-5;
+  }
+
+  li{
+    @apply font-extralight text-gray-400 my-2 hover:text-black transition-colors duration-500 ease-in-out;
+  }
+
+  #fullCircle{
+    @apply h-4 w-4 bg-black rounded-full mr-1;
+  }
+
+  #emptyCircle{
+    @apply h-4 w-4 border border-black mr-1 rounded-full;
+  }
+
+  #references{
+    @apply pt-10;
+  }
 }
 
 :root {
