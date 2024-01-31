@@ -6,17 +6,24 @@ export default function Resume() {
     <div className="text-justify m-10">
       <h1 className="text-3xl align-middle mt-10">George Gausden</h1>
 
-      <div className="grid grid-cols-4 mt-10">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
+        <div className="flex">
         <h2>Address</h2>
-        <p>Montréal, Canada</p>
+        <p className="pl-5 text-gray-400">Montréal, Canada</p>
+        </div>
+
+        <div className="flex">
         <h2>Phone</h2>
-        <p>{`(514)-603-4335`}</p>
+        <p className="pl-5 text-gray-400">{`(514)-603-4335`}</p>
+        </div>
       </div>
-      <div className="grid grid-cols-4 mt-5">
+
+
+      <div className="flex mt-2">
         <h2>Email</h2>
         <Link
           href="mailto:george.philip.gausden@gmail.com"
-          className="hover:font-extrabold"
+          className="hover:font-extrabold hover:text-black transition-all ease-in-out duration-500 pl-5 text-gray-400"
         >
           george.philip.gausden@gmail.com
         </Link>
@@ -26,7 +33,7 @@ export default function Resume() {
         <h3>01 Employment History</h3>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-4 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 grid-rows-4 mt-5">
         <h4>{`06/2023 - Present`}</h4>
         <div>
           <h5>Web Designer at Studio NewKid</h5>
@@ -71,7 +78,7 @@ modern and engaging look for the company`}</li>
         <h3>02 Internships</h3>
       </div>
 
-      <div className="grid grid-cols-2 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5">
         <h4>{`Jul 2022 - Sep 2022`}</h4>
         <div>
           <h5>Artist Assistant</h5>
@@ -88,7 +95,7 @@ modern and engaging look for the company`}</li>
         <h3>03 Education</h3>
       </div>
 
-      <div className="grid grid-cols-2 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5">
         <h4>{`Sep 2021 - Present`}</h4>
         <div>
           <h5>Concordia University</h5>
@@ -96,7 +103,7 @@ modern and engaging look for the company`}</li>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5">
         <h4>{`Sep 2020 - Apr 2021`}</h4>
         <div>
           <h5>McGill University</h5>
@@ -104,7 +111,7 @@ modern and engaging look for the company`}</li>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5">
         <h4>{`Sep 2017 - Dec 2019`}</h4>
         <div>
           <h5>John Abbott College</h5>
@@ -172,7 +179,7 @@ modern and engaging look for the company`}</li>
       </div>
 
       <div>
-        <div id="references" className="grid grid-cols-2">
+        <div id="references" className="grid sm:grid-cols-1 md:grid-cols-2">
           <div></div>
           <h2>Asma Khan</h2>
           <div></div>
@@ -180,7 +187,7 @@ modern and engaging look for the company`}</li>
           <div></div>
           <Link
             href={`mailto:asmameister@gmail.com`}
-            className="hover:font-extrabold"
+            id = "emailLink"
           >
             asmameister@gmail.com
           </Link>
@@ -189,7 +196,7 @@ modern and engaging look for the company`}</li>
         </div>
       </div>
 
-      <div id="references" className="grid grid-cols-2">
+      <div id="references" className="grid sm:grid-cols-1 md:grid-cols-2">
         <div></div>
         <h2>Ali Zangana</h2>
         <div></div>
@@ -197,7 +204,7 @@ modern and engaging look for the company`}</li>
         <div></div>
         <Link
           href={`mailto:studionewkid@gmail.com`}
-          className="hover:font-extrabold"
+          id = "emailLink"
         >
           studionewkid@gmail.com
         </Link>
@@ -205,7 +212,7 @@ modern and engaging look for the company`}</li>
         <p>{`(514)-703-9922`}</p>
       </div>
 
-      <div id="references" className="grid grid-cols-2">
+      <div id="references" className="grid sm:grid-cols-1 md:grid-cols-2">
         <div></div>
         <h2>Adam Kinsinger</h2>
         <div></div>
@@ -213,7 +220,7 @@ modern and engaging look for the company`}</li>
         <div></div>
         <Link
           href={`mailto:adamkinsinger@paper.co`}
-          className="hover:font-extrabold"
+          id="emailLink"
         >
           adamkinsinger@paper.co
         </Link>
@@ -224,11 +231,30 @@ modern and engaging look for the company`}</li>
         <h3>06 Languages</h3>
       </div>
 
-      <div className="grid grid-cols-2">
-        <div></div>
-        <div>
-          <div>English</div>
-          
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
+        <div>English</div>
+        <div className="flex">
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+        </div>
+        <div>French</div>
+        <div className="flex">
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+        </div>
+        <div>Arabic</div>
+        <div className="flex">
+          <div id="fullCircle"></div>
+          <div id="fullCircle"></div>
+          <div id="emptyCircle"></div>
+          <div id="emptyCircle"></div>
+          <div id="emptyCircle"></div>
         </div>
 
       </div>
