@@ -5,9 +5,9 @@ const projects = [
         link: "/p5experiments"
     },
     {
-        title: "Project 2",
-        imageSrc: "/0002.png",
-        link: "/"
+        title: "Humanoid",
+        imageSrc: "/humanoid.mp4",
+        link: "/humanoid"
     },
     {
         title: "Project 3",

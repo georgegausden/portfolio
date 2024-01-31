@@ -28,7 +28,7 @@
   }
 
   ul{
-    @apply list-disc ml-10 my-5;
+    @apply  ml-10 my-5;
   }
 
   li{

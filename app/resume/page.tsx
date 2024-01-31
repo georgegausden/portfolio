@@ -12,7 +12,7 @@ const MotionLi = ({ children }: { children: React.ReactNode }) => (
     transition={{ duration: 2 }}
     variants={{
       visible: { color: "black", opacity: 1 },
-      hidden: { color: "gray", opacity: 0.2}
+      hidden: { color: "gray", opacity: 0.}
     }}
   >
     {children}

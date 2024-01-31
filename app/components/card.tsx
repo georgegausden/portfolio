@@ -10,9 +10,9 @@ function Card({ project }: { project: any }) {
    
 
     return (
-        <Link href={project.link} className="border border-black hover:italic ease-in-out rounded-md overflow-hidden">
+        <Link href={project.link} className="border border-black hover:italic ease-in-out  overflow-hidden">
             <div className='m-5 hover:scale-[105%] ease-in-out duration-300 overflow-clip z-0'>
-                <Image src={project.imageSrc} alt="card" width={300} height={300} className='rounded-md'/>
+                <Image src={project.imageSrc} alt="card" width={300} height={300} className=''/>
             </div>
 
             <div className='border-t border-black z-10'>
