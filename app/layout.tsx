@@ -18,10 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className}>
-      
-      <body className='m-5 text-black uppercase'>
-        <Navbar></Navbar>
+      <body className='text-black uppercase'>
+        <Navbar/>
+        <div className="p-5">
         {children}
+        </div>
         </body>
     </html>
   );

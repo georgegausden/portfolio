@@ -6,8 +6,10 @@ export default function About() {
       <h1 className="text-3xl text-center align-middle m-10">About</h1>
 
     {/* get my biography */}
-      <p className="px-64 text-justify">{text[0].biography}</p>
-      <p className="px-64 py-10 text-justify">{text[0].artiststatement}</p>
+      <p className="px-64 text-justify normal-case">{text[0].biography}</p>
+
+      <h1 className="text-3xl text-center align-middle mt-10">My Practice</h1>
+      <p className="px-64 py-10 text-justify normal-case">{text[0].artiststatement}</p>
 
     </div>
   );
