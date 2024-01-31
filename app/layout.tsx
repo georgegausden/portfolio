@@ -20,9 +20,6 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       
       <body className='text-black dark:text-white uppercase'>
-     
-       
-
         <Navbar/>
         <div className="p-5">
         {children}
