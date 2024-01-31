@@ -1,9 +1,29 @@
+
+'use client'
 import text from "../components/text";
 import Link from "next/link";
+import {motion} from "framer-motion";
+
+
+const MotionLi = ({ children }: { children: React.ReactNode }) => (
+  <motion.li
+    initial="hidden"
+    whileInView="visible"
+    transition={{ duration: 2 }}
+    variants={{
+      visible: { color: "black" },
+      hidden: { color: "gray"}
+    }}
+  >
+    {children}
+  </motion.li>
+);
+
+
 
 export default function Resume() {
   return (
-    <div className="text-justify px-10 normal-case">
+    <div className="text-justify md:px-10 normal-case">
       <h1 className="text-3xl align-middle mt-10"></h1>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
@@ -19,7 +39,7 @@ export default function Resume() {
       </div>
 
 
-      <div className="flex mt-2">
+      <div className="flex md:mt-2">
         <h2>Email</h2>
         <Link
           href="mailto:george.philip.gausden@gmail.com"
@@ -33,14 +53,14 @@ export default function Resume() {
         <h3>01 Employment History</h3>
       </div>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 grid-rows-4 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 md:grid-rows-4 mt-5">
         <h4>{`06/2023 - Present`}</h4>
         <div>
           <h5>Web Designer at Studio NewKid</h5>
           <ul>
-            <li>{`Utilized HTML, CSS, and JavaScript to create visually appealing and interactive webpages`}</li>
-            <li>{`Researched and identified the latest trends in design and implemented them to create a
-modern and engaging look for the company`}</li>
+            <MotionLi>{`Utilized HTML, CSS, and JavaScript to create visually appealing and interactive webpages`}</MotionLi>
+            <MotionLi>{`Researched and identified the latest trends in design and implemented them to create a
+modern and engaging look for the company`}</MotionLi>
           </ul>
         </div>
 
@@ -48,9 +68,9 @@ modern and engaging look for the company`}</li>
         <div>
           <h5>Illustration Designer at Oxygen Publishing</h5>
           <ul>
-            <li>{`Researched and designed a book cover for a newly published author`}</li>
-            <li>{`Created multiple iterations of an approved design`}</li>
-            <li>{`Successfully met the expectations of the author and delivered a final product`}</li>
+            <MotionLi>{`Researched and designed a book cover for a newly published author`}</MotionLi>
+            <MotionLi>{`Created multiple iterations of an approved design`}</MotionLi>
+            <MotionLi>{`Successfully met the expectations of the author and delivered a final product`}</MotionLi>
           </ul>
         </div>
 
@@ -58,9 +78,9 @@ modern and engaging look for the company`}</li>
         <div>
           <h5>Educator at Paper</h5>
           <ul>
-            <li>{`Researched and designed a book cover for a newly published author`}</li>
-            <li>{`Created multiple iterations of an approved design`}</li>
-            <li>{`Successfully met the expectations of the author and delivered a final product`}</li>
+            <MotionLi>{`Researched and designed a book cover for a newly published author`}</MotionLi>
+            <MotionLi>{`Created multiple iterations of an approved design`}</MotionLi>
+            <MotionLi>{`Successfully met the expectations of the author and delivered a final product`}</MotionLi>
           </ul>
         </div>
 
@@ -68,8 +88,8 @@ modern and engaging look for the company`}</li>
         <div>
           <h5>Tutor at Oxford Learning Center</h5>
           <ul>
-            <li>{`Adapted instruction to meet the needs of students with diverse backgrounds, learning styles, and abilities`}</li>
-            <li>{`Established positive relationships with students to create a safe and supportive learning environment`}</li>
+            <MotionLi>{`Adapted instruction to meet the needs of students with diverse backgrounds, learning styles, and abilities`}</MotionLi>
+            <MotionLi>{`Established positive relationships with students to create a safe and supportive learning environment`}</MotionLi>
           </ul>
         </div>
       </div>
@@ -83,10 +103,10 @@ modern and engaging look for the company`}</li>
         <div>
           <h5>Artist Assistant</h5>
           <ul>
-            <li>{`Digitized a whole body of work for a local Montreal artist working on a Canada Council
-            grant project`}</li>
-            <li>{`Collaborated with the artist on representing some of her work in a digital space using 3D
-            mapping software`}</li>
+            <MotionLi>{`Digitized a whole body of work for a local Montreal artist working on a Canada Council
+            grant project`}</MotionLi>
+            <MotionLi>{`Collaborated with the artist on representing some of her work in a digital space using 3D
+            mapping software`}</MotionLi>
           </ul>
         </div>
       </div>
