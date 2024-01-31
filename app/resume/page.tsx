@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Resume() {
   return (
-    <div className="text-justify">
+    <div className="text-justify px-10 normal-case">
       <h1 className="text-3xl align-middle mt-10"></h1>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
