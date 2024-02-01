@@ -20,7 +20,8 @@ const Experiment: React.FC<ExperimentProps> = ({ title, date, description }) => 
 };
 
 
-function p5Experiments(){
+
+function Experiments(){
     return(
         <div>
             <h1>experiments</h1>
@@ -33,6 +34,7 @@ function p5Experiments(){
 
             <Experiment title='Turbulence' date='2022' description='testing out'></Experiment>
        
+
         </div>
     )
 
@@ -41,4 +43,4 @@ function p5Experiments(){
 
 
 
-export default p5Experiments;
+export default Experiments;
