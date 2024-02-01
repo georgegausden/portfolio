@@ -1,8 +1,8 @@
 
-'use client'
+
 import { usePathname } from 'next/navigation'
 
-import { experimentData } from '../page';
+import { experimentData } from '../experimentData';
 
 export default function ExperimentProject(){
     const pathname = usePathname();
@@ -21,11 +21,5 @@ export default function ExperimentProject(){
             </div>
         </div>
     )
-    // const { params } = useNavigation();
-    // const { experimentname } = params;
-
-    // // Find the experiment in the data array
-    // const experiment = experimentData.find(exp => exp.title.toLowerCase().replace(/\s+/g, '') === experimentname);
-
     
 }

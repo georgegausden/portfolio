@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { experimentData } from './experimentData';
 
 interface ExperimentProps {
     title: string;
-    date: string;
+    date: number;
     description: string;
 }
 
@@ -18,23 +19,8 @@ const Experiment: React.FC<ExperimentProps> = ({ title, date, description }) => 
     );
 };
 
-export const experimentData = [
-    {
-        title: "Inkflow",
-        date: "2022",
-        shortDescription: "A collection of p5.js experiments",
-        longDescription: "A long collection of p5.js experiments",
-        link: "https://editor.p5js.org/georgegausden/full/Q7I0m_H-c"
-    },
-    {
-        title: "2 Experiments",
-        date: "2025",
-        shortDescription: "A collection of p5.js experiments",
-        longDescription: "A long collection of p5.js experiments",
-        link: "/experiments"
-    },
 
-];
+
 
 
 
