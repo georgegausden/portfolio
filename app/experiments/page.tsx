@@ -13,8 +13,10 @@ const Experiment: React.FC<ExperimentProps> = ({ title, date, description }) => 
 
     return (
         <div id='experimentSection'>
+            
             <Link href={href} id='experimentTitle'>{`${title} - ${date}`}</Link>
             <p id='experimentDescription'>{description}</p>
+            
         </div>
     );
 };
@@ -28,9 +30,10 @@ const Experiment: React.FC<ExperimentProps> = ({ title, date, description }) => 
 function Experiments(){
     return(
         <div>
+            
             <h1>experiments</h1>
             <p className='pt-10'>{`From time to time, I like to experiment...`}</p>
-
+            
             {experimentData.map((project, index) => (
                 <Experiment 
                     key={index}

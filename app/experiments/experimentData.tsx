@@ -8,11 +8,11 @@ export const experimentData = [
         link: "https://editor.p5js.org/georgegausden/full/Q7I0m_H-c"
     },
     {
-        title: "2 Experiments",
+        title: "Pulsing",
         date: 2025,
         shortDescription: "A collection of p5.js experiments",
         longDescription: "A long collection of p5.js experiments",
-        link: "/experiments"
+        link: "https://editor.p5js.org/georgegausden/full/i_k7ko-wa"
     },
     {
         title: "Turbulence",
