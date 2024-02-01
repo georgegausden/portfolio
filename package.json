@@ -14,6 +14,8 @@
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-p5": "^1.4.1",
+    "react-p5-wrapper": "^4.1.2",
     "react-text-typist": "^1.1.8"
   },
   "devDependencies": {

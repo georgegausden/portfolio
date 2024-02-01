@@ -31,6 +31,18 @@
     @apply  ml-10 my-5;
   }
 
+  #experimentTitle{
+    @apply hover:font-extrabold transition-all duration-500 ease-in-out text-lg;
+  }
+
+  #experimentSection{
+    @apply my-10;
+  }
+
+  #experimentDescription{
+    @apply my-2 text-gray-400;
+  }
+
   li{
     @apply font-extralight text-gray-400 my-2 hover:text-black transition-colors duration-500 ease-in-out;
   }
@@ -64,8 +76,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
   }
 }
 
