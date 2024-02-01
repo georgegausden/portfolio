@@ -1,12 +1,11 @@
-'use client'
 
-export default function Lines(){
+export default function Turbulence(){
     return(
         <div className="flex">
-            <iframe width={'70%'} height={800} src="https://editor.p5js.org/georgegausden/full/Q7I0m_H-c" className="border border-black"></iframe>
+            <iframe width={'70%'} height={800} src="https://editor.p5js.org/georgegausden/full/GccEJwSzc" className="border border-black w-full"></iframe>
 
             <div className="pl-10">
-                <h2 className="text-xl">{`Inkflow (2022)`}</h2>
+                <h2 className="text-xl">{`Turbulence (2021)`}</h2>
                 <p className="pt-10">{`A look into exploring the idea of ink flowing down a page. What would the flow of ink look like in a world where algorithms dominate?`}</p>
             </div>
         </div>

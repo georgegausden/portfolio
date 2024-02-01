@@ -2,7 +2,7 @@ const projects = [
     {
         title: "p5 Experiments",
         imageSrc: "/0001.png",
-        link: "/p5experiments"
+        link: "/experiments"
     },
     {
         title: "Humanoid",
