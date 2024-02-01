@@ -6,7 +6,7 @@ const projects = [
     },
     {
         title: "Humanoid",
-        imageSrc: "/humanoid.mp4",
+        imageSrc: "/0001.png",
         link: "/humanoid"
     },
     {
