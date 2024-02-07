@@ -16,10 +16,17 @@ export const experimentData = [
     },
     {
         title: "Turbulence",
-        date: 2025,
+        date: 2022,
         shortDescription: "A collection of p5.js experiments",
         longDescription: "A long collection of p5.js experiments",
         link: "https://editor.p5js.org/georgegausden/full/GccEJwSzc"
+    },
+    {
+        title: "Cyclical",
+        date: 2023,
+        shortDescription: "Cyclical motion using circles in circles",
+        longDescription: "A long collection of p5.js experiments",
+        link: "https://editor.p5js.org/georgegausden/full/nRFN9z0JZ"
     },
 
 ];

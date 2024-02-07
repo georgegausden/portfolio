@@ -20,19 +20,21 @@ const Experiment: React.FC<ExperimentProps> = ({ title, date, description }) => 
 };
 
 
+function sortExperiments(experiments: any[]){
+    return experiments.sort((a, b) => b.date - a.date);
+}
 
 
 
 
 
 function Experiments(){
+    const sortedExperiments = sortExperiments(experimentData);
     return(
         <div>
-            
             <h1>experiments</h1>
             <p className='pt-10'>{`From time to time, I like to experiment...`}</p>
-            
-            {experimentData.map((project, index) => (
+            {sortedExperiments.map((project, index) => (
                 <Experiment 
                     key={index}
                     title={project.title} 
@@ -41,7 +43,7 @@ function Experiments(){
                 />
             ))}
         </div>
-    )
+    );
 }
 
 
