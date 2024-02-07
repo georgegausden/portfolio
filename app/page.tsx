@@ -69,8 +69,12 @@ class Topic {
   //display the topic inside of a box
   display(frameCount: number = 0) {
 
-    this.move(frameCount);
+    if(frameCount % 25 == 0){
+      this.updateVelocity();
+    }
 
+    this.move(frameCount);
+    
     return (
       <div>
         
@@ -84,11 +88,19 @@ class Topic {
     )
   }
 
-  move(frameCount: number = 0){
-    //make the topics move a bit randomly
+  move(frameCount:number){
     
-    this.x += this.xVelocity*frameCount/10000;
-    this.y += this.yVelocity*frameCount/1000;
+    console.log(this.xVelocity, this.yVelocity)
+    
+    //map the frameCount to the x and y values
+    this.x += this.xVelocity * frameCount;
+    this.y += this.yVelocity * frameCount;
+    
+  }
+
+  updateVelocity(){
+    this.xVelocity = Math.random();
+    this.yVelocity = Math.random();
   }
 
   
