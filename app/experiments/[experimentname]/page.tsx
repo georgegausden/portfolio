@@ -4,18 +4,21 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { experimentData } from "../experimentData";
 
-export default function ExperimentProject() {
-  const pathname = usePathname();
 
+export default function ExperimentProject() {
+
+  const pathname = usePathname();
   const experimentName = pathname.substring(pathname.lastIndexOf("/") + 1);
-  console.log(experimentName);
   const experiment = experimentData.find(
     (exp) => exp.title.toLowerCase().replace(/\s+/g, "") === experimentName
   );
 
+
+
   return (
     <div>
-      <Link href="/" className="text-xl text-black w-full">
+      {/* add a link to the previous pages, so the user can decide to navigate back one page or two */}
+      <Link href="/" className="text-xl text-black w-full hover:underline">
         {pathname}
       </Link>
 
@@ -25,11 +28,11 @@ export default function ExperimentProject() {
           height={800}
           src={experiment?.link}
           loading="lazy"
-          className="border border-black w-full"
+          className="w-full max-w-[50%]"
         ></iframe>
 
         <div className="pl-10">
-          <h2 className="text-xl">{experiment?.title}</h2>
+          <h1 className="text-xl">{experiment?.title}</h1>
           <p className="pt-10">{experiment?.longDescription}</p>
         </div>
       </div>

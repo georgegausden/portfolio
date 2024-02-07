@@ -13,10 +13,8 @@ const Experiment: React.FC<ExperimentProps> = ({ title, date, description }) => 
 
     return (
         <div id='experimentSection'>
-            
             <Link href={href} id='experimentTitle'>{`${title} - ${date}`}</Link>
             <p id='experimentDescription'>{description}</p>
-            
         </div>
     );
 };

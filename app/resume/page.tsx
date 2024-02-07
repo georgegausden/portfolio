@@ -23,10 +23,10 @@ const MotionLi = ({ children }: { children: React.ReactNode }) => (
 
 export default function Resume() {
   return (
-    <div className="text-justify md:px-10 md:pr-[200px] normal-case">
-      <h1 className="text-3xl align-middle mt-10"></h1>
+    <div className="text-justify  normal-case">
+      
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2">
         <div className="flex">
         <h2>Address</h2>
         <p className="pl-5 text-gray-400">Montréal, Canada</p>
