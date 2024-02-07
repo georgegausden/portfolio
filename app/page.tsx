@@ -12,11 +12,13 @@ import { frame } from "framer-motion";
 
 
 export default function Home() {
+  
+
 
   //create an array of topics
-  let topic1 = new Topic("Experiments", "/experiments", 200, 10, 10, 10);
-  let topic2 = new Topic("Contact", "/experiments", 100, 400, 10, 10);
-  let topic3 = new Topic("About", "/experiments", 150, 300, 10, 10);
+  let topic1 = new Topic("Experiments", "/experiments", 0, 0, 10, 10);
+  let topic2 = new Topic("Contact", "/experiments", 0, 400, 10, 10);
+  let topic3 = new Topic("About", "/experiments", 150, 0, 10, 10);
 
   let topics = [topic1, topic2, topic3];
 
@@ -32,7 +34,7 @@ export default function Home() {
 
 
   return (
-    <main className=" w-full h-screen">
+    <main className="w-full h-screen">
       {topics.map((topic, index) => (
         <div key={index}>
           {topic.display(frameCount)}
@@ -69,20 +71,16 @@ class Topic {
   //display the topic inside of a box
   display(frameCount: number = 0) {
 
-    if(frameCount % 25 == 0){
-      this.updateVelocity();
-    }
-
     this.move(frameCount);
     
     return (
       <div>
         
-          <svg className="w-full h-screen absolute">
-            <line x1={this.centerX} y1={this.centerY} x2={this.x.toString()} y2={this.y.toString()} style={{ stroke: "black" }} />
-          </svg>
+        <svg className="w-full h-screen absolute">
+          <line x1={this.centerX} y1={this.centerY} x2={this.x.toString()} y2={this.y.toString()} style={{ stroke: "black" }} />
+        </svg>
         
-        <button style={{ transform: `translate(${this.x}px, ${this.y}px)` }} className="bg-black text-white w-28 hover:bg-blue-500 p-2 uppercase">{this.name}</button>      
+        <button style={{ transform: `translate(${this.x}px, ${this.y}px)` }} className="bg-black text-white w-32 hover:bg-blue-500 p-2 uppercase">{this.name}</button>      
         
       </div>
     )
@@ -93,17 +91,10 @@ class Topic {
     console.log(this.xVelocity, this.yVelocity)
     
     //map the frameCount to the x and y values
-    this.x += this.xVelocity * frameCount;
-    this.y += this.yVelocity * frameCount;
-    
-  }
+    this.x = this.centerX/5*Math.sin(frameCount/500)+this.centerX;
+    this.y +=  this.centerY/5*Math.cos(frameCount/500)+this.centerY/2;
 
-  updateVelocity(){
-    this.xVelocity = Math.random();
-    this.yVelocity = Math.random();
   }
-
-  
 }
 
 
@@ -112,7 +103,7 @@ function DisplayTopics() {
   
 
   //create an array of topics
-  let topic1 = new Topic("Experiments", "/experiments", 200, 10, 1, 1);
+  let topic1 = new Topic("Experiments", "/experiments", 0, 0, 1, 1);
   let topic2 = new Topic("Contact", "/experiments", 100, 400, 2, 2);
   let topic3 = new Topic("About", "/experiments", 150, 300, 1, 1);
 
@@ -127,9 +118,6 @@ function DisplayTopics() {
           {topic.display()}
         </div>
       ))}
-
-
-      
     </div>
   )
 
