@@ -5,90 +5,120 @@ import Card from "./components/card";
 import projects from "./components/projects";
 import CardGrid from "./components/cardGrid";
 
+import React, { useEffect, useRef, useState } from 'react';
+import { frame } from "framer-motion";
+
+
 
 
 export default function Home() {
+
+  //create an array of topics
+  let topic1 = new Topic("Experiments", "/experiments", 200, 10, 10, 10);
+  let topic2 = new Topic("Contact", "/experiments", 100, 400, 10, 10);
+  let topic3 = new Topic("About", "/experiments", 150, 300, 10, 10);
+
+  let topics = [topic1, topic2, topic3];
+
+  const [frameCount, updateFrame] = useState(0);
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      updateFrame((frameCount) => frameCount + 1);
+    }, 1);
+  });
+  
+
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-10">
-      <canvas id="myCanvas" width="1080" height="500"></canvas>
-      
+    <main className=" w-full h-screen">
+      {topics.map((topic, index) => (
+        <div key={index}>
+          {topic.display(frameCount)}
+        </div>
+      ))}
     </main>
   );
 }
 
 
 
+class Topic {
+  name: string;
+  url: string;
+  x: number;
+  y: number;
+  xVelocity: number;
+  yVelocity: number;
+  centerX: number;
+  centerY: number;
+  
 
-
-
-if (typeof window !== 'undefined') {
-  const canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
-  const ctx = canvas.getContext('2d');
-
-  const centerX = canvas.width / 2;
-  const centerY = canvas.height / 2;
-  const length = 150; // Length of the branches
-  const branches = 4; // Number of branches
-  let angleOffset = 0; // Offset to animate the branches
-  const squareSize = 10; // Size of the square
-  const squares: { x: number; y: number; }[] = []; // Array to store the squares
-
-  const draw = function() {
-    ctx?.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-    squares.length = 0; // Clear the squares array
-
-    for (let i = 0; i < branches; i++) {
-      const angle = ((i * Math.PI * 2) / branches) + angleOffset;
-      const x = centerX + length * Math.cos(angle);
-      const y = centerY + length * Math.sin(angle);
-
-      ctx?.beginPath();
-      ctx?.moveTo(centerX, centerY);
-      ctx?.lineTo(x, y);
-      ctx?.stroke();
-
-      // Draw a black square at the end of the branch
-      if (ctx) {
-      ctx.fillStyle = 'black';
-      ctx?.fillRect(x - squareSize / 2, y - squareSize / 2, squareSize, squareSize);
-      }
-
-      // Store the square in the squares array
-      squares.push({ x, y });
-    }
-
-    angleOffset += 0.01; // Increase the offset to animate the branches
-    requestAnimationFrame(draw); // Call draw again on the next frame
+  constructor(name: string, url: string, x: number, y: number, xVelocity: number = 0, yVelocity: number = 0) {
+    this.name = name
+    this.url = url;
+    this.x = x;
+    this.y = y;
+    this.xVelocity = xVelocity;
+    this.yVelocity = yVelocity;
+    this.centerX = window?.innerWidth / 2;
+    this.centerY = window?.innerHeight / 2;
   }
 
-  draw(); // Start the animation
+  //display the topic inside of a box
+  display(frameCount: number = 0) {
 
-  // Add a mousemove event listener to the canvas
-  canvas.addEventListener('mousemove', function(event) {
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
+    this.move(frameCount);
 
-    // Check if the mouse is over one of the squares
-    for (const square of squares) {
-      const dx = mouseX - square.x;
-      const dy = mouseY - square.y;
+    return (
+      <div>
+        
+          <svg className="w-full h-screen absolute">
+            <line x1={this.centerX} y1={this.centerY} x2={this.x.toString()} y2={this.y.toString()} style={{ stroke: "black" }} />
+          </svg>
+        
+        <button style={{ transform: `translate(${this.x}px, ${this.y}px)` }} className="bg-black text-white w-28 hover:bg-blue-500 p-2 uppercase">{this.name}</button>      
+        
+      </div>
+    )
+  }
 
-      if (Math.sqrt(dx * dx + dy * dy) < squareSize / 2) {
-        // The mouse is over this square, so draw additional branches from it
-        for (let i = 0; i < 3; i++) {
-          const angle = (i * Math.PI * 2) / 3;
-          const x = square.x + length * Math.cos(angle) / 2;
-          const y = square.y + length * Math.sin(angle) / 2;
+  move(frameCount: number = 0){
+    //make the topics move a bit randomly
+    
+    this.x += this.xVelocity*frameCount/10000;
+    this.y += this.yVelocity*frameCount/1000;
+  }
 
-          ctx?.beginPath();
-          ctx?.moveTo(square.x, square.y);
-          ctx?.lineTo(x, y);
-          ctx?.stroke();
-        }
+  
+}
 
-        break;
-      }
-    }
-  });
+
+
+function DisplayTopics() {
+  
+
+  //create an array of topics
+  let topic1 = new Topic("Experiments", "/experiments", 200, 10, 1, 1);
+  let topic2 = new Topic("Contact", "/experiments", 100, 400, 2, 2);
+  let topic3 = new Topic("About", "/experiments", 150, 300, 1, 1);
+
+  let topics = [topic1, topic2, topic3];
+
+
+
+  return (
+    <div>
+      {topics.map((topic, index) => (
+        <div key={index}>
+          {topic.display()}
+        </div>
+      ))}
+
+
+      
+    </div>
+  )
+
 }

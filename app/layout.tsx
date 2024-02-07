@@ -20,12 +20,11 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       
       <body className='text-black uppercase'>
-        {/* <Navbar/> */}
-        <div className="pl-5 pt-5 pr-[10%]">
+       
         {children}
-        </div>
+
         
-        </body>
+      </body>
     </html>
   );
 }
