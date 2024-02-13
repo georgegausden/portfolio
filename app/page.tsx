@@ -106,7 +106,7 @@ class Topic {
             <line x1={this.x+100} y1={this.y+100} x2={this.x.toString()} y2={this.y.toString()} style={{ stroke: "black" }} />
              </svg>
 
-             <button style={{ transform: `translate(${this.x+100}px, ${this.y+100}px)` }}
+             <button style={{ transform: `translate(${this.x+100}px, ${this.y+100}px)`, backgroundColor: this.colour  }}
          className="bg-black text-white w-32 hover:bg-blue-500 p-2 uppercase hover:w-64 transition-all ease-in-out duration-500"
          >{this.name}</button>
   
