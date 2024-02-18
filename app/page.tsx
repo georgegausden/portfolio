@@ -58,6 +58,7 @@ class Topic {
   randomY: number;
   hovering: boolean = false;
   colour: string;
+  clicked: boolean = false;
 
 
   constructor(name: string, url: string, x: number, y: number, xVelocity: number = 0, yVelocity: number = 0, randomX: number = Math.random(), randomY: number = Math.random(), colour: string) {
@@ -73,45 +74,47 @@ class Topic {
     this.randomY = randomY;
     this.hovering = false;
     this.colour = colour;
+    this.clicked = false;
   }
 
   //display the topic inside of a box
   display(frameCount: number = 0) {
 
+    
     this.move(frameCount);
 
     return (
       <div>
 
-        <svg className="w-full h-screen absolute" style={{ pointerEvents: "none" }}>
-          <line x1={this.centerX+5} y1={this.centerY} x2={this.x.toString()} y2={this.y.toString()} style={{ stroke: "black" }} />
-        </svg>
+        
 
         <button
           style={{ 
             transform: `translate(${this.x}px, ${this.y}px)`, 
             backgroundColor: this.colour 
           }}
-          className={`w-10 h-10 p-2 uppercase hover:w-64 transition-all ease-in-out duration-500 `}
+          className={`${!this.clicked ? 'w-10' : 'w-64'} h-10 p-2 uppercase ${!this.clicked ? 'hover:w-64' : ''} transition-all ease-in-out duration-500 rounded-full shadow-xl drop-shadow-lg`}
           onMouseEnter={() => this.hovering = true}
           onMouseLeave={() => this.hovering = false}
+          onMouseDown={() => this.clicked = true}
         >
-          {this.hovering && this.name}
+          {(this.hovering || this.clicked) && this.name}
+          
         </button>
 
-        {/* if a boolean called hovering is triggered, display subtopics, using svgs and buttons */}
-        {this.hovering && (
-          <div>
-            <svg className="w-full h-screen absolute" style={{ pointerEvents: "none" }}>
-            <line x1={this.x+100} y1={this.y+100} x2={this.x.toString()} y2={this.y.toString()} style={{ stroke: "black" }} />
-             </svg>
-
-             <button style={{ transform: `translate(${this.x+100}px, ${this.y+100}px)` }}
-         className="bg-black text-white w-32 hover:bg-blue-500 p-2 uppercase hover:w-64 transition-all ease-in-out duration-500"
-         >{this.name}</button>
-  
-            </div>
+        {this.clicked && (
+          <div style={{transform: `translate(${this.x + 100}px, ${this.y+10}px)`,
+          backgroundColor: this.colour,
+          }}
+          className="w-64 h-10 p-2 uppercase transition-all ease-in-out duration-500 rounded-full shadow-xl drop-shadow-lg align-middle"
+          >
+           {this.name}
+            
+          </div>
+        
         )}
+
+        
 
       </div>
     )
