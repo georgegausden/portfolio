@@ -4,11 +4,11 @@
 
 @layer components{
   h1{
-    @apply font-black text-8xl my-2;
+    @apply font-black text-8xl my-20;
   }
 
   h2{
-    @apply font-extrabold text-4xl my-2;
+    @apply font-extrabold text-4xl my-10;
   }
 
   h3{
@@ -28,19 +28,19 @@
   }
 
   p{
-    @apply text-sm py-5 ;
+    @apply text-sm py-5 leading-8;
   }
 
   ul{
     @apply  ml-10 my-5;
   }
 
-  link{
-    @apply hover:text-black transition-colors duration-500 ease-in-out;
+  a{
+    @apply hover:text-black transition-all duration-500 ease-in-out hover:scale-105 my-10;
   }
 
   img{
-    @apply rounded-[2px] hover:scale-[102%] ease-in-out duration-500 transition-transform;
+    @apply rounded-[2px] hover:scale-[102%] ease-in-out duration-500 transition-transform bg-cover p-10 w-full bg-gray-400;
   }
 
   #caption{
@@ -81,6 +81,7 @@
   }
 
   
+  
 }
 
 :root {
@@ -112,5 +113,4 @@ body {
     text-wrap: balance;
   }
 }
-
 

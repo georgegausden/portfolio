@@ -95,14 +95,14 @@ function Experiments() {
                 {/* where i should put the experiment information */}
             </div>
 
-            <div className='col-span-1  sticky '>
-                <div className='grid grid-rows-5 gap-[100px] text-center text-gray-500 '>
+            <div className='col-span-1 '>
+                <div className='grid grid-rows-5 gap-[100px] text-center text-gray-500 hidden'>
                    
-                    <Link href='#initial-concept'>Initial Concept</Link>
-                    <Link href="#first-stage">First Stage</Link>
-                    <Link href="#second-stage">Second Stage</Link>
-                    <Link href="#third-stage">Third Stage</Link>
-                    <Link href="#final-thoughts">Final Thoughts</Link>
+                    <a href='#initial-concept'>Initial Concept</a>
+                    <a href="#first-stage">First Stage</a>
+                    <a href="#second-stage">Second Stage</a>
+                    <a href="#third-stage">Third Stage</a>
+                    <a href="#final-thoughts">Final Thoughts</a>
 
                 </div>
                 {/* navigation for the experiment page */}
@@ -110,7 +110,7 @@ function Experiments() {
 
             <div className='col-span-1  '>
 
-                <div className='grid grid-rows-5 gap-[200px] text-center text-gray-800'>
+                <div className='grid grid-rows-5 gap-[100px] text-center text-gray-800'>
                     <Link href='/'>Home</Link>
                     <Link href='/'>Project 1</Link>
                     <Link href='/'>Project 2</Link>
@@ -131,3 +131,4 @@ function Experiments() {
 
 
 export default Experiments;
+
