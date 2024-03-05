@@ -15,6 +15,7 @@ export default function Home() {
     return [topic1, topic2, topic3];
   });
 
+  
   const [frameCount, setFrameCount] = useState(0);
 
   useEffect(() => {

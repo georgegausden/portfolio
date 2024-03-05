@@ -1,53 +1,49 @@
-class Topic {
-    constructor(name, numberOfConnections, originConnection) {
-        this.name = name;
-        this.numberOfConnections = numberOfConnections;
-        this.originConnection = originConnection;
+// pages/index.js
+import React, { useRef, useEffect } from 'react';
+import TopicSquare from '../components/TopicSquare';
+
+const topics = [
+  { name: 'Topic 1', angle: 45 },
+  { name: 'Topic 2', angle: 135 },
+  { name: 'Topic 3', angle: 225 },
+  { name: 'Topic 4', angle: 315 },
+];
+
+const HomePage = () => {
+  const centerRef = useRef(null);
+
+  useEffect(() => {
+    const centerElement = centerRef.current;
+    if (centerElement) {
+      const centerX = centerElement.offsetLeft + centerElement.offsetWidth / 2;
+      const centerY = centerElement.offsetTop + centerElement.offsetHeight / 2;
+
+      topics.forEach((topic, index) => {
+        const square = document.querySelectorAll('.topic-square')[index];
+        const squareRect = square.getBoundingClientRect();
+        const squareX = squareRect.left + squareRect.width / 2;
+        const squareY = squareRect.top + squareRect.height / 2;
+        const angle = Math.atan2(squareY - centerY, squareX - centerX) * (180 / Math.PI);
+        topic.angle = angle;
+      });
     }
+  }, []);
 
-    // Method to display the connection details
-    displayDetails() {
-        return `Name: ${this.name}, Number of Connections: ${this.numberOfConnections}, Origin Connection: ${this.originConnection}`;
-    }
-}
+  return (
+    <div className="flex justify-center items-center h-screen relative">
+      <div className="grid grid-cols-2 gap-4">
+        {topics.map((topic, index) => (
+          <TopicSquare
+            key={index}
+            topic={topic}
+            centerX={centerRef.current ? centerRef.current.offsetLeft + centerRef.current.offsetWidth / 2 : 0}
+            centerY={centerRef.current ? centerRef.current.offsetTop + centerRef.current.offsetHeight / 2 : 0}
+          />
+        ))}
+      </div>
+      <div ref={centerRef} className="absolute w-8 h-8 bg-gray-400 rounded-full" />
+    </div>
+  );
+};
 
-class Project extends Topic {
-    constructor(name, originConnection) {
-        super(name, 0, originConnection);
-    }
-
-    // Method to display the project details
-    displayDetails() {
-        return `Project Name: ${this.name}, Number of Connections: ${this.numberOfConnections}, Parent Connection: ${this.originConnection}`;
-    }
-}
-
-
-// Create an SVG element
-const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-svg.setAttribute('width', '400');
-svg.setAttribute('height', '400');
-
-// Create a line element
-const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-line.setAttribute('x1', '50');
-line.setAttribute('y1', '50');
-line.setAttribute('x2', '350');
-line.setAttribute('y2', '350');
-line.setAttribute('stroke', 'black');
-
-// Add the line to the SVG
-svg.appendChild(line);
-
-// Add the SVG to the body of the document
-document.body.appendChild(svg);
-
-
-
-
-export function returnDetails(topic) {
-    return topic.displayDetails();
-}
-
-let connection1 = new Topic('Connection1', 5, 'Origin1');
-console.log(connection1.displayDetails());
+export default HomePage;

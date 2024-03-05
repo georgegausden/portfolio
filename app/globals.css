@@ -35,8 +35,12 @@
     @apply  ml-10 my-5;
   }
 
+  link{
+    @apply hover:text-black transition-colors duration-500 ease-in-out;
+  }
+
   img{
-    @apply rounded-[2px] hover:scale-105 ease-in-out duration-500 transition-transform;
+    @apply rounded-[2px] hover:scale-[102%] ease-in-out duration-500 transition-transform;
   }
 
   #caption{
