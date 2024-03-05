@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       
-      <body className='text-black uppercase'>
+      <body className='text-black ml-[5%] mt-[5%]'>
        
         {children}
 
