@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { experimentData } from "./experimentData";
 import Image from "next/image";
+import Navbar from "../components/navbar";
+import PageNavigation from "../components/pageNavigation";
 
 interface ExperimentProps {
   title: string;
@@ -12,18 +14,24 @@ interface ExperimentProps {
 function Experiments() {
   return (
     
+    <div className="grid grid-cols-6">
+      <h1 className="col-span-6">Title of Experiment</h1>
+      <h2 id="initial-concept" className="col-span-6">Initial Concept</h2>
+
       <div className="col-span-4">
-        <h1>Title of Experiment</h1>
+        
 
-        <h2 id="initial-concept">Initial Concept</h2>
-
-        <Image
+        
+        <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm"><Image
+          className=" object-cover"
           src="/0001.png"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt="Picture of the author"
           id="image"
-        />
+        /></div>
+
+        
         <p id="caption">Caption of Image</p>
 
         <p>
@@ -35,13 +43,14 @@ function Experiments() {
 
         <h2 id="first-stage">First Stage</h2>
 
-        <Image
+        <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm"><Image
+          className=" object-cover"
           src="/0001.png"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt="Picture of the author"
           id="image"
-        />
+        /></div>
         <p id="caption">Caption of Image</p>
 
         <p>
@@ -77,14 +86,14 @@ function Experiments() {
         </p>
 
         <h2 id="second-stage">Second Stage</h2>
-        <Image
+        <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm"><Image
+          className=" object-cover"
           src="/0001.png"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt="Picture of the author"
           id="image"
-        />
-        <p id="caption">Caption of Image</p>
+        /></div>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
@@ -94,14 +103,14 @@ function Experiments() {
         </p>
 
         <h2 id="third-stage">Third Stage</h2>
-        <Image
+        <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm"><Image
+          className=" object-cover"
           src="/0001.png"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt="Picture of the author"
           id="image"
-        />
-        <p id="caption">Caption of Image</p>
+        /></div>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
@@ -111,14 +120,14 @@ function Experiments() {
         </p>
 
         <h2 id="final-thoughts">Final Thoughts</h2>
-        <Image
+        <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm"><Image
+          className=" object-cover"
           src="/0001.png"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt="Picture of the author"
           id="image"
-        />
-        <p id="caption">Caption of Image</p>
+        /></div>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
@@ -141,6 +150,18 @@ function Experiments() {
                 </div> */}
         {/* navigation for the experiment page */}
       </div>
+
+      <div className="col-span-1">
+        
+        <PageNavigation />
+        
+      </div>
+      <div className="col-span-1">
+      <Navbar />
+      </div>
+      </div>
+
+      
    
   );
 }

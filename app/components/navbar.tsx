@@ -3,11 +3,14 @@ import Link from "next/link";
 
 function Navbar() {
 return (
-    <nav className="col-span-1 col-start-6 fixed w-full">
-        <div className="grid grid-rows-3 text-center text-gray-800 border-l">
-            <Link className="my-24" href="/">Home</Link>
-            <Link className="my-24" href="/about">About</Link>
-            <Link className="my-24" href="/contact">Contact</Link>
+    <nav>
+
+        
+        
+        <div className="grid grid-rows-3 text-center text-gray-800 gap-[200px] font-bold">
+            <Link className="mb-0 mt-0" href="/">Home</Link>
+            <Link className="mb-0 mt-0" href="/about">About</Link>
+            <Link className="mb-0 mt-0" href="/contact">Contact</Link>
             
         </div>
         {/* navigation for the experiment page */}
