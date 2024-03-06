@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       
-      <body className='text-black ml-[5%] mt-[5%] grid grid-cols-6'>
+      <body className='text-black ml-[5%] mt-[5%] grid grid-cols-6 relative'>
       
           {children}
         
