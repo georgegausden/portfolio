@@ -1,19 +1,29 @@
 interface BranchProps {
-  rotation: number;
+    x1: string;
+    y1: string;
+    x2: string;
+    y2: string;
 }
 
-export default function Branch({ rotation }: BranchProps){
-    return(
-        <div>
-            <svg width="100%" height="100%" className={`rotate-${rotation}`}>
-                <line x1="100%" y1="100%" x2="50%" y2="50%" stroke="black" strokeWidth="2" />
-                
-                <rect x="45%" y="45%" width="10%" height="10%" fill="black" />
+const Branch: React.FC<BranchProps> = ({ x1, y1, x2, y2 }) => {
+    return (
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+            <svg
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            >
+                <line
+                    x1={x1}
+                    y1={y1}
+                    x2={x2}
+                    y2={y2}
+                    stroke="black"
+                />
             </svg>
-
-            <div>NAME</div>
-
-            
+            <button style={{ position: 'absolute', top: y2, left: x2 }} className="w-10 h-10 bg-black text-white hover:w-16 ease-in-out duration-500 transition-all">
+                Text
+            </button>
         </div>
-    )
-}
+    );
+};
+
+export default Branch;

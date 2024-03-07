@@ -13,10 +13,10 @@ export default function Home() {
 
   return (
     <main className="grid grid-cols-2 h-screen">
-      <Branch rotation={0} />
-      <Branch rotation={0} />
-      <Branch rotation={90} />
-      <Branch rotation={45} />
+      <Branch x1="100%" y1="100%" x2="50%" y2="50%" />
+      <Branch x1="0%" y1="100%" x2="50%" y2="50%" />
+      <Branch x1="100%" y1="0%" x2="50%" y2="50%" />
+      <Branch x1="0%" y1="0%" x2="50%" y2="50%" />
       
     </main>
   );
