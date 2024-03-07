@@ -30,12 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       
-      <body className='text-black ml-[5%] mt-[1%] relative'>
-      
+      {/* <body className='text-black ml-[5%] mt-[1%] relative'> */}
+      <body className='text-black relative'>
+
+
           {children}
-        
-          {/* <PageNavigation />
-          <Navbar /> */}
         
       </body>
     </html>

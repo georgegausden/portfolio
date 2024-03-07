@@ -16,12 +16,9 @@ function Experiments() {
     
     <div className="grid grid-cols-6">
       <h1 className="col-span-6">Title of Experiment</h1>
-      <h2 id="initial-concept" className="col-span-6">Initial Concept</h2>
+      
 
       <div className="col-span-4">
-        
-
-        
         <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm"><Image
           className=" object-cover"
           src="/0001.png"
@@ -31,8 +28,9 @@ function Experiments() {
           id="image"
         /></div>
 
-        
         <p id="caption">Caption of Image</p>
+
+        <h2 id="initial-concept">Initial Concept</h2>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
