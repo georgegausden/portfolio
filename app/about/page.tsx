@@ -1,9 +1,17 @@
+'use client'
 import text from "../components/text";
 import Navbar from "../components/navbar";
+import {motion, AnimatePresence} from "framer-motion";
 
 export default function About() {
   return (
-    <div className=" grid grid-cols-6">
+    <AnimatePresence>
+    <motion.div className=" grid grid-cols-6"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ ease: "easeInOut", duration: 1 }}
+    >
       <div className="col-span-4">
       <h2 className="mt-0">Biography</h2>
 
@@ -17,6 +25,7 @@ export default function About() {
       </div>
       
 
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 }
