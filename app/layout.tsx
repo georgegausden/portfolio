@@ -2,6 +2,7 @@ import Navbar from "./components/navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Arimo } from "next/font/google";
+import MainLayout from "./components/mainLayout";
 
 
 import "./globals.css";
@@ -33,11 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       
-      <body className='text-black ml-[39px] mt-[87px] relative scroll-smooth'>
+      <body className='text-black'>
       
 
 
-          {children}
+        <MainLayout>{children}</MainLayout>
         
       </body>
     </html>
