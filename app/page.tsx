@@ -20,12 +20,12 @@ export default function Home() {
     exit={{ opacity: 0 }}
     transition={{ ease: "easeInOut", duration: 1 }}
     >
-      <Branch x1="100%" y1="100%" x2="50%" y2="50%">
-        <Branch x1="0%" y1="0%" x2="-50%" y2="-50%"></Branch>
+      <Branch x1="100%" y1="100%" x2="50%" y2="50%" index={1} color="#707F6A">
+        <Branch x1="0%" y1="0%" x2="-50%" y2="-50%" index={1} color="#707F6A"></Branch>
       </Branch>
-      <Branch x1="0%" y1="100%" x2="50%" y2="50%" />
-      <Branch x1="100%" y1="0%" x2="50%" y2="50%" />
-      <Branch x1="0%" y1="0%" x2="50%" y2="50%" />
+      <Branch x1="0%" y1="100%" x2="50%" y2="50%" index={2} color="#000000"/>
+      <Branch x1="100%" y1="0%" x2="50%" y2="50%" index={3} color="#A7B6CA" />
+      <Branch x1="0%" y1="0%" x2="50%" y2="50%" index={4} color="#707F6A" />
       
     </motion.main>
     </AnimatePresence>
