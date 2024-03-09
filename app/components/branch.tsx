@@ -1,11 +1,16 @@
+import Link from "next/link";
+import { ReactNode } from 'react';
+
+
 interface BranchProps {
     x1: string;
     y1: string;
     x2: string;
     y2: string;
+    children?: ReactNode;
 }
 
-const Branch: React.FC<BranchProps> = ({ x1, y1, x2, y2 }) => {
+const Branch: React.FC<BranchProps> = ({ x1, y1, x2, y2, children }) => {
     return (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <svg
@@ -19,9 +24,13 @@ const Branch: React.FC<BranchProps> = ({ x1, y1, x2, y2 }) => {
                     stroke="black"
                 />
             </svg>
-            <button style={{ position: 'absolute', top: y2, left: x2 }} className="w-10 h-10 bg-black text-white hover:w-16 ease-in-out duration-500 transition-all">
-                Text
-            </button>
+            <Link href = {"/experiments"} style={{ position: 'absolute', top: y2, left: x2 }} className="w-10 h-auto m-0 bg-green-500 text-white hover:w-auto ease-in-out duration-500 transition-all">
+                <h6>Experiments</h6>
+            </Link>
+
+            <div style={{ position: 'absolute', top: y2, left: x2 }}>
+                {children}
+            </div>
         </div>
     );
 };
