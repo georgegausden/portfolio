@@ -15,7 +15,7 @@ function Experiments() {
   return (
     
     <div className="grid grid-cols-6">
-      <h1 className="col-span-6">Title of Experiment</h1>
+      <h1 className="col-span-6 mt-0">Title of Experiment</h1>
       
 
       <div className="col-span-4">
