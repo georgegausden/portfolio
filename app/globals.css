@@ -55,6 +55,9 @@
     @apply my-10;
   }
 
+  #homepageLink{
+    @apply w-32 rounded-sm text-center
+  }
   #experimentDescription{
     @apply my-2 text-gray-400;
   }

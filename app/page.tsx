@@ -48,7 +48,7 @@ export default function Home() {
 
 
             </svg>
-            <a 
+            <a
               onMouseEnter={() => setIsMouseOver(true)}
               onMouseLeave={() => setIsMouseOver(false)}
               style={{
@@ -62,6 +62,7 @@ export default function Home() {
             </a>
 
             <Link href="/about"
+            id = 'homepageLink'
               onMouseEnter={() => setIsMouseOver(true)}
               onMouseLeave={() => setIsMouseOver(false)}
               style={{
@@ -74,7 +75,7 @@ export default function Home() {
               <h6>Biography</h6>
             </Link>
 
-            
+
           </div>
 
 
@@ -90,21 +91,21 @@ export default function Home() {
                 stroke='black'
               />
 
-                {/* draw the lines for the other pages */}
-                <line
+              {/* draw the lines for the other pages */}
+              <line
                 x1='50%'
                 y1='50%'
                 x2='75%'
                 y2='50%'
 
 
-               
-                
+
+
                 stroke='black'
-                transform="translate(-20,-20)"
+                transform="translate(0,-20)"
               />
             </svg>
-            <Link href="/3d"
+            <a
               style={{
                 position: 'absolute',
                 bottom: '50%',
@@ -112,8 +113,21 @@ export default function Home() {
                 backgroundColor: "#000000"
               }}
 
-              className={`w-10 h-auto m-0 text-white hover:w-32 ease-in-out duration-500 transition-all pl-2`}>
+              className={`w-10 h-auto m-0 text-white hover:w-auto hover:text-white ease-in-out duration-500 transition-all px-2`}>
               <h6>3D Projects</h6>
+            </a>
+
+            <Link id='homepageLink'
+            href="/3d"
+              style={{
+                position: 'absolute',
+                bottom: '50%',
+                left: '75%',
+                backgroundColor: "#000000"
+              }}
+
+              className={`w-auto h-auto m-0 text-white hover:text-white ease-in-out duration-500 transition-all px-2`}>
+              <h6>Low Poly Diorama</h6>
             </Link>
           </div>
         </div>
@@ -127,8 +141,30 @@ export default function Home() {
                 x1="100%" y1="0%" x2="50%" y2="50%"
                 stroke='black'
               />
+
+              {/* draw the lines for the other pages */}
+              <line
+                x1='50%'
+                y1='50%'
+                x2='25%'
+                y2='25%'
+
+                stroke='black'
+                transform="translate(-20,20)"
+              />
+
+              {/* draw the lines for the other pages */}
+              <line
+                x1='50%'
+                y1='50%'
+                x2='25%'
+                y2='75%'
+
+                stroke='black'
+                transform="translate(-20,20)"
+              />
             </svg>
-            <Link href="/experiments"
+            <a
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -136,8 +172,34 @@ export default function Home() {
                 backgroundColor: "#A7B6CA"
               }}
 
-              className={`w-10 h-auto m-0 text-white hover:w-32 ease-in-out duration-500 transition-all pl-2`}>
+              className={`w-10 h-auto m-0 text-black hover:w-auto ease-in-out duration-500 transition-all px-2`}>
               <h6>Contact</h6>
+            </a>
+
+            <Link id='homepageLink'
+            href="/contact"
+              style={{
+                position: 'absolute',
+                top: '75%',
+                right: '75%',
+                backgroundColor: "#A7B6CA"
+              }}
+
+              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>CV</h6>
+            </Link>
+
+            <Link id='homepageLink'
+            href="/contact"
+              style={{
+                position: 'absolute',
+                top: '25%',
+                right: '75%',
+                backgroundColor: "#A7B6CA"
+              }}
+
+              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>Email</h6>
             </Link>
           </div>
         </div>
@@ -151,8 +213,34 @@ export default function Home() {
                 x1="0%" y1="0%" x2="50%" y2="50%"
                 stroke='black'
               />
+
+              <line
+                x1="50%" y1="50%" x2="75%" y2="75%"
+                stroke='black'
+                transform="translate(0,20)"
+              />
+
+<line
+                x1="50%" y1="50%" x2="75%" y2="25%"
+                stroke='black'
+                transform="translate(0,20)"
+              />
+
+<line
+                x1="50%" y1="50%" x2="75%" y2="50%"
+                stroke='black'
+                transform="translate(0,20)"
+              />
+
+<line
+                x1="50%" y1="50%" x2="50%" y2="75%"
+                stroke='black'
+                transform="translate(20,0)"
+              />
+
+
             </svg>
-            <Link href="/experiments"
+            <a
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -160,9 +248,62 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-10 h-auto m-0 text-white hover:w-32 ease-in-out duration-500 transition-all pl-2`}>
+              className={`w-10 h-auto m-0 text-black hover:w-auto ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiments</h6>
+            </a>
+
+            <Link id='homepageLink'
+            href="/experiments"
+              style={{
+                position: 'absolute',
+                top: '75%',
+                left: '75%',
+                backgroundColor: "#707F6A"
+              }}
+
+              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>Geometries</h6>
             </Link>
+
+            <Link id='homepageLink'
+            href="/experiments"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '75%',
+                backgroundColor: "#707F6A"
+              }}
+
+              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>Experiment #3</h6>
+            </Link>
+
+            <Link id='homepageLink'
+            href="/experiments"
+              style={{
+                position: 'absolute',
+                top: '25%',
+                left: '75%',
+                backgroundColor: "#707F6A"
+              }}
+
+              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>Experiment #2</h6>
+            </Link>
+
+            <Link id='homepageLink'
+            href="/experiments"
+              style={{
+                position: 'absolute',
+                top: '75%',
+                left: '50%',
+                backgroundColor: "#707F6A"
+              }}
+
+              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>Experiment #4</h6>
+            </Link>
+            
           </div>
         </div>
 
@@ -172,6 +313,8 @@ export default function Home() {
     </AnimatePresence>
   );
 }
+
+
 
 
 
