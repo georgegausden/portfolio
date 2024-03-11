@@ -185,7 +185,7 @@ export default function Home() {
             </a>
 
             {isMouseOverContact && <Link id='homepageLink'
-              href="/" download
+              href="/CV.pdf" download
               style={{
                 position: 'absolute',
                 top: '75%',
@@ -198,7 +198,7 @@ export default function Home() {
             </Link>}
 
             {isMouseOverContact && <Link id='homepageLink'
-             href = "mailto: george.philip.gausden@gmail.com"
+             href = "mailto:george.philip.gausden@gmail.com"
               style={{
                 position: 'absolute',
                 top: '25%',
