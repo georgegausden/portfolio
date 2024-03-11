@@ -190,7 +190,7 @@ export default function Home() {
             </Link>
 
             <Link id='homepageLink'
-              href="/contact"
+             href = "mailto: george.philip.gausden@gmail.com"
               style={{
                 position: 'absolute',
                 top: '25%',
