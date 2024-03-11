@@ -185,7 +185,7 @@ export default function Home() {
             </a>
 
             {isMouseOverContact && <Link id='homepageLink'
-              href="/contact"
+              href="/" download
               style={{
                 position: 'absolute',
                 top: '75%',
