@@ -12,7 +12,12 @@ import Branch from "./components/branch";
 
 export default function Home() {
 
-  const [isMouseOver, setIsMouseOver] = useState(false);
+  const [isMouseOverAbout, setIsMouseOverAbout] = useState(false);
+  const [isMouseOver3D, setisMouseOver3D] = useState(false);
+  const [isMouseOverContact, setisMouseOverContact] = useState(false);
+  const [isMouseOverExperiments, setisMouseOverExperiments] = useState(false);
+
+
 
   return (
     <AnimatePresence>
@@ -37,43 +42,42 @@ export default function Home() {
               />
 
               {/* draw the lines for the other pages */}
-              <line
+              {isMouseOverAbout && <line
                 x1='50%'
                 y1='50%'
                 x2='25%'
                 y2='50%'
                 stroke='black'
                 transform="translate(-20,-20)"
-              />
+              />}
 
 
             </svg>
             <a
-              onMouseEnter={() => setIsMouseOver(true)}
-              onMouseLeave={() => setIsMouseOver(false)}
+              onMouseEnter={() => setIsMouseOverAbout(true)}
+              
               style={{
                 position: 'absolute',
                 bottom: '50%',
                 right: '50%',
                 backgroundColor: "#F1E7DD"
               }}
-              className={`w-10 h-auto m-0 text-black hover:w-auto ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-auto m-0 text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6>About</h6>
             </a>
 
-            <Link href="/about"
+            {isMouseOverAbout && <Link href="/about"
               id='homepageLink'
-              onMouseEnter={() => setIsMouseOver(true)}
-              onMouseLeave={() => setIsMouseOver(false)}
+            
               style={{
                 position: 'absolute',
                 bottom: '50%',
                 right: '75%',
                 backgroundColor: "#F1E7DD"
               }}
-              className={`w-auto px-2 h-auto m-0 text-black ease-in-out duration-500 transition-all`}>
+              className={`w-32 px-2 h-auto m-0 text-black ease-in-out duration-500 transition-all`}>
               <h6>Biography</h6>
-            </Link>
+            </Link>}
 
 
           </div>
@@ -92,7 +96,7 @@ export default function Home() {
               />
 
               {/* draw the lines for the other pages */}
-              <line
+              {isMouseOver3D&&<line
                 x1='50%'
                 y1='50%'
                 x2='75%'
@@ -102,10 +106,12 @@ export default function Home() {
 
 
                 stroke='black'
-                transform="translate(0,-20)"
-              />
+                transform="translate(20,-20)"
+              />}
             </svg>
             <a
+                          onMouseEnter={() => setisMouseOver3D(true)}
+
               style={{
                 position: 'absolute',
                 bottom: '50%',
@@ -113,11 +119,11 @@ export default function Home() {
                 backgroundColor: "#000000"
               }}
 
-              className={`w-10 h-auto m-0 text-white hover:w-auto hover:text-white ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-10 m-0 text-transparent text-center hover:w-32 hover:text-white ease-in-out duration-500 transition-all px-2`}>
               <h6>3D Projects</h6>
             </a>
 
-            <Link id='homepageLink'
+            {isMouseOver3D && <Link id='homepageLink'
               href="/3d"
               style={{
                 position: 'absolute',
@@ -126,9 +132,9 @@ export default function Home() {
                 backgroundColor: "#000000"
               }}
 
-              className={`w-auto h-auto m-0 text-white hover:text-white ease-in-out duration-500 transition-all px-2`}>
-              <h6>Low Poly Diorama</h6>
-            </Link>
+              className={`w-32 h-auto m-0 text-white hover:text-white ease-in-out duration-500 transition-all px-2`}>
+              <h6>CGI Montreal</h6>
+            </Link>}
           </div>
         </div>
 
@@ -143,7 +149,8 @@ export default function Home() {
               />
 
               {/* draw the lines for the other pages */}
-              <line
+              
+              {isMouseOverContact && <line
                 x1='50%'
                 y1='50%'
                 x2='25%'
@@ -151,10 +158,10 @@ export default function Home() {
 
                 stroke='black'
                 transform="translate(-20,20)"
-              />
+              />}
 
               {/* draw the lines for the other pages */}
-              <line
+              {isMouseOverContact && <line
                 x1='50%'
                 y1='50%'
                 x2='25%'
@@ -162,9 +169,10 @@ export default function Home() {
 
                 stroke='black'
                 transform="translate(-20,20)"
-              />
+              />}
             </svg>
             <a
+              onMouseEnter={() => setisMouseOverContact(true)}
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -172,11 +180,11 @@ export default function Home() {
                 backgroundColor: "#A7B6CA"
               }}
 
-              className={`w-10 h-auto m-0 text-black hover:w-auto ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-auto m-0 text-transparent text-center hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6>Contact</h6>
             </a>
 
-            <Link id='homepageLink'
+            {isMouseOverContact && <Link id='homepageLink'
               href="/contact"
               style={{
                 position: 'absolute',
@@ -185,11 +193,11 @@ export default function Home() {
                 backgroundColor: "#A7B6CA"
               }}
 
-              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>CV</h6>
-            </Link>
+            </Link>}
 
-            <Link id='homepageLink'
+            {isMouseOverContact && <Link id='homepageLink'
              href = "mailto: george.philip.gausden@gmail.com"
               style={{
                 position: 'absolute',
@@ -198,9 +206,9 @@ export default function Home() {
                 backgroundColor: "#A7B6CA"
               }}
 
-              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Email</h6>
-            </Link>
+            </Link>}
           </div>
         </div>
 
@@ -214,33 +222,34 @@ export default function Home() {
                 stroke='black'
               />
 
-              <line
+              {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="75%" y2="75%"
                 stroke='black'
                 transform="translate(20,20)"
-              />
+              />}
 
-              <line
+              {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="75%" y2="25%"
                 stroke='black'
                 transform="translate(20,20)"
-              />
+              />}
 
-              <line
+              {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="75%" y2="50%"
                 stroke='black'
                 transform="translate(20,20)"
-              />
+              />}
 
-              <line
+              {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="50%" y2="75%"
                 stroke='black'
                 transform="translate(20,20)"
-              />
+              />}
 
 
             </svg>
             <a
+            onMouseEnter={() => setisMouseOverExperiments(true)}
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -248,11 +257,11 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-10 h-auto m-0 text-black hover:w-auto ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-auto m-0 text-transparent text-center hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiments</h6>
             </a>
 
-            <Link id='homepageLink'
+            {isMouseOverExperiments && <Link id='homepageLink'
               href="/experiments"
               style={{
                 position: 'absolute',
@@ -261,11 +270,11 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Geometries</h6>
-            </Link>
+            </Link>}
 
-            <Link id='homepageLink'
+            {isMouseOverExperiments && <Link id='homepageLink'
               href="/experiments"
               style={{
                 position: 'absolute',
@@ -274,11 +283,11 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiment #3</h6>
-            </Link>
+            </Link>}
 
-            <Link id='homepageLink'
+            {isMouseOverExperiments && <Link id='homepageLink'
               href="/experiments"
               style={{
                 position: 'absolute',
@@ -287,11 +296,11 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiment #2</h6>
-            </Link>
+            </Link>}
 
-            <Link id='homepageLink'
+            {isMouseOverExperiments && <Link id='homepageLink'
               href="/experiments"
               style={{
                 position: 'absolute',
@@ -300,9 +309,9 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiment #4</h6>
-            </Link>
+            </Link>}
 
           </div>
         </div>
