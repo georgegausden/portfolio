@@ -62,7 +62,7 @@ export default function Home() {
             </a>
 
             <Link href="/about"
-            id = 'homepageLink'
+              id='homepageLink'
               onMouseEnter={() => setIsMouseOver(true)}
               onMouseLeave={() => setIsMouseOver(false)}
               style={{
@@ -118,7 +118,7 @@ export default function Home() {
             </a>
 
             <Link id='homepageLink'
-            href="/3d"
+              href="/3d"
               style={{
                 position: 'absolute',
                 bottom: '50%',
@@ -177,7 +177,7 @@ export default function Home() {
             </a>
 
             <Link id='homepageLink'
-            href="/contact"
+              href="/contact"
               style={{
                 position: 'absolute',
                 top: '75%',
@@ -190,7 +190,7 @@ export default function Home() {
             </Link>
 
             <Link id='homepageLink'
-            href="/contact"
+              href="/contact"
               style={{
                 position: 'absolute',
                 top: '25%',
@@ -217,25 +217,25 @@ export default function Home() {
               <line
                 x1="50%" y1="50%" x2="75%" y2="75%"
                 stroke='black'
-                transform="translate(0,20)"
+                transform="translate(20,20)"
               />
 
-<line
+              <line
                 x1="50%" y1="50%" x2="75%" y2="25%"
                 stroke='black'
-                transform="translate(0,20)"
+                transform="translate(20,20)"
               />
 
-<line
+              <line
                 x1="50%" y1="50%" x2="75%" y2="50%"
                 stroke='black'
-                transform="translate(0,20)"
+                transform="translate(20,20)"
               />
 
-<line
+              <line
                 x1="50%" y1="50%" x2="50%" y2="75%"
                 stroke='black'
-                transform="translate(20,0)"
+                transform="translate(20,20)"
               />
 
 
@@ -253,7 +253,7 @@ export default function Home() {
             </a>
 
             <Link id='homepageLink'
-            href="/experiments"
+              href="/experiments"
               style={{
                 position: 'absolute',
                 top: '75%',
@@ -266,7 +266,7 @@ export default function Home() {
             </Link>
 
             <Link id='homepageLink'
-            href="/experiments"
+              href="/experiments"
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -279,7 +279,7 @@ export default function Home() {
             </Link>
 
             <Link id='homepageLink'
-            href="/experiments"
+              href="/experiments"
               style={{
                 position: 'absolute',
                 top: '25%',
@@ -292,7 +292,7 @@ export default function Home() {
             </Link>
 
             <Link id='homepageLink'
-            href="/experiments"
+              href="/experiments"
               style={{
                 position: 'absolute',
                 top: '75%',
@@ -303,7 +303,7 @@ export default function Home() {
               className={`w-auto h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiment #4</h6>
             </Link>
-            
+
           </div>
         </div>
 
