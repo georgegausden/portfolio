@@ -1,8 +1,12 @@
 import Navbar from "./components/navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import { Arimo } from "next/font/google";
 import MainLayout from "./components/mainLayout";
+
+
+
+
 
 
 import "./globals.css";
@@ -15,7 +19,7 @@ import PageNavigation from "./components/pageNavigation";
 
 
 
-const inter = Arimo({ subsets: ["latin"] });
+const inter = Open_Sans({ subsets: ["latin"] });
 
   
 
