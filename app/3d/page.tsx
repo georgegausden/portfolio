@@ -134,16 +134,7 @@ function Projects() {
           </p>
 
           <h2 id="final-thoughts">Final Thoughts</h2>
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
-            <Image
-              className=" object-cover"
-              src="/0001.png"
-              width={400}
-              height={400}
-              alt="Picture of the author"
-              id="image"
-            />
-          </div>
+          
 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
@@ -152,19 +143,7 @@ function Projects() {
             repellendus beatae hic facilis voluptatibus facere?
           </p>
 
-          {/* where i should put the experiment information */}
-
-          {/* <div className='col-span-1 '>
-                <div className='grid-rows-5 gap-[100px] text-center text-gray-500'>
-                   
-                    <a href='#initial-concept'>Initial Concept</a>
-                    <a href="#first-stage">First Stage</a>
-                    <a href="#second-stage">Second Stage</a>
-                    <a href="#third-stage">Third Stage</a>
-                    <a href="#final-thoughts">Final Thoughts</a>
-
-                </div> */}
-          {/* navigation for the experiment page */}
+          
         </div>
 
         <div className="col-span-1">
