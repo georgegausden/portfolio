@@ -32,12 +32,10 @@ useEffect(() => {
   return (
     <nav className="col-start-5 sticky top-[91px]">
        
-      <div className="grid grid-rows-3 text-center text-green-950 gap-[91px] ">
-        <button><a className={activeId === 'initial-concept' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'initial-concept')}>Initial Concept</a></button>
-        <button><a className={activeId === 'first-stage' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'first-stage')}>First Stage</a></button>
-        <button><a className={activeId === 'second-stage' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'second-stage')}>Second Stage</a></button>
-        <button><a className={activeId === 'third-stage' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'third-stage')}>Third Stage</a></button>
-        <button><a className={activeId === 'final-thoughts' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'final-thoughts')}>Final Thoughts</a></button>
+      <div className="grid grid-rows-auto text-center text-green-950 gap-[91px] ">
+        <button><a className={activeId === 'Inspiration' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'Inspiration')}>Inspiration</a></button>
+        <button><a className={activeId === 'Iterations' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'Iterations')}>Iterations</a></button>
+        <button><a className={activeId === 'Final-Result' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'Final-Result')}>Final Result</a></button>
       </div>
     </nav>
   );

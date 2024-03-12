@@ -12,7 +12,7 @@ import MainLayout from "./components/mainLayout";
 import "./globals.css";
 
 import { AnimatePresence } from "framer-motion";
-import PageNavigation from "./components/pageNavigation";
+import PageNavigation from "./components/experimentNavigation";
 
 
 

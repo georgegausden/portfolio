@@ -4,7 +4,7 @@ import Link from "next/link";
 import { experimentData } from "./experimentData";
 import Image from "next/image";
 import Navbar from "../components/navbar";
-import PageNavigation from "../components/pageNavigation";
+import PageNavigation from "../components/experimentNavigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface ExperimentProps {
@@ -40,7 +40,7 @@ function Experiments() {
 
           <p id="caption">Caption of Image</p>
 
-          <h2 id="initial-concept">Initial Concept</h2>
+          <h2 id="Inspiration">Inspiration</h2>
 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
@@ -49,7 +49,7 @@ function Experiments() {
             repellendus beatae hic facilis voluptatibus facere?
           </p>
 
-          <h2 id="first-stage">First Stage</h2>
+          <h2 id="Iterations">Iterations</h2>
 
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
             <Image
@@ -95,7 +95,7 @@ function Experiments() {
             cum laboriosam molestias voluptate deserunt!
           </p>
 
-          <h2 id="second-stage">Second Stage</h2>
+          <h2 id="Final-Result">Final Result</h2>
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
