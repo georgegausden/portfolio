@@ -17,8 +17,6 @@ export default function Home() {
   const [isMouseOverContact, setisMouseOverContact] = useState(false);
   const [isMouseOverExperiments, setisMouseOverExperiments] = useState(false);
 
-
-
   return (
     <AnimatePresence>
       <motion.main className="grid grid-cols-2 h-screen"
@@ -27,7 +25,7 @@ export default function Home() {
         exit={{ opacity: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
       >
-        <div>
+        <div id='about'>
 
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <svg
@@ -38,7 +36,7 @@ export default function Home() {
                 y1='100%'
                 x2='50%'
                 y2='50%'
-                stroke='black'
+                stroke='black'                
               />
 
               {/* draw the lines for the other pages */}
@@ -54,15 +52,17 @@ export default function Home() {
 
             </svg>
             <a
+            id = 'homepageLink'
               onMouseEnter={() => setIsMouseOverAbout(true)}
               
+
               style={{
                 position: 'absolute',
                 bottom: '50%',
                 right: '50%',
                 backgroundColor: "#F1E7DD"
               }}
-              className={`w-10 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6>About</h6>
             </a>
 
@@ -85,7 +85,7 @@ export default function Home() {
 
         </div>
 
-        <div>
+        <div id='3D Projects'>
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <svg
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
@@ -110,8 +110,9 @@ export default function Home() {
               />}
             </svg>
             <a
-                          onMouseEnter={() => setisMouseOver3D(true)}
-
+            id = 'homepageLink'
+              onMouseEnter={() => setisMouseOver3D(true)}
+              
               style={{
                 position: 'absolute',
                 bottom: '50%',
@@ -132,13 +133,16 @@ export default function Home() {
                 backgroundColor: "#000000"
               }}
 
+              // when the user hovers over one of the links, show the image of the project?
+              
+
               className={`w-32 h-auto m-0 text-white hover:text-white ease-in-out duration-500 transition-all px-2`}>
               <h6>CGI Montreal</h6>
             </Link>}
           </div>
         </div>
 
-        <div>
+        <div id='contact'>
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <svg
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
@@ -170,8 +174,20 @@ export default function Home() {
                 stroke='black'
                 transform="translate(-20,20)"
               />}
+
+              {/* draw the lines for the other pages */}
+              {isMouseOverContact && <line
+                x1='50%'
+                y1='50%'
+                x2='25%'
+                y2='50%'
+
+                stroke='black'
+                transform="translate(-20,20)"
+              />}
             </svg>
             <a
+            id = 'homepageLink'
               onMouseEnter={() => setisMouseOverContact(true)}
               style={{
                 position: 'absolute',
@@ -198,6 +214,20 @@ export default function Home() {
             </Link>}
 
             {isMouseOverContact && <Link id='homepageLink'
+              href="https://www.instagram.com/georgegausden/"
+              target="_blank"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '75%',
+                backgroundColor: "#A7B6CA"
+              }}
+
+              className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
+              <h6>Instagram</h6>
+            </Link>}
+
+            {isMouseOverContact && <Link id='homepageLink'
              href = "mailto:george.philip.gausden@gmail.com"
               style={{
                 position: 'absolute',
@@ -212,7 +242,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div id='experiments'>
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <svg
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
@@ -220,6 +250,9 @@ export default function Home() {
               <line
                 x1="0%" y1="0%" x2="50%" y2="50%"
                 stroke='black'
+                style={{
+                  animation: 'draw 2s forwards'
+                }}
               />
 
               {isMouseOverExperiments && <line
@@ -249,6 +282,7 @@ export default function Home() {
 
             </svg>
             <a
+            id = 'homepageLink'
             onMouseEnter={() => setisMouseOverExperiments(true)}
               style={{
                 position: 'absolute',
@@ -267,7 +301,10 @@ export default function Home() {
                 position: 'absolute',
                 top: '75%',
                 left: '75%',
-                backgroundColor: "#707F6A"
+                backgroundColor: "#707F6A",
+                cursor: `url('0001.png'), auto`
+                
+                
               }}
 
               className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>

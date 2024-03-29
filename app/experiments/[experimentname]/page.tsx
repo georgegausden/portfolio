@@ -13,7 +13,7 @@ export default function ExperimentProject() {
     (exp) => exp.title.toLowerCase().replace(/\s+/g, "") === experimentName
   );
 
-
+    
 
   return (
     <div>

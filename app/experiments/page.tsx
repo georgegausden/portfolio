@@ -24,7 +24,9 @@ function Experiments() {
         exit={{ opacity: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
       >
-        <h1 className="col-span-6 mt-0">Title of Experiment</h1>
+        <h1 className="col-span-6 mt-0"
+        style={{backgroundColor: "#707F6A"}}
+        >Title of Experiment</h1>
 
         <div className="col-span-4">
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">

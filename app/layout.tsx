@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Open_Sans } from "next/font/google";
 import { Arimo } from "next/font/google";
 import MainLayout from "./components/mainLayout";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 

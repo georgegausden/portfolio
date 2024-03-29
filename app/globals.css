@@ -83,6 +83,10 @@
     @apply pt-10;
   }
 
+  #homepageLink{
+    @apply text-white;
+  }
+
   
 
   
