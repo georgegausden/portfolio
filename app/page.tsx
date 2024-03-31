@@ -7,7 +7,6 @@ import CardGrid from "./components/cardGrid";
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
-import Branch from "./components/branch";
 
 
 export default function Home() {
@@ -101,9 +100,6 @@ export default function Home() {
                 y1='50%'
                 x2='75%'
                 y2='50%'
-
-
-
 
                 stroke='black'
                 transform="translate(20,-20)"
@@ -296,7 +292,7 @@ export default function Home() {
             </a>
 
             {isMouseOverExperiments && <Link id='homepageLink'
-              href="/experiments"
+              href="/experiments/Geometries"
               style={{
                 position: 'absolute',
                 top: '75%',
@@ -312,7 +308,7 @@ export default function Home() {
             </Link>}
 
             {isMouseOverExperiments && <Link id='homepageLink'
-              href="/experiments"
+              href="/experiments/Experiment3"
               style={{
                 position: 'absolute',
                 top: '50%',

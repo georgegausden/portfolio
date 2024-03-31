@@ -3,6 +3,7 @@ export const experimentData = [
     {
         title: "Geometries",
         date: 2022,
+        initialConcept: "the purpose of this exercise was to explore trigonometry and ways that concepts from trigonometry could be utilized to create 2D artwork. There was an element of unexpectedness. I would program nodes or code and let it run to see how it would appear. I used randomness as part of the creation of some of the drawings.",
         shortDescription: "A collection of p5.js experiments",
         longDescription: "A long collection of p5.js experiments",
         link: "https://editor.p5js.org/georgegausden/full/Q7I0m_H-c"

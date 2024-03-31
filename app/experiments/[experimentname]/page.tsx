@@ -1,41 +1,149 @@
-"use client";
-
-import { usePathname } from "next/navigation";
+'use client'
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { experimentData } from "../experimentData";
+import Image from "next/image";
+import Navbar from "../../components/navbar";
+import PageNavigation from "../../components/experimentNavigation";
+import { AnimatePresence, motion } from "framer-motion";
+
+interface ExperimentProps {
+  title: string;
+  date: number;
+  description: string;
+}
+
+// get the information from the experimentData file
+// and use it to populate the page
 
 
-export default function ExperimentProject() {
 
-  const pathname = usePathname();
-  const experimentName = pathname.substring(pathname.lastIndexOf("/") + 1);
-  const experiment = experimentData.find(
-    (exp) => exp.title.toLowerCase().replace(/\s+/g, "") === experimentName
-  );
+function Experiments() {
 
-    
+  const pathname = window.location.pathname;
+  const experimentName = pathname.split("/")[2];
+
+  const experiment = experimentData.find(exp => exp.title === experimentName);
+
+  if (!experiment) {
+    // Handle the case where no experiment matches the name
+    console.error(`No experiment found with title: ${experimentName}`);
+    return null;
+  }
+
+  
 
   return (
-    <div>
-      {/* add a link to the previous pages, so the user can decide to navigate back one page or two */}
-      <Link href="/" className="text-xl text-black w-full hover:underline">
-        {pathname}
-      </Link>
+    <AnimatePresence>
+      <motion.div
+        className="grid grid-cols-6"
+        
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+      >
+        <h1 className="col-span-6 mt-0"
+        
+        >{experiment.title}</h1>
 
-      <div className="flex pt-10">
-        <iframe
-          width={"70%"}
-          height={800}
-          src={experiment?.link}
-          loading="lazy"
-          className="w-full max-w-[50%]"
-        ></iframe>
+        <div className="col-span-4">
+          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+            <Image
+              className=" object-cover"
+              src="/0001.png"
+              width={400}
+              height={400}
+              alt="Picture of the author"
+              id="image"
+            />
+          </div>
 
-        <div className="pl-10">
-          <h1 className="text-xl">{experiment?.title}</h1>
-          <p className="pt-10">{experiment?.longDescription}</p>
+          <p id="caption">Caption of Image</p>
+
+          <h2 id="Inspiration">Inspiration</h2>
+
+          <p>
+            {experiment.initialConcept}
+          </p>
+
+          <h2 id="Iterations">Iterations</h2>
+
+          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+            <Image
+              className=" object-cover"
+              src="/0001.png"
+              width={400}
+              height={400}
+              alt="Picture of the author"
+              id="image"
+            />
+          </div>
+          <p id="caption">Caption of Image</p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+            assumenda dolorem praesentium. Similique incidunt omnis atque quam
+            odio mollitia impedit corporis accusantium obcaecati, officiis
+            repellendus beatae hic facilis voluptatibus facere?
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sequi
+            dolore, quidem asperiores delectus similique voluptatem minus
+            voluptatibus aut? Corrupti hic illo harum recusandae excepturi,
+            ullam rem molestiae dicta quod vel nihil, nam, amet laborum
+            voluptatum itaque a? Qui quis adipisci laborum enim alias non
+            recusandae, repellendus iste nihil sit nostrum quod blanditiis
+            cumque neque velit quia corporis nesciunt, ipsum et, eligendi
+            tenetur deserunt nam. Porro eos error officia dolor eius, quod
+            aspernatur sequi placeat. Facere, possimus. Qui ab impedit
+            perspiciatis repellat dolorum saepe, mollitia, perferendis nihil
+            laudantium in labore quae. Labore exercitationem quia quas ad
+            accusamus blanditiis quasi. Assumenda itaque nam neque repellendus
+            alias veritatis beatae ea eligendi eius, commodi accusamus. Expedita
+            accusamus aperiam, ea possimus maxime quibusdam animi provident
+            assumenda facere quia sequi cumque voluptatem enim voluptatibus,
+            quidem eum ab atque! Placeat, suscipit facere. Similique hic,
+            blanditiis sit facilis explicabo eligendi cum sint sequi aliquam
+            architecto odio molestiae accusamus modi iusto itaque, unde nihil
+            repellat aperiam suscipit. Dolorem repudiandae adipisci id. Qui quos
+            error eaque. Culpa doloremque fugiat rem consequuntur illum aperiam.
+            Ex quo at fuga quos, rerum, facere error dolores, laboriosam tempora
+            quae illo nam provident et repellendus adipisci? Debitis ullam quam
+            cum laboriosam molestias voluptate deserunt!
+          </p>
+
+          <h2 id="Final-Result">Final Result</h2>
+          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+            <Image
+              className=" object-cover"
+              src="/0001.png"
+              width={400}
+              height={400}
+              alt="Picture of the author"
+              id="image"
+            />
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+            assumenda dolorem praesentium. Similique incidunt omnis atque quam
+            odio mollitia impedit corporis accusantium obcaecati, officiis
+            repellendus beatae hic facilis voluptatibus facere?
+          </p>
+
+          
         </div>
-      </div>
-    </div>
+
+        <div className="col-span-1">
+          <PageNavigation />
+        </div>
+        <div className="col-span-1">
+          <Navbar />
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
+
+export default Experiments;

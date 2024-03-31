@@ -21,7 +21,7 @@ import PageNavigation from "./components/experimentNavigation";
 
 
 
-const inter = Open_Sans({ subsets: ["latin"] });
+const inter = Arimo({ subsets: ["latin"] });
 
   
 
