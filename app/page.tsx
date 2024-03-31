@@ -308,7 +308,7 @@ export default function Home() {
             </Link>}
 
             {isMouseOverExperiments && <Link id='homepageLink'
-              href="/experiments/Experiment3"
+              href="/experiments/Experiment1"
               style={{
                 position: 'absolute',
                 top: '50%',

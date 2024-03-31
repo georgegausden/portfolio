@@ -31,7 +31,10 @@ function Experiments() {
     return null;
   }
 
-  
+  // Now you can use the experiment data
+  console.log(experiment);
+
+
 
   return (
     <AnimatePresence>
@@ -64,7 +67,10 @@ function Experiments() {
           <h2 id="Inspiration">Inspiration</h2>
 
           <p>
-            {experiment.initialConcept}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+            assumenda dolorem praesentium. Similique incidunt omnis atque quam
+            odio mollitia impedit corporis accusantium obcaecati, officiis
+            repellendus beatae hic facilis voluptatibus facere?
           </p>
 
           <h2 id="Iterations">Iterations</h2>

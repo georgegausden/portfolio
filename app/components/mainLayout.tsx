@@ -12,8 +12,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const isHomePage = usePathname() === '/';
 
   return (
-    <div className={isHomePage ? '' : 'ml-[39px] mt-[87px] relative scroll-smooth'}>
+    <div id = "backgroundEffect">
+    <div className={isHomePage ? '' : 'ml-[39px] mt-[87px] relative scroll-smooth z-10'}>
       {children}
+    </div>
     </div>
   );
 };
