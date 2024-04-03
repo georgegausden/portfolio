@@ -51,8 +51,8 @@ function Projects() {
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
-              src="/0001.png"
-              width={400}
+              src="/vfx2.webp"
+              width={700}
               height={400}
               alt="Picture of the author"
               id="image"
@@ -63,38 +63,14 @@ function Projects() {
           <p>
           The first stage involved taking pictures in situ of the space. We chose to focus on a specific part of the underground network. We took pictures and measurements and noted them down in a PDF. 
           </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sequi
-            dolore, quidem asperiores delectus similique voluptatem minus
-            voluptatibus aut? Corrupti hic illo harum recusandae excepturi,
-            ullam rem molestiae dicta quod vel nihil, nam, amet laborum
-            voluptatum itaque a? Qui quis adipisci laborum enim alias non
-            recusandae, repellendus iste nihil sit nostrum quod blanditiis
-            cumque neque velit quia corporis nesciunt, ipsum et, eligendi
-            tenetur deserunt nam. Porro eos error officia dolor eius, quod
-            aspernatur sequi placeat. Facere, possimus. Qui ab impedit
-            perspiciatis repellat dolorum saepe, mollitia, perferendis nihil
-            laudantium in labore quae. Labore exercitationem quia quas ad
-            accusamus blanditiis quasi. Assumenda itaque nam neque repellendus
-            alias veritatis beatae ea eligendi eius, commodi accusamus. Expedita
-            accusamus aperiam, ea possimus maxime quibusdam animi provident
-            assumenda facere quia sequi cumque voluptatem enim voluptatibus,
-            quidem eum ab atque! Placeat, suscipit facere. Similique hic,
-            blanditiis sit facilis explicabo eligendi cum sint sequi aliquam
-            architecto odio molestiae accusamus modi iusto itaque, unde nihil
-            repellat aperiam suscipit. Dolorem repudiandae adipisci id. Qui quos
-            error eaque. Culpa doloremque fugiat rem consequuntur illum aperiam.
-            Ex quo at fuga quos, rerum, facere error dolores, laboriosam tempora
-            quae illo nam provident et repellendus adipisci? Debitis ullam quam
-            cum laboriosam molestias voluptate deserunt!
-          </p>
+          
 
           <h2 id="second-stage">Second Stage</h2>
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
-              src="/0001.png"
-              width={400}
+              src="/vfx.webp"
+              width={700}
               height={400}
               alt="Picture of the author"
               id="image"
@@ -107,12 +83,12 @@ function Projects() {
 
           <h2 id="third-stage">Third Stage</h2>
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
-            <Image
+            <iframe
               className=" object-cover"
-              src="/0001.png"
-              width={400}
+              src="/vfxvideo.mp4"
+              width={700}
               height={400}
-              alt="Picture of the author"
+              
               id="image"
             />
           </div>

@@ -121,7 +121,7 @@ export default function Home() {
             </a>
 
             {isMouseOver3D && <Link id='homepageLink'
-              href="/3d"
+              href="/cgi"
               style={{
                 position: 'absolute',
                 bottom: '50%',
