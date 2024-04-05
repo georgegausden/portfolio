@@ -65,7 +65,7 @@ export default function Home() {
                 backgroundColor: "#F1E7DD"
               }}
               className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}>
-              <h6>About</h6>
+              <h6 className="text-black">About</h6>
             </a>
 
             {isMouseOverAbout && <Link href="/about"
@@ -78,7 +78,7 @@ export default function Home() {
                 backgroundColor: "#F1E7DD"
               }}
               className={`w-32 px-2 h-auto m-0 text-black ease-in-out duration-500 transition-all`}>
-              <h6>Biography</h6>
+              <h6 className="text-black">Biography</h6>
             </Link>}
 
 
