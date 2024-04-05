@@ -27,7 +27,7 @@ function Projects() {
         <h1 className="col-span-6 mt-0">Humanoid</h1>
 
         <div className="col-span-4">
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto items-center flex justify-center rounded-sm">
             <iframe
               className=" object-cover"
               src="/GeorgeG_WalkCycle_Final.mp4"
@@ -48,7 +48,7 @@ function Projects() {
 
           <h2 id="first-stage">First Stage</h2>
 
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
               src="/test.png"

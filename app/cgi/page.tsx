@@ -48,7 +48,7 @@ function Projects() {
 
           <h2 id="first-stage">First Stage</h2>
 
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
               src="/vfx2.webp"
@@ -66,7 +66,7 @@ function Projects() {
           
 
           <h2 id="second-stage">Second Stage</h2>
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
               src="/vfx.webp"
@@ -82,7 +82,7 @@ function Projects() {
           </p>
 
           <h2 id="third-stage">Third Stage</h2>
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <iframe
               className=" object-cover"
               src="/vfxvideo.mp4"

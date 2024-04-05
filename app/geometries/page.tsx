@@ -29,7 +29,7 @@ function Experiments() {
         >Geometries</h1>
 
         <div className="col-span-4">
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto bg-gray-100  items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
               src="/geometries1.jpg"
@@ -50,11 +50,11 @@ function Experiments() {
 
           <h2 id="Iterations">Iterations</h2>
 
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto bg-gray-100  items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
-              src="/0001.png"
-              width={400}
+              src="/geometries2.jpg"
+              width={700}
               height={400}
               alt="Picture of the author"
               id="image"
@@ -95,11 +95,11 @@ function Experiments() {
           </p>
 
           <h2 id="Final-Result">Final Result</h2>
-          <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
-              src="/0001.png"
-              width={400}
+              src="/geometries3.jpg"
+              width={700}
               height={400}
               alt="Picture of the author"
               id="image"
