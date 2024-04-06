@@ -16,6 +16,33 @@ export default function Home() {
   const [isMouseOverContact, setisMouseOverContact] = useState(false);
   const [isMouseOverExperiments, setisMouseOverExperiments] = useState(false);
 
+  const setAllMouseOverStatesToFalse = () => {
+    setIsMouseOverAbout(false);
+    setisMouseOver3D(false);
+    setisMouseOverContact(false);
+    setisMouseOverExperiments(false);
+  }
+
+  const handleMouseOver = (section: any) => {
+    setAllMouseOverStatesToFalse();
+    switch (section) {
+      case 'about':
+        setIsMouseOverAbout(true);
+        break;
+      case '3D':
+        setisMouseOver3D(true);
+        break;
+      case 'contact':
+        setisMouseOverContact(true);
+        break;
+      case 'experiments':
+        setisMouseOverExperiments(true);
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <AnimatePresence>
       <div>
@@ -55,7 +82,7 @@ export default function Home() {
             </svg>
             <a
             id = 'homepageLink'
-              onMouseEnter={() => setIsMouseOverAbout(true)}
+              onMouseEnter={() => {setAllMouseOverStatesToFalse(); setIsMouseOverAbout(true)}}
               
 
               style={{
@@ -120,7 +147,7 @@ export default function Home() {
             </svg>
             <a
             id = 'homepageLink'
-              onMouseEnter={() => setisMouseOver3D(true)}
+            onMouseEnter={() => {setAllMouseOverStatesToFalse(); setisMouseOver3D(true)}}
               
               style={{
                 position: 'absolute',
@@ -214,7 +241,7 @@ export default function Home() {
             </svg>
             <a
             id = 'homepageLink'
-              onMouseEnter={() => setisMouseOverContact(true)}
+            onMouseEnter={() => {setAllMouseOverStatesToFalse(); setisMouseOverContact(true)}}
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -309,7 +336,7 @@ export default function Home() {
             </svg>
             <a
             id = 'homepageLink'
-            onMouseEnter={() => setisMouseOverExperiments(true)}
+            onMouseEnter={() => {setAllMouseOverStatesToFalse(); setisMouseOverExperiments(true)}}
               style={{
                 position: 'absolute',
                 top: '50%',
