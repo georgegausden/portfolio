@@ -45,7 +45,7 @@ function Experiments() {
           <h2 id="Inspiration">Inspiration</h2>
 
           <p>
-            I've always been interested in the way that trigonometric functions can be used to create complex shapes. I wanted to experiment with this concept and see how far I could push it. Most of the iterations involved combining sine, cosine and tangent functions in different ways to create interesting patterns. 
+          I've always been interested in the way that trigonometric functions can be used to create complex shapes. I wanted to experiment with this concept and see how far I could push it. Most of the iterations involved combining sine, cosine and tangent functions in different ways to create interesting patterns. 
           </p>
 
           <h2 id="Iterations">Iterations</h2>
