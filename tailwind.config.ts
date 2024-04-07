@@ -22,6 +22,8 @@ const config: Config = {
         // Add more custom column configurations if needed
       },
     },
+
+    
   },
   plugins: [],
 };

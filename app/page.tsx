@@ -334,17 +334,17 @@ export default function Home() {
                 }}
               />
 
-              {isMouseOverExperiments && <line
+              {/* {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="75%" y2="75%"
                 stroke='black'
                 transform="translate(20,20)"
-              />}
+              />} */}
 
-              {isMouseOverExperiments && <line
+              {/* {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="75%" y2="25%"
                 stroke='black'
                 transform="translate(20,20)"
-              />}
+              />} */}
 
               {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="75%" y2="50%"
@@ -352,11 +352,11 @@ export default function Home() {
                 transform="translate(20,20)"
               />}
 
-              {isMouseOverExperiments && <line
+              {/* {isMouseOverExperiments && <line
                 x1="50%" y1="50%" x2="50%" y2="75%"
                 stroke='black'
                 transform="translate(20,20)"
-              />}
+              />} */}
 
 
             </svg>
@@ -374,7 +374,7 @@ export default function Home() {
               <h6>Experiments</h6>
             </a>
 
-            {isMouseOverExperiments && <Link id='homepageLink'
+            {/* {isMouseOverExperiments && <Link id='homepageLink'
               href="/geometries"
               style={{
                 position: 'absolute',
@@ -388,10 +388,10 @@ export default function Home() {
 
               className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Geometries</h6>
-            </Link>}
+            </Link>} */}
 
             {isMouseOverExperiments && <Link id='homepageLink'
-              href="/experiments/Experiment1"
+              href="/geometries"
               style={{
                 position: 'absolute',
                 top: '50%',
@@ -400,10 +400,10 @@ export default function Home() {
               }}
 
               className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
-              <h6>Experiment #3</h6>
+              <h6>Geometry</h6>
             </Link>}
 
-            {isMouseOverExperiments && <Link id='homepageLink'
+            {/* {isMouseOverExperiments && <Link id='homepageLink'
               href="/experiments"
               style={{
                 position: 'absolute',
@@ -427,7 +427,7 @@ export default function Home() {
 
               className={`w-32 h-auto m-0 text-black ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiment #4</h6>
-            </Link>}
+            </Link>} */}
 
           </div>
         </div>
