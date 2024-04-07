@@ -34,7 +34,7 @@ const ProjectNavigation: React.FC<ProjectNavigationProps> = ({ sections }) => {
   }, []);
 
   return (
-    <nav className="col-start-5 sticky top-[91px]">
+    <nav className="col-start-5 sticky top-[91px] ">
       <div className="grid grid-rows-auto text-center text-green-950 gap-[91px] ">
         {sections.map(section => (
           <button key={section}>

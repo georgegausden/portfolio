@@ -17,7 +17,7 @@ function Diorama() {
   return (
     <AnimatePresence>
       <motion.div
-        className="grid grid-cols-6"
+        className="md:grid md:grid-cols-1 lg:grid-cols-6"
         
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -51,10 +51,10 @@ function Diorama() {
           
         </div>
 
-        <div className="col-span-1 md:visible sm:collapse">
+        <div className="col-span-1">
           <ProjectNavigation sections={['Initial Concept',]} />
         </div>
-        <div className="col-span-1 md:visible sm:collapse">
+        <div className="col-span-1">
           <Navbar />
         </div>
       </motion.div>
