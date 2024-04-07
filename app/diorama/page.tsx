@@ -26,7 +26,7 @@ function Diorama() {
       >
         <h1 className="col-span-6 mt-0">Low Poly Diorama</h1>
 
-        <div className="col-span-4">
+        <div className="md:col-span-4 sm:col-span-6">
           <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
             <iframe
               className=" object-cover"
@@ -49,10 +49,10 @@ function Diorama() {
           
         </div>
 
-        <div className="col-span-1">
+        <div className="col-span-1 md:visible sm:collapse">
           <ProjectNavigation />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 md:visible sm:collapse">
           <Navbar />
         </div>
       </motion.div>
