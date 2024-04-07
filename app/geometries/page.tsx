@@ -60,7 +60,7 @@ function Experiments() {
               id="image"
             />
           </div>
-          <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
+          <div className=" w-full h-auto mt-5 bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
               src="/geometries3.jpg"

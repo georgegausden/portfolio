@@ -97,21 +97,12 @@ function Projects() {
           Texturing and preparing the animation assets. We textured the space and lit it, trying as best as we could to match the conditions of the actual space. We then animated the butterflies and moss to grow up the stairs. We also played around with lighting to try to give the illusion of nature coming into the scene.
           </p>
 
-          <h2 id="Final Thoughts">Final Thoughts</h2>
           
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-            assumenda dolorem praesentium. Similique incidunt omnis atque quam
-            odio mollitia impedit corporis accusantium obcaecati, officiis
-            repellendus beatae hic facilis voluptatibus facere?
-          </p>
-
           
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation sections={['Initial Concept', 'First Stage', 'Second Stage', 'Third Stage', 'Final Thoughts']} />
+          <ProjectNavigation sections={['Initial Concept', 'First Stage', 'Second Stage', 'Third Stage']} />
         </div>
         <div className="col-span-1">
           <Navbar />
