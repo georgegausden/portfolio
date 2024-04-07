@@ -39,13 +39,13 @@ function Projects() {
           </div>
 
 
-          <h2 id="initial-concept">Initial Concept</h2>
+          <h2 id="Initial Concept">Initial Concept</h2>
 
           <p>
           The prompt for this project was to create a humanoid creature. I had to sculpt, texture, rig and then animate its walk. 
           </p>
 
-          <h2 id="first-stage">First Stage</h2>
+          <h2 id="First Stage">First Stage</h2>
 
           <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
             <Image
@@ -63,7 +63,7 @@ function Projects() {
           </p>
           
 
-          <h2 id="second-stage">Second Stage</h2>
+          <h2 id="Second Stage">Second Stage</h2>
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
@@ -79,7 +79,7 @@ function Projects() {
            In the second stage, we had to refine the character. I chose the wire character because it was the most interesting and the most challenging. I had to make sure that the character was humanoid enough to walk like a human. By this stage, I was starting to get a feel for the textures and colours I would want to use. Although later on I would move to a more green palette, the idea of wires being a key feature of the character was already fleshed out.  
           </p>
 
-          <h2 id="third-stage">Third Stage</h2>
+          <h2 id="Third Stage">Third Stage</h2>
           <div className=" w-full h-auto bg-gray-200 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
@@ -98,7 +98,7 @@ function Projects() {
             repellendus beatae hic facilis voluptatibus facere?
           </p>
 
-          <h2 id="final-thoughts">Final Thoughts</h2>
+          <h2 id="Final Thoughts">Final Thoughts</h2>
           
 
           <p>
@@ -112,7 +112,7 @@ function Projects() {
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation />
+          <ProjectNavigation sections={['Initial Concept', 'First Stage', 'Second Stage', 'Third Stage']} />
         </div>
         <div className="col-span-1">
           <Navbar />

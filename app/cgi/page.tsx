@@ -40,13 +40,13 @@ function Projects() {
 
           
 
-          <h2 id="initial-concept">Initial Concept</h2>
+          <h2 id="Initial Concept">Initial Concept</h2>
 
           <p>
           A project done in the context of a 3D modelling class. It involved realistically reproducing one part of Montreal’s underground city and then animating on top of it. This project was done in collaboration with Alex Cho. 
           </p>
 
-          <h2 id="first-stage">First Stage</h2>
+          <h2 id="First Stage">First Stage</h2>
 
           <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
@@ -65,7 +65,7 @@ function Projects() {
           </p>
           
 
-          <h2 id="second-stage">Second Stage</h2>
+          <h2 id="Second Stage">Second Stage</h2>
           <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
@@ -81,7 +81,7 @@ function Projects() {
           Sculpting the scene using iSpy and Blender. We first had to make sure that the measurements matched with the real world ones. 
           </p>
 
-          <h2 id="third-stage">Third Stage</h2>
+          <h2 id="Third Stage">Third Stage</h2>
           <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <iframe
               className=" object-cover"
@@ -97,7 +97,7 @@ function Projects() {
           Texturing and preparing the animation assets. We textured the space and lit it, trying as best as we could to match the conditions of the actual space. We then animated the butterflies and moss to grow up the stairs. We also played around with lighting to try to give the illusion of nature coming into the scene.
           </p>
 
-          <h2 id="final-thoughts">Final Thoughts</h2>
+          <h2 id="Final Thoughts">Final Thoughts</h2>
           
 
           <p>
@@ -111,7 +111,7 @@ function Projects() {
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation />
+          <ProjectNavigation sections={['Initial Concept', 'First Stage', 'Second Stage', 'Third Stage', 'Final Thoughts']} />
         </div>
         <div className="col-span-1">
           <Navbar />

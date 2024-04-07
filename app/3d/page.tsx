@@ -147,7 +147,7 @@ function Projects() {
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation />
+          <ProjectNavigation sections={[]} />
         </div>
         <div className="col-span-1">
           <Navbar />

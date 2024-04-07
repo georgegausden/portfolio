@@ -40,7 +40,7 @@ function Diorama() {
 
          
 
-          <h2 id="initial-concept">Initial Concept</h2>
+          <h2 id="Initial Concept">Initial Concept</h2>
 
           <p>
           This project was done in the context of a 3D modelling course. We had to come up with a low-poly landscape concept, sculpt it and then animate it.  
@@ -50,7 +50,7 @@ function Diorama() {
         </div>
 
         <div className="col-span-1 md:visible sm:collapse">
-          <ProjectNavigation />
+          <ProjectNavigation sections={['Initial Concept',]} />
         </div>
         <div className="col-span-1 md:visible sm:collapse">
           <Navbar />
