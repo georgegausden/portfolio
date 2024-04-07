@@ -120,7 +120,7 @@ function Experiments() {
         </div>
 
         <div className="col-span-1">
-          <PageNavigation />
+          <PageNavigation sections={[]} />
         </div>
         <div className="col-span-1">
           <Navbar />
