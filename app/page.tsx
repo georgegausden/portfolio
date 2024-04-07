@@ -144,6 +144,16 @@ export default function Home() {
                 stroke='black'
                 transform="translate(20,-20)"
               />}
+
+              {isMouseOver3D&&<line
+                x1='50%'
+                y1='50%'
+                x2='50%'
+                y2='75%'
+
+                stroke='black'
+                transform="translate(20,-20)"
+              />}
             </svg>
             <a
             id = 'homepageLink'
@@ -191,6 +201,22 @@ export default function Home() {
               
               className={`w-32 h-auto m-0 text-white hover:text-white ease-in-out duration-500 transition-all px-2`}>
               <h6>Humanoid</h6>
+            </Link>}
+
+
+            {isMouseOver3D && <Link id='homepageLink'
+              href="/diorama"
+              style={{
+                position: 'absolute',
+                bottom: '25%',
+                left: '50%',
+                backgroundColor: "#000000"
+              }}
+
+              // when the user hovers over one of the links, show the image of the project?
+              
+              className={`w-32 h-auto m-0 text-white hover:text-white ease-in-out duration-500 transition-all px-2`}>
+              <h6>Diorama</h6>
             </Link>}
           </div>
         </div>

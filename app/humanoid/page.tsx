@@ -38,12 +38,11 @@ function Projects() {
             />
           </div>
 
-          <p id="caption">Caption of Image</p>
 
           <h2 id="initial-concept">Initial Concept</h2>
 
           <p>
-          The prompt for this project was to create a humanoid creature. I had to sculpt it, texture it, rig it and then animate its walk. 
+          The prompt for this project was to create a humanoid creature. I had to sculpt, texture, rig and then animate its walk. 
           </p>
 
           <h2 id="first-stage">First Stage</h2>
@@ -58,7 +57,6 @@ function Projects() {
               id="image"
             />
           </div>
-          <p id="caption">Caption of Image</p>
 
           <p>
           Brainstorming ideas for the creature. I played around with different possible creatures that could exist. I came up with 3 different concepts, one duck/man, a book character and the wire character. The main reasons I rejected the other two ideas was because the duck character seemed a bit overdone and the book character wouldn’t walk necessarily in a human way. 

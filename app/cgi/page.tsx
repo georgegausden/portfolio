@@ -38,7 +38,7 @@ function Projects() {
             />
           </div>
 
-          <p id="caption">Caption of Image</p>
+          
 
           <h2 id="initial-concept">Initial Concept</h2>
 
@@ -58,7 +58,7 @@ function Projects() {
               id="image"
             />
           </div>
-          <p id="caption">Caption of Image</p>
+          
 
           <p>
           The first stage involved taking pictures in situ of the space. We chose to focus on a specific part of the underground network. We took pictures and measurements and noted them down in a PDF. 
