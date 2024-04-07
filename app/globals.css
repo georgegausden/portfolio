@@ -4,31 +4,31 @@
 
 @layer components{
   h1{
-    @apply font-black text-8xl my-20;
+    @apply font-black  lg:text-8xl my-20;
   }
 
   h2{
-    @apply font-medium text-4xl my-10;
+    @apply font-medium  lg:text-4xl my-10;
   }
 
   h3{
-    @apply font-bold text-2xl my-2;
+    @apply font-bold lg:text-2xl my-2;
   }
 
   h4{
-    @apply font-semibold text-xl my-2;
+    @apply font-semibold lg:text-xl my-2;
   }
 
   h5{
-    @apply font-medium text-lg my-2;
+    @apply font-medium  lg:text-lg my-2;
   }
 
   h6{
-    @apply font-normal text-base my-2;
+    @apply font-normal lg:text-base my-2;
   }
 
   p{
-    @apply text-sm py-5 leading-8 tracking-[0.1em];
+    @apply md:text-xs lg:text-sm py-5 leading-8 tracking-[0.1em];
   }
 
   ul{

@@ -17,7 +17,7 @@ function Projects() {
   return (
     <AnimatePresence>
       <motion.div
-        className="grid grid-cols-6"
+        className="md:grid grid-cols-6"
         
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
