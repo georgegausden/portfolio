@@ -43,6 +43,14 @@
     @apply rounded-sm hover:scale-[102%] ease-in-out duration-500 transition-transform m-10;
   }
 
+  iframe{
+    @apply rounded-sm hover:scale-[102%] ease-in-out duration-500 transition-transform m-10 aspect-video border-none; 
+  }
+
+  video{
+    @apply rounded-sm hover:scale-[102%] ease-in-out duration-500 transition-transform m-10 aspect-video;
+  }
+
   #caption{
     @apply font-bold text-sm py-2;
   }

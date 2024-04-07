@@ -28,13 +28,17 @@ function Projects() {
 
         <div className="col-span-4">
           <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
-            <iframe
+            <video
               className=" object-cover"
               src="/vfxvideo.mp4"
-              width={900}
-              height={400}
-              
+              width='100%'
+              height='100%'
               id="image"
+    autoPlay
+    loop
+    muted
+              
+             
             />
           </div>
 
@@ -82,14 +86,16 @@ function Projects() {
           </p>
 
           <h2 id="Third Stage">Third Stage</h2>
-          <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
-            <iframe
+          <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
+            <video
               className=" object-cover"
               src="/vfxvideo.mp4"
-              width={700}
-              height={400}
-              
+              width='100%'
+              height='100%'
               id="image"
+    autoPlay
+    loop
+    muted
             />
           </div>
 

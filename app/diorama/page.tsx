@@ -27,14 +27,16 @@ function Diorama() {
         <h1 className="col-span-6 mt-0">Low Poly Diorama</h1>
 
         <div className="md:col-span-4 sm:col-span-6">
-          <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
-            <iframe
+          <div className=" w-full h-auto  items-center flex justify-center  rounded-sm">
+            <video
               className=" object-cover"
               src="/0001.mp4"
-              width={900}
-              height={400}
-              
+              width='95%'
+              height='100%'
               id="image"
+    autoPlay
+    loop
+    muted
             />
           </div>
 
