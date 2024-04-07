@@ -1,7 +1,11 @@
 'use client'
 import React, { useEffect, useState } from "react";
 
-function PageNavigation() {
+interface PageNavigationProps {
+  sections: string[];
+}
+
+const PageNavigation: React.FC<PageNavigationProps> = ({ sections }) => {
   const [activeId, setActiveId] = useState('');
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
@@ -33,9 +37,16 @@ useEffect(() => {
     <nav className="col-start-5 sticky top-[91px]">
        
       <div className="grid grid-rows-auto text-center text-green-950 gap-[91px] ">
-        <button><a className={activeId === 'Inspiration' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'Inspiration')}>Inspiration</a></button>
-        <button><a className={activeId === 'Iterations' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'Iterations')}>Iterations</a></button>
-        <button><a className={activeId === 'Final-Result' ? 'font-extrabold' : ''} onClick={(e) => handleClick(e, 'Final-Result')}>Final Result</a></button>
+      {sections.map(section => (
+          <button key={section}>
+            <a 
+              className={activeId === section ? 'font-extrabold' : ''} 
+              onClick={(e) => handleClick(e, section)}
+            >
+              {section}
+            </a>
+          </button>
+        ))}
       </div>
     </nav>
   );
