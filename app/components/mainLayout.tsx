@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div id = "backgroundEffect">
-    <div className={isHomePage ? '' : 'ml-[39px] mt-[87px] relative scroll-smooth z-10 sm:mr-[39px]'}>
+    <div className={isHomePage ? '' : 'sm:ml-[39px] mt-[87px] relative scroll-smooth z-10 sm:mr-[39px] max-w-screen-xl xl:mx-auto'}>
       {children}
     </div>
     </div>
