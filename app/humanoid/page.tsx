@@ -6,6 +6,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import ProjectNavigation from "../components/projectNavigation";
 import { AnimatePresence, motion } from "framer-motion";
+/* eslint-disable */
 
 interface ExperimentProps {
   title: string;
