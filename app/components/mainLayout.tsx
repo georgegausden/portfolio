@@ -13,8 +13,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const mobileMessage = `Mobile website in development :-)`
 
   return (
-    <div className="flex flex-col justify-center h-screen">
-      <div className='md:hidden flex justify-center mx-5'>
+    <div >
+      <div className='md:hidden flex justify-center mx-5 flex-col h-screen'>
         <h1>{mobileMessage}</h1>
       </div>
       <div className='hidden md:block'>
