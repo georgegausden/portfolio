@@ -42,7 +42,7 @@ function Projects() {
 
 
           <h2 id="Initial Concept">Initial Concept</h2>
-
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p>
           The prompt for this project was to create a humanoid creature. I had to sculpt, texture, rig and then animate its walk. 
           </p>
@@ -59,7 +59,7 @@ function Projects() {
               id="image"
             />
           </div>
-
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p>
           Brainstorming ideas for the creature. I played around with different possible creatures that could exist. I came up with 3 different concepts, one duck/man, a book character and the wire character. The main reasons I rejected the other two ideas was because the duck character seemed a bit overdone and the book character wouldn’t walk necessarily in a human way. 
           </p>
@@ -76,7 +76,7 @@ function Projects() {
               id="image"
             />
           </div>
-
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p>
            In the second stage, we had to refine the character. I chose the wire character because it was the most interesting and the most challenging. I had to make sure that the character was humanoid enough to walk like a human. By this stage, I was starting to get a feel for the textures and colours I would want to use. Although later on I would move to a more green palette, the idea of wires being a key feature of the character was already fleshed out.  
           </p>
@@ -92,7 +92,7 @@ function Projects() {
               id="image"
             />
           </div>
-
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p>
             In this stage, I focused on sculpting out the body, texturing and rigging the character. I had to make sure that the character was able to move in a way that was believable. I also had to make sure that the textures were realistic enough to be convincing.
           </p>
@@ -111,7 +111,7 @@ function Projects() {
     muted
             />
           </div>
-
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p>
             Finally, I made a walkcycle using the character's rigging system. 
           </p>
