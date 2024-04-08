@@ -48,11 +48,25 @@ function Diorama() {
           This project was done in the context of a 3D modelling course. We had to come up with a low-poly landscape concept, sculpt it and then animate it.  
           </p>
 
+          <h2 id="Sketch">Sketch</h2>
+
+          <div className=" w-full h-auto bg-gray-50 items-center flex justify-center rounded-sm">
+            <Image
+              className=" object-cover"
+              src="/GeorgeG_Low_Poly_Diaroama_Concept.png"
+              width={700}
+              height={400}
+              alt="Picture of the author"
+              id="image"
+            />
+          </div>
+
+          
           
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation sections={['Initial Concept',]} />
+          <ProjectNavigation sections={['Initial Concept','Sketch']} />
         </div>
         <div className="col-span-1">
           <Navbar />

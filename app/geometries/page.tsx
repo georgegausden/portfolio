@@ -40,7 +40,7 @@ function Experiments() {
             />
           </div>
 
-          <p id="caption">Caption of Image</p>
+          
 
           <h2 id="Inspiration">Inspiration</h2>
 

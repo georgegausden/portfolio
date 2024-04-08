@@ -50,7 +50,7 @@ function Projects() {
           A project done in the context of a 3D modelling class. It involved realistically reproducing one part of Montreal’s underground city and then animating on top of it. This project was done in collaboration with Alex Cho. 
           </p>
 
-          <h2 id="First Stage">First Stage</h2>
+          <h2 id="Measuring">Measuring</h2>
 
           <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
@@ -69,7 +69,7 @@ function Projects() {
           </p>
           
 
-          <h2 id="Second Stage">Second Stage</h2>
+          <h2 id="Modelling">Modelling</h2>
           <div className=" w-full h-auto bg-gray-100 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
@@ -85,7 +85,7 @@ function Projects() {
           Sculpting the scene using iSpy and Blender. We first had to make sure that the measurements matched with the real world ones. 
           </p>
 
-          <h2 id="Third Stage">Third Stage</h2>
+          <h2 id="Animating">Animating</h2>
           <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
             <video
               className=" object-cover"
@@ -108,7 +108,7 @@ function Projects() {
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation sections={['Initial Concept', 'First Stage', 'Second Stage', 'Third Stage']} />
+          <ProjectNavigation sections={['Initial Concept', 'Measuring', 'Modelling', 'Animating']} />
         </div>
         <div className="col-span-1">
           <Navbar />
