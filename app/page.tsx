@@ -45,9 +45,9 @@ export default function Home() {
 
   return (
     <AnimatePresence>
-      <div>
+      {/* <div>
         <h6 className="text-black absolute top-5 right-10 font-extralight">George Gausden</h6>
-      </div>
+      </div> */}
       <motion.main className="grid grid-cols-2 h-screen"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

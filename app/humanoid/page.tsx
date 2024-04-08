@@ -47,7 +47,7 @@ function Projects() {
           The prompt for this project was to create a humanoid creature. I had to sculpt, texture, rig and then animate its walk. 
           </p>
 
-          <h2 id="First Stage">First Stage</h2>
+          <h2 id="Brainstorming">Brainstorming</h2>
 
           <div className=" w-full h-auto bg-gray-50  items-center flex justify-center rounded-sm">
             <Image
@@ -65,7 +65,7 @@ function Projects() {
           </p>
           
 
-          <h2 id="Second Stage">Second Stage</h2>
+          <h2 id="Sketching">Sketching</h2>
           <div className=" w-full h-auto bg-gray-50 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
@@ -81,12 +81,12 @@ function Projects() {
            In the second stage, we had to refine the character. I chose the wire character because it was the most interesting and the most challenging. I had to make sure that the character was humanoid enough to walk like a human. By this stage, I was starting to get a feel for the textures and colours I would want to use. Although later on I would move to a more green palette, the idea of wires being a key feature of the character was already fleshed out.  
           </p>
 
-          <h2 id="Third Stage">Third Stage</h2>
+          <h2 id="Modelling">Modelling</h2>
           <div className=" w-full h-auto bg-gray-50 items-center flex justify-center rounded-sm">
             <Image
               className=" object-cover"
-              src="/0001.png"
-              width={400}
+              src="/GeorgeG_Wireman_Model.png"
+              width={700}
               height={400}
               alt="Picture of the author"
               id="image"
@@ -94,27 +94,33 @@ function Projects() {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-            assumenda dolorem praesentium. Similique incidunt omnis atque quam
-            odio mollitia impedit corporis accusantium obcaecati, officiis
-            repellendus beatae hic facilis voluptatibus facere?
+            In this stage, I focused on sculpting out the body, texturing and rigging the character. I had to make sure that the character was able to move in a way that was believable. I also had to make sure that the textures were realistic enough to be convincing.
           </p>
 
-          <h2 id="Final Thoughts">Final Thoughts</h2>
+          <h2 id="Animation">Animation</h2>
           
+          <div className=" w-full h-auto  items-center flex justify-center rounded-sm">
+            <video
+              className=" "
+              src="/GeorgeG_WalkCycle_Final.mp4"
+              width='95%'
+              height='100%'
+              id="image"
+    autoPlay
+    loop
+    muted
+            />
+          </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-            assumenda dolorem praesentium. Similique incidunt omnis atque quam
-            odio mollitia impedit corporis accusantium obcaecati, officiis
-            repellendus beatae hic facilis voluptatibus facere?
+            Finally, I made a walkcycle using the character's rigging system. 
           </p>
 
           
         </div>
 
         <div className="col-span-1">
-          <ProjectNavigation sections={['Initial Concept', 'First Stage', 'Second Stage', 'Third Stage']} />
+          <ProjectNavigation sections={['Initial Concept', 'Brainstorming', 'Sketching', 'Modelling', 'Animation']} />
         </div>
         <div className="col-span-1">
           <Navbar />
