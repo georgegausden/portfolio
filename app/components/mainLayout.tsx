@@ -10,12 +10,18 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   
   const isHomePage = usePathname() === '/';
+  const mobileMessage = `Mobile website in development :-)`
 
   return (
-    <div id = "backgroundEffect">
-    <div className={isHomePage ? '' : 'sm:ml-[39px] mt-[87px] relative scroll-smooth z-10 sm:mr-[39px] max-w-screen-xl xl:mx-auto'}>
-      {children}
-    </div>
+    <div className="flex flex-col justify-center h-screen">
+      <div className='md:hidden flex justify-center mx-5'>
+        <h1>{mobileMessage}</h1>
+      </div>
+      <div className='hidden md:block'>
+        <div className={isHomePage ? '' : 'sm:ml-[39px] mt-[87px] relative scroll-smooth z-10 sm:mr-[39px] max-w-screen-xl xl:mx-auto'}>
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
