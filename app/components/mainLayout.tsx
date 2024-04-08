@@ -7,6 +7,8 @@ interface MainLayoutProps {
   children: React.ReactNode;
 }
 
+
+
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   
   const isHomePage = usePathname() === '/';
@@ -14,6 +16,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div >
+      
       <div className='md:hidden flex justify-center mx-5 flex-col h-screen'>
         <h1>{mobileMessage}</h1>
       </div>
