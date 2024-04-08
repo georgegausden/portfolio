@@ -18,7 +18,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <h1>{mobileMessage}</h1>
       </div>
       <div className='hidden md:block'>
-        <div className={isHomePage ? '' : 'sm:ml-[39px] mt-[87px] relative scroll-smooth z-10 sm:mr-[39px] max-w-screen-xl xl:mx-auto'}>
+        <div className={isHomePage ? '' : 'sm:ml-[39px] mt-[87px] mb-[87px] relative scroll-smooth z-10 sm:mr-[39px] max-w-screen-xl xl:mx-auto'}>
           {children}
         </div>
       </div>

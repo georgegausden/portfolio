@@ -7,6 +7,7 @@ import Navbar from "../components/navbar";
 import PageNavigation from "../components/experimentNavigation";
 import { AnimatePresence, motion } from "framer-motion";
 
+
 interface ExperimentProps {
   title: string;
   date: number;
