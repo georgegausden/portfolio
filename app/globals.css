@@ -132,3 +132,13 @@ body {
   }
 }
 
+::-moz-selection {
+  background: #BAC5B6;
+}
+::-webkit-selection {
+  background: #BAC5B6;
+}
+::selection {
+  background: #BAC5B6;
+}
+
