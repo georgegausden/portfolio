@@ -20,7 +20,11 @@ export default function Test(){
             
             <Branch parent={branches[0]} name="About" isActive={true} xPosition={25} yPosition={25}></Branch>
 
-            <Branch parent={branches[1]} name="Biography" isActive={true} xPosition={10} yPosition={75}></Branch>
+            <Branch parent={branches[1]} name="Biography" isActive={true} xPosition={25} yPosition={10}></Branch>
+            <Branch parent={branches[1]} name="Biography" isActive={true} xPosition={10} yPosition={10}></Branch>
+            <Branch parent={branches[1]} name="Biography" isActive={true} xPosition={10} yPosition={25}></Branch>
+
+
 
             <Branch parent={branches[0]} name="3D Projects" isActive={true} xPosition={75} yPosition={25}></Branch>
             <Branch parent={branches[0]} name="Contact" isActive={true} xPosition={25} yPosition={75}></Branch>

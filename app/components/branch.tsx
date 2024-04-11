@@ -22,7 +22,7 @@ interface Branch {
 export default function Branch({parent = undefined, name, isActive, xPosition, yPosition}: BranchProps){
 
     let boxWidthPercentage = 5;
-    let boxHeightPercentage = 2;
+    let boxHeightPercentage = 3;
     
     let x1 = parent?.xPosition;
     let y1 = parent?.yPosition;
