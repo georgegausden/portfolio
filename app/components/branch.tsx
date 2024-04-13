@@ -1,31 +1,93 @@
+'use client'
+
+import { ReactNode } from "react";
+
 //here will be the code for my Branch system component
 
 //use svgs
 
 interface BranchProps {
-    parent?: Branch;
+    
     name: string;
     isActive: boolean;
     xPosition: number;
     yPosition: number;
+    children?: ReactNode;
 
 }
 
 interface Branch {
     xPosition: number | undefined;
     yPosition: number | undefined;
-    parent?: Branch;
+    
     name: string;
     isActive: boolean;
+    children?: Branch[];
 }
 
-export default function Branch({parent = undefined, name, isActive, xPosition, yPosition}: BranchProps){
+interface ChildBranchProps {
+    parent: {
+      x1: number;
+      y1: number;
+      isActive: boolean;
+    };
+    name: string;
+    isActive: boolean;
+    xPosition: number;
+    yPosition: number;
+    children?: ReactNode;
+  }
+  
+  const ChildBranch = ({
+    name,
+    xPosition,
+    yPosition,
+  
+  }: ChildBranchProps) => {
+    const x2Box = xPosition;
+    const y2Box = yPosition;
+  
+    let x2BoxString = x2Box.toString() + '%';
+    let y2BoxString = y2Box.toString() + '%';
+  
+    if (x2Box > 50) {
+      x2BoxString = (100 - x2Box).toString() + '%';
+    }
+  
+    if (y2Box > 50) {
+      y2BoxString = (100 - y2Box).toString() + '%';
+    }
+  
+    return (
+      <div>
+        <a
+          id="homepageLink"
+          style={{
+            position: 'absolute',
+            zIndex: 2,
+            ...(y2Box > 50 ? { bottom: y2BoxString } : { top: y2BoxString }),
+            ...(x2Box > 50 ? { right: x2BoxString } : { left: x2BoxString }),
+            backgroundColor: '#F1E7DD',
+          }}
+          
+          className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}
+        >
+          <h6 className="text-black">{name}</h6>
+        </a>
+  
+      </div>
+    );
+  };
+
+
+
+export default function Branch({ name, isActive, xPosition, yPosition, children}: BranchProps){
 
     let boxWidthPercentage = 5;
     let boxHeightPercentage = 3;
-    
-    let x1 = parent?.xPosition;
-    let y1 = parent?.yPosition;
+
+    let x1 = 50;
+    let y1 = 50;
 
     if (x1!= 50){
         if ((x1 ?? 0) > 50){
@@ -42,8 +104,6 @@ export default function Branch({parent = undefined, name, isActive, xPosition, y
             y1 = (y1 ?? 0) + boxHeightPercentage;
         }
     }
-
-
    
 
     let x1String = x1?.toString()+ '%';
@@ -86,53 +146,64 @@ export default function Branch({parent = undefined, name, isActive, xPosition, y
 
 
 
-    return(
+    return (
         <div className="w-full h-full absolute">
-        {/* if there is a parent to the branch, then use those coordinates for the line */}
-        {parent && <div><svg
-        style={{position:'absolute',
-        zIndex: 1,
-        width: '100%',
-        height: '100%',
-        
-        }}>
-            <line
-            style={{position: 'absolute',}}
+            {/* if there is a parent to the branch, then use those coordinates for the line */}
             
-             x1={x1String}
-             y1={y1String}
-             x2={x2String}
-             y2={y2String}
-             stroke='black'   
-             />
-            </svg>
+                <div>
+                    <svg
+                        style={{
+                            position: 'absolute',
+                            zIndex: 1,
+                            width: '100%',
+                            height: '100%',
+                        }}
+                    >
+                        <line
+                            style={{ position: 'absolute' }}
+                            x1={x1String}
+                            y1={y1String}
+                            x2={x2String}
+                            y2={y2String}
+                            stroke="black"
+                        />
+                    </svg>
 
-            <a
-            id='homepageLink'
-            
-            
+                    <a
+                        id="homepageLink"
+                        style={{
+                            position: 'absolute',
+                            zIndex: 2,
+                            ...(y2Box > 50 ? { bottom: y2BoxString } : { top: y2BoxString }),
+                            ...(x2Box > 50 ? { right: x2BoxString } : { left: x2BoxString }),
+                            backgroundColor: '#F1E7DD',
+                        }}
+                        onMouseEnter={() => {
+                            isActive = true;
+                            console.log(isActive)
+                        }}
+                        className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}
+                    >
+                        <h6 className="text-black">{name}</h6>
+                    </a>
 
-            style={{
-                    position: 'absolute',
-                    zIndex: 2,
-                
-                    ...(y2Box > 50 ? { bottom: y2BoxString } : { top: y2BoxString }),
-                    ...(x2Box > 50 ? { right: x2BoxString } : { left: x2BoxString }),
-                    backgroundColor: "#F1E7DD"
-            }}
-            className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}
+                    {isActive && (
+            <ChildBranch
+              parent={{ x1, y1, isActive }}
+              name={name}
+              isActive={isActive}
+              xPosition={xPosition}
+              yPosition={yPosition}
             >
-                <h6 className="text-black">{name}</h6>
-            </a>
-            </div>
-
-            
-
-            
-            
-            
-            }
+              {children}
+            </ChildBranch>
+          )}
+                    
+                </div>
             
         </div>
-    )
+    );
 }
+
+
+
