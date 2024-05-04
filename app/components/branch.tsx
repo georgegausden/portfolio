@@ -9,6 +9,7 @@ import { ReactNode } from "react";
 interface BranchProps {
     
     name: string;
+    colour: string;
     isActive: boolean;
     xPosition: number;
     yPosition: number;
@@ -21,6 +22,7 @@ interface Branch {
     yPosition: number | undefined;
     
     name: string;
+    colour: string;
     isActive: boolean;
     children?: Branch[];
 }
@@ -81,7 +83,7 @@ interface ChildBranchProps {
 
 
 
-export default function Branch({ name, isActive, xPosition, yPosition, children}: BranchProps){
+export default function Branch({ name, colour, isActive, xPosition, yPosition, children}: BranchProps){
 
     let boxWidthPercentage = 5;
     let boxHeightPercentage = 3;
@@ -176,7 +178,7 @@ export default function Branch({ name, isActive, xPosition, yPosition, children}
                             zIndex: 2,
                             ...(y2Box > 50 ? { bottom: y2BoxString } : { top: y2BoxString }),
                             ...(x2Box > 50 ? { right: x2BoxString } : { left: x2BoxString }),
-                            backgroundColor: '#F1E7DD',
+                            backgroundColor: colour,
                         }}
                         onMouseEnter={() => {
                             isActive = true;
