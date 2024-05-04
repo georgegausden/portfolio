@@ -91,7 +91,7 @@ export default function Home() {
                 right: '50%',
                 backgroundColor: "#F1E7DD"
               }}
-              className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}>
+              className={`w-32 h-auto m-0  text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6 className="text-black">About</h6>
             </a>
 
@@ -168,7 +168,7 @@ export default function Home() {
 
               
 
-              className={`w-10 h-10 m-0 text-transparent rounded-sm text-center hover:w-32 hover:text-white ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-10 m-0 text-transparent  text-center hover:w-32 hover:text-white ease-in-out duration-500 transition-all px-2`}>
               <h6>3D Projects</h6>
             </a>
 
@@ -275,7 +275,7 @@ export default function Home() {
                 backgroundColor: "#A7B6CA"
               }}
 
-              className={`w-10 h-auto m-0 text-transparent rounded-sm text-center hover:w-32 ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-auto m-0 text-transparent  text-center hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6>Contact</h6>
             </a>
 
@@ -370,7 +370,7 @@ export default function Home() {
                 backgroundColor: "#707F6A"
               }}
 
-              className={`w-10 h-auto m-0 text-transparent rounded-sm text-center hover:w-32 ease-in-out duration-500 transition-all px-2`}>
+              className={`w-10 h-auto m-0 text-transparent  text-center hover:w-32 ease-in-out duration-500 transition-all px-2`}>
               <h6>Experiments</h6>
             </a>
 

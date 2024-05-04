@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Navbar() {
 return (
-    <nav className="sticky top-[91px] ">
+    <nav className="sticky top-[91px]">
 
         
         
