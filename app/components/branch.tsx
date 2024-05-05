@@ -24,66 +24,13 @@ interface Branch {
     name: string;
     colour: string;
     isActive: boolean;
-    children?: Branch[];
+   
 }
 
-interface ChildBranchProps {
-    parent: {
-      x1: number;
-      y1: number;
-      isActive: boolean;
-    };
-    name: string;
-    isActive: boolean;
-    xPosition: number;
-    yPosition: number;
-    children?: ReactNode;
-  }
-  
-  const ChildBranch = ({
-    name,
-    xPosition,
-    yPosition,
-  
-  }: ChildBranchProps) => {
-    const x2Box = xPosition;
-    const y2Box = yPosition;
-  
-    let x2BoxString = x2Box.toString() + '%';
-    let y2BoxString = y2Box.toString() + '%';
-  
-    if (x2Box > 50) {
-      x2BoxString = (100 - x2Box).toString() + '%';
-    }
-  
-    if (y2Box > 50) {
-      y2BoxString = (100 - y2Box).toString() + '%';
-    }
-  
-    return (
-      <div>
-        <a
-          id="homepageLink"
-          style={{
-            position: 'absolute',
-            zIndex: 2,
-            ...(y2Box > 50 ? { bottom: y2BoxString } : { top: y2BoxString }),
-            ...(x2Box > 50 ? { right: x2BoxString } : { left: x2BoxString }),
-            backgroundColor: '#F1E7DD',
-          }}
-          
-          className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}
-        >
-          <h6 className="text-black">{name}</h6>
-        </a>
-  
-      </div>
-    );
-  };
 
 
 
-export default function Branch({ name, colour, isActive, xPosition, yPosition, children}: BranchProps){
+export default function Branch({ name, colour, isActive, xPosition, yPosition}: BranchProps){
 
     let boxWidthPercentage = 5;
     let boxHeightPercentage = 3;
@@ -184,22 +131,10 @@ export default function Branch({ name, colour, isActive, xPosition, yPosition, c
                             isActive = true;
                             console.log(isActive)
                         }}
-                        className={`w-32 h-auto m-0 rounded-sm text-center text-transparent hover:w-32 ease-in-out duration-500 transition-all px-2`}
+                        className={`w-32 h-auto m-0 text-center text-transparent hover:w-32 ease-in-out border border-black duration-500 transition-all px-2`}
                     >
                         <h6 className="text-black">{name}</h6>
                     </a>
-
-                    {isActive && (
-            <ChildBranch
-              parent={{ x1, y1, isActive }}
-              name={name}
-              isActive={isActive}
-              xPosition={xPosition}
-              yPosition={yPosition}
-            >
-              {children}
-            </ChildBranch>
-          )}
                     
                 </div>
             

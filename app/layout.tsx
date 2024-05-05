@@ -42,9 +42,9 @@ export default function RootLayout({
       
       <body className='text-black'>
       
+        
 
-
-        <MainLayout>{children}</MainLayout>
+   {children}
         
       </body>
     </html>
