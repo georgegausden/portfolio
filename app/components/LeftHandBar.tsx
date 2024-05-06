@@ -14,10 +14,16 @@ export default function LeftHandBar({ activeButton, onProjectClick }: LeftHandBa
       <h2>{activeButton}</h2>
 
       {activeCategory?.projects.map((project, index) => (
-        <div key={index} className='py-2'>
-          <button onClick={() => onProjectClick(project)}>{project.title}</button>
-        </div>
-      ))}
+  <div key={index} className='py-2'>
+    {project.title === 'CV' ? (
+      <button onClick={() => window.open(project.link, '_blank')}>{project.title}</button>
+    ) : project.title === 'Email' ? (
+      <button onClick={() => window.location.href = `mailto:${project.link}`}>{project.title}</button>
+    ) : (
+      <button onClick={() => onProjectClick(project)}>{project.title}</button>
+    )}
+  </div>
+))}
     </div>
   )
 }
