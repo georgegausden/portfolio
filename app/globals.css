@@ -36,7 +36,7 @@
   }
 
   p{
-    @apply md:text-xs md:text-sm py-5 leading-8 tracking-[0.1em];
+    @apply py-5 ;
   }
 
   ul{
