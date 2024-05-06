@@ -7,6 +7,14 @@
     @apply font-black text-3xl md:text-8xl my-20;
   }
 
+  button{
+    @apply text-black hover:underline
+  }
+
+
+
+  
+
   h2{
     @apply font-medium  md:text-4xl my-10;
   }
@@ -40,7 +48,7 @@
   }
 
   img{
-    @apply rounded-sm hover:scale-[102%] ease-in-out duration-500 transition-transform m-10;
+    @apply hover:scale-[92%] ease-in-out duration-700 m-10;
   }
 
   iframe{

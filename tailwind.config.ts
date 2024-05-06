@@ -21,6 +21,21 @@ const config: Config = {
         '15': 'repeat(15, minmax(0, 1fr))', // Custom 15-column grid
         // Add more custom column configurations if needed
       },
+      animation: {
+        'pulse': 'pulse 3s infinite',
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(2)' },
+        },
+      },
+      animationDelay: { // Add this
+        '1': '1s',
+        '2': '2s',
+        '3': '3s',
+        '4': '4s',
+      },
     },
 
     
