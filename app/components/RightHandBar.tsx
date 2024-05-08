@@ -19,11 +19,11 @@ export default function RightHandBar({ activeProject }: RightHandBarProps) {
       <AnimatePresence mode='wait'>
         {project && (
           <motion.div
-            key={project.title}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            // key={project.title}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0 }}
+            // transition={{ duration: 1 }}
              // Add this
           >
             <h2>{project.title}</h2>

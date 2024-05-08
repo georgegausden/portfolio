@@ -47,9 +47,9 @@
     @apply hover:text-black text-sm transition-all duration-500 ease-in-out hover:scale-105 my-10;
   }
 
-  img{
-    @apply hover:scale-[92%] ease-in-out duration-700 m-10;
-  }
+ img{
+  @apply scale-[75%] hover:scale-[90%] ease-in-out transition-transform duration-700
+ }
 
   iframe{
     @apply rounded-sm hover:scale-[102%] ease-in-out duration-500 transition-transform m-10 aspect-video border-none; 
