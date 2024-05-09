@@ -19,7 +19,7 @@ export default function VideoPlayer({ activeProject, isClicked, handleClick }: V
         <div>
             <div
         // style={{ left: xPosition, top: yPosition }}
-        className=" w-[400px] h-[400px] border-black border relative"
+        className=" w-full h-[400px] border-black border relative"
       >
         {/* here is where the image or video of the project goes */}
         
