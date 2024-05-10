@@ -19,7 +19,7 @@ export default function VideoPlayer({ activeProject, isClicked, handleClick }: V
         <div>
             <div
         // style={{ left: xPosition, top: yPosition }}
-        className=" w-full h-[400px] border-black border relative"
+        className=" w-full h-[500px] rounded-full border-black border relative"
       >
         {/* here is where the image or video of the project goes */}
         
@@ -29,14 +29,14 @@ export default function VideoPlayer({ activeProject, isClicked, handleClick }: V
                 src={activeProject.link}
                 alt="project"
                 layout="fill"
-                objectFit="contain"
+                objectFit="cover"
                 
               />
             
           )}
        
 <button
-  className={`h-20 w-10 bg-[#707F6A] absolute ${
+  className={`h-10 w-10 bg-[#707F6A] absolute ${
     !isClicked && "animate-pulse"
   }`}
   style={{ top: 0, left: 0, animationDelay: '0s' }} // Top left corner
@@ -44,7 +44,7 @@ export default function VideoPlayer({ activeProject, isClicked, handleClick }: V
 ></button>
 
 <button
-  className={`h-10 w-20 bg-black absolute ${
+  className={`h-10 w-10 bg-black absolute ${
     !isClicked && "animate-pulse"
   }`}
   style={{ top: 0, right: 0, animationDelay: '0.5s' }} // Top right corner
@@ -54,7 +54,7 @@ export default function VideoPlayer({ activeProject, isClicked, handleClick }: V
 
 
 <button
-  className={`h-20 w-10 bg-[#9e968f] absolute ${
+  className={`h-10 w-10 bg-[#9e968f] absolute ${
     !isClicked && "animate-pulse"
   }`}
   style={{ bottom: 0, right: 0, animationDelay: '1s' }} // Bottom right corner
@@ -62,7 +62,7 @@ export default function VideoPlayer({ activeProject, isClicked, handleClick }: V
 ></button>
 
 <button
-  className={`h-10 w-20 bg-[#A7B6CA] absolute ${
+  className={`h-10 w-10 bg-[#A7B6CA] absolute ${
     !isClicked && "animate-pulse"
   }`}
   style={{ bottom: 0, left: 0, animationDelay: '1.5s' }} // Bottom left corner

@@ -37,22 +37,22 @@ export default function Test() {
   };
 
   return (
-    <div className="grid md:grid-cols-3 grid-cols-1 md:items-center md:h-screen">
+    <div className="grid md:grid-cols-5 grid-cols-1 md:items-center md:h-screen">
 
       
 
-      <div className="w-full" ><LeftHandBar
+      <div className="w-full mx-auto" ><LeftHandBar
           activeButton={activeButton || ""}
           onProjectClick={handleProjectClick || ""}
         />
     </div>
         
-<div>
+<div className="col-span-2">
       <VideoPlayer activeProject={activeProject} isClicked={isClicked} handleClick={handleClick}/>
 
       </div>
 
-      <div >
+      <div className="col-span-2" >
         <RightHandBar activeProject={activeProject ? activeProject : null} />
       </div>
     </div>

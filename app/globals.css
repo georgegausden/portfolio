@@ -48,7 +48,11 @@
   }
 
  img{
-  @apply scale-[75%] hover:scale-[90%] ease-in-out transition-transform duration-700
+  @apply scale-[75%] hover:scale-[80%] ease-in-out transition-transform duration-700 rounded-full
+ }
+
+ button{
+  @apply rounded-full
  }
 
   iframe{
