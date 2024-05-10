@@ -27,7 +27,7 @@ const config: Config = {
       keyframes: {
         pulse: {
           '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(2)' },
+          '50%': { transform: 'scale(1.5)' },
         },
       },
       animationDelay: { // Add this

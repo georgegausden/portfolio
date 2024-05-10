@@ -37,7 +37,7 @@ export default function Test() {
   };
 
   return (
-    <div className="grid md:grid-cols-3 grid-cols-1 md:items-center">
+    <div className="grid md:grid-cols-3 grid-cols-1 md:items-center md:h-screen">
 
       
 
