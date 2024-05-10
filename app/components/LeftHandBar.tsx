@@ -15,18 +15,18 @@ export default function LeftHandBar({
   );
 
   return (
-    <div className="py-[20%] px-10">
+    <div className="py-[20%] pr-10">
       <h2>{activeButton}</h2>
 
       {activeCategory?.projects.map((project, index) => (
         <div key={index} className="py-2">
           {project.title === "CV" ? (
-            <button onClick={() => window.open(project.link, "_blank")}>
+            <button onClick={() => window.open(project.links[0], "_blank")}>
               {project.title}
             </button>
           ) : project.title === "Email" ? (
             <button
-              onClick={() => (window.location.href = `mailto:${project.link}`)}
+              onClick={() => (window.location.href = `mailto:${project.links[0]}`)}
             >
               {project.title}
             </button>

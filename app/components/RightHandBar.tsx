@@ -5,7 +5,7 @@ type RightHandBarProps = {
   activeProject: {
     title: string;
     description: string;
-    link: string;
+    links: string[];
   } | null;
 };
 

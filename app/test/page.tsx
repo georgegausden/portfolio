@@ -12,7 +12,7 @@ export default function Test() {
   const [activeProject, setActiveProject] = useState<{
     title: string;
     description: string;
-    link: string;
+    links: string[];
   } | null>(null);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -31,13 +31,13 @@ export default function Test() {
   const handleProjectClick = (project: {
     title: string;
     description: string;
-    link: string;
+    links: string[];
   }) => {
     setActiveProject(project);
   };
 
   return (
-    <div className="grid md:grid-cols-5 grid-cols-1 md:items-center md:h-screen">
+    <div className="grid md:grid-cols-5 grid-cols-1 md:items-center md:h-screen max-w-6xl mx-auto">
 
       
 
@@ -53,7 +53,7 @@ export default function Test() {
       </div>
 
       <div className="col-span-2" >
-        <RightHandBar activeProject={activeProject ? activeProject : null} />
+        <RightHandBar activeProject={activeProject} />
       </div>
     </div>
   );

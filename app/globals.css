@@ -8,7 +8,11 @@
   }
 
   button{
-    @apply text-black hover:underline
+    @apply text-black hover:underline 
+  }
+
+  #videoPlayerButton{
+    @apply shadow-lg drop-shadow-lg hover:scale-110 ease-in-out duration-500 transition-transform;
   }
 
 
@@ -48,12 +52,10 @@
   }
 
  img{
-  @apply scale-[75%] hover:scale-[80%] ease-in-out transition-transform duration-700 rounded-full
+  @apply scale-[75%] hover:scale-[80%] ease-in-out transition-transform duration-700
  }
 
- button{
-  @apply rounded-full
- }
+
 
   iframe{
     @apply rounded-sm hover:scale-[102%] ease-in-out duration-500 transition-transform m-10 aspect-video border-none; 
