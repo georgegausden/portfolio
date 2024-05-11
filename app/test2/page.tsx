@@ -1,20 +1,33 @@
 'use client'
 import Navbar from "../components/navbar"
 import { useState } from "react";
+import projects from "../data/projects.json";
 
 export default function homePage() {
     const [hoveredSection, setHoveredSection] = useState('');
     const [activeSection, setActiveSection] = useState('');
 
+    
+const biography = projects.find(project => project.category === 'About');
+const artistStatement = projects.find(project => project.category === 'About');
+const experimentsSection = projects.find(project => project.category === 'Experiments');
+const projectsSection = projects.find(project => project.category === 'Projects');
+
+const activeExperiment = projects.find(project => project.category === 'Experiments')?.projects.find(experiment => experiment.title === activeSection);
+
+
+
+
     return (
         <div>
-            <div className=" bg-[#F3F3F3] w-full h-screen">
+            <div className=" bg-[#F3F3F3] w-full h-[90%]">
 
             
 
 {/* section for navbar */}
-  <nav className="sticky py-10">
-    <div className="flex text-center text-gray-800 gap-[15%] justify-center items-start">
+<div className="relative">
+<nav style={{position: 'absolute', top: 0, width: '100%'}} className="sticky py-10">
+    <div className="flex text-center text-gray-800 gap-[20%] justify-center items-start">
       <div>
         <h3 
           onMouseEnter={() => setHoveredSection('About')}
@@ -37,12 +50,14 @@ export default function homePage() {
           Experiments
         </h3>
         {hoveredSection === 'Experiments' && (
-          <div className="flex flex-col items-start translate-x-[50%] py-5">
-            <button>Experiment 1</button>
-            <button>Experiment 2</button>
-            <button>Experiment 3</button>
-          </div>
-        )}
+  <div className="flex flex-col items-start translate-x-[50%] py-5">
+    {experimentsSection?.projects.map((experiment, index) => (
+      <button key={index} onClick={() => setActiveSection(experiment.title)}>
+        {experiment.title}
+      </button>
+    ))}
+  </div>
+)}
       </div>
 
       <div>
@@ -51,13 +66,14 @@ export default function homePage() {
         >
           Projects
         </h3>
-        {hoveredSection === 'Projects' && (
-          <div className="flex flex-col items-start translate-x-[50%] py-5">
-            <button>Project 1</button>
-            <button>Project 2</button>
-            <button>Project 3</button>
-          </div>
-        )}
+        
+{hoveredSection === 'Projects' && (
+  <div className="flex flex-col items-start translate-x-[50%] py-5">
+    {projectsSection?.projects.map((project, index) => (
+      <button key={index} onClick={() => setActiveSection(project.title)}>{project.title}</button>
+    ))}
+  </div>
+)}
       </div>
 
       <div>
@@ -75,9 +91,34 @@ export default function homePage() {
       </div>
     </div>
   </nav>
+  </div>
 
 {/* section for content */}
-  <div className=" overflow-x-scroll bg-purple-200 h-full">
+  <div className=" overflow-x-scroll bg-purple-200 flex items-center justify-center px-[20%]">
+       {activeSection === 'Biography' && (
+  
+    <p>{biography?.projects[0].description}</p>
+ 
+)}
+
+{activeSection === 'Artist Statement' && (
+  
+  <p>{biography?.projects[1].description}</p>
+
+)}
+
+
+{activeSection === activeExperiment?.title && (
+  <div className="flex flex-row">
+    {activeExperiment?.links.map((link, index) => (
+      <img key={index} src={link} alt={activeExperiment.title} />
+    ))}
+  </div>
+)}
+
+
+
+
 
     
     
