@@ -3,7 +3,7 @@ import Navbar from "../components/navbar"
 import { useState } from "react";
 import projects from "../data/projects.json";
 
-export default function homePage() {
+export default function HomePage() {
     const [hoveredSection, setHoveredSection] = useState('');
     const [activeSection, setActiveSection] = useState('');
 
