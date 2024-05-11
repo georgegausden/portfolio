@@ -8,7 +8,7 @@
   }
 
   button{
-    @apply text-black hover:underline 
+    @apply  text-blue-500 hover:underline;
   }
 
   #videoPlayerButton{
@@ -24,8 +24,9 @@
   }
 
   h3{
-    @apply font-bold md:text-2xl my-2;
+    @apply font-bold
   }
+  
 
   h4{
     @apply font-semibold md:text-xl my-2;

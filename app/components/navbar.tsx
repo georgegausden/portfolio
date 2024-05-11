@@ -1,24 +1,75 @@
-import React from "react";
-import Link from "next/link";
+'use client';
+
+import { useState } from 'react';
 
 function Navbar() {
-return (
-    <nav className="sticky top-[91px]">
+  const [hoveredSection, setHoveredSection] = useState('');
 
-        
-        
-        <div className="grid grid-rows-3 text-center text-gray-800 gap-[91px] font-bold">
-            <Link className="mb-0 mt-0" href="/">Home</Link>
-            <Link className="mb-0 mt-0" href="/about">About</Link>
-            <Link className="mb-0 mt-0" href="https://www.instagram.com/georgegausden/"
-              target="_blank">Instagram</Link>
-            <a className="mb-0 mt-0" href="mailto:george.philip.gausden@gmail.com">Email</a>
-            <Link className="mb-0 mt-0"  href="/CV.pdf" download>CV</Link>
-            
+  return (
+    <nav className="sticky py-10">
+      <div className="flex text-center text-gray-800 gap-[15%] justify-center items-start">
+        <div>
+          <h3 
+            onMouseEnter={() => setHoveredSection('About')}
+          >
+            About
+          </h3>
+          {hoveredSection === 'About' && (
+            <div className="flex flex-col items-start translate-x-[50%] py-5">
+              <button>Biography</button>
+              <button>CV</button>
+              <button>Artist Statement</button>
+            </div>
+          )}
         </div>
-        {/* navigation for the experiment page */}
+
+        <div>
+          <h3 
+            onMouseEnter={() => setHoveredSection('Experiments')}
+          >
+            Experiments
+          </h3>
+          {hoveredSection === 'Experiments' && (
+            <div className="flex flex-col items-start translate-x-[50%] py-5">
+              <button>Experiment 1</button>
+              <button>Experiment 2</button>
+              <button>Experiment 3</button>
+            </div>
+          )}
+        </div>
+
+        <div>
+          <h3 
+            onMouseEnter={() => setHoveredSection('Projects')}
+          >
+            Projects
+          </h3>
+          {hoveredSection === 'Projects' && (
+            <div className="flex flex-col items-start translate-x-[50%] py-5">
+              <button>Project 1</button>
+              <button>Project 2</button>
+              <button>Project 3</button>
+            </div>
+          )}
+        </div>
+
+        <div>
+          <h3 
+            onMouseEnter={() => setHoveredSection('Contact')}
+          >
+            Contact
+          </h3>
+          {hoveredSection === 'Contact' && (
+            <div className="flex flex-col items-start translate-x-[50%] py-5">
+              <button>Email</button>
+              <button>Phone</button>
+              <button>Address</button>
+            </div>
+          )}
+        </div>
+      </div>
     </nav>
-);
+  );
 }
 
 export default Navbar;
