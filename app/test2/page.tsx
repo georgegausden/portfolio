@@ -22,10 +22,6 @@ export default function HomePage() {
   const contact = projects.find((project) => project.category === "Contact");
   const CVLink = contact?.projects[1].links[0];
 
-
-
-
-
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
@@ -122,17 +118,16 @@ export default function HomePage() {
           )}
 
           {activeSection === activeExperiment?.title && (
-            <div className="flex flex-col md:flex-row gap-20">
+            <div className="flex flex-col md:flex-row gap-20  mx-10">
               {activeExperiment?.links.map((link, index) => (
-                <div key={index} className="relative flex-shrink-0 group">
+                <div key={index} className="relative flex-shrink-0 group bg-blue-500 ">
                 <Image
                   key={index}
                   src={link}
                   alt={activeExperiment.title}
-                  
-                  width={400}
-                  height={400}
-                />
+                  width={500}
+                  height={500}
+                  />
                 <div id="imageCaption">{`${activeExperiment.title}, p5.js, 2018`}</div>
                 </div>
               ))}

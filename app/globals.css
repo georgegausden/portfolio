@@ -17,7 +17,7 @@
 
 
   #navbarSection{
-    @apply absolute flex flex-col items-start md:translate-x-[50%] py-5 gap-3 md:gap-0;
+    @apply absolute flex flex-col items-start md:translate-x-[0%] py-5 gap-3 md:gap-0;
   }
 
   
@@ -157,12 +157,12 @@ body {
 }
 
 ::-moz-selection {
-  background: #BAC5B6;
+  background: #ffffff;
 }
 ::-webkit-selection {
   background: #BAC5B6;
 }
 ::selection {
-  background: #BAC5B6;
+  background: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
