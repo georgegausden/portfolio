@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       
-      <body className="mx-5">
+      <body>
       
         
 

@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function HomePage() {
   const [hoveredSection, setHoveredSection] = useState("");
   const [activeSection, setActiveSection] = useState("");
-
   const biography = projects.find((project) => project.category === "About");
   const artistStatement = projects.find(
     (project) => project.category === "About"
@@ -18,13 +17,10 @@ export default function HomePage() {
   const projectsSection = projects.find(
     (project) => project.category === "Projects"
   );
-  
   const contact = projects.find((project) => project.category === "Contact");
-
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
-
     const activeProject = projects
     .find((project) => project.category === "Projects")
     ?.projects.find((experiment) => experiment.title === activeSection);

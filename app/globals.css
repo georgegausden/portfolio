@@ -4,7 +4,7 @@
 
 @layer components{
   h1{
-    @apply font-black text-3xl md:text-8xl my-20;
+    @apply font-black text-8xl my-20;
   }
 
   button{
