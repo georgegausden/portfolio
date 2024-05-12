@@ -1,6 +1,5 @@
 "use client";
 // import Branch from "../components/Branch";
-import LeftHandBar from "../components/LeftHandBar";
 import RightHandBar from "../components/RightHandBar";
 import Image from "next/image";
 import { SetStateAction, useState, useEffect } from "react";
