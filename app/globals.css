@@ -8,7 +8,7 @@
   }
 
   button{
-    @apply  text-blue-500 hover:underline;
+    @apply text-gray-500  hover:text-black transition-colors duration-500 ease-in-out;
   }
 
   #videoPlayerButton{
@@ -16,6 +16,9 @@
   }
 
 
+  #navbarSection{
+    @apply absolute flex flex-col items-start md:translate-x-[50%] py-5 gap-3 md:gap-0;
+  }
 
   
 
