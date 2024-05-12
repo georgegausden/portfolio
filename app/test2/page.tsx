@@ -19,6 +19,8 @@ export default function HomePage() {
     (project) => project.category === "Projects"
   );
 
+
+
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
@@ -36,7 +38,7 @@ export default function HomePage() {
               <div>
                 <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
                 {hoveredSection === "About" && (
-                  <div className="flex flex-col items-start translate-x-[50%] py-5">
+                  <div className="absolute flex flex-col items-start translate-x-[50%] py-5">
                     <button onClick={() => setActiveSection("Biography")}>
                       Biography
                     </button>
@@ -55,7 +57,7 @@ export default function HomePage() {
                   Experiments
                 </h3>
                 {hoveredSection === "Experiments" && (
-                  <div className="flex flex-col items-start translate-x-[50%] py-5">
+                  <div className="absolute flex flex-col items-start translate-x-[50%] py-5">
                     {experimentsSection?.projects.map((experiment, index) => (
                       <button
                         key={index}
@@ -74,7 +76,7 @@ export default function HomePage() {
                 </h3>
 
                 {hoveredSection === "Projects" && (
-                  <div className="flex flex-col items-start translate-x-[50%] py-5">
+                  <div className="absolute flex flex-col items-start translate-x-[50%] py-5">
                     {projectsSection?.projects.map((project, index) => (
                       <button
                         key={index}
@@ -92,9 +94,11 @@ export default function HomePage() {
                   Contact
                 </h3>
                 {hoveredSection === "Contact" && (
-                  <div className="flex flex-col items-start translate-x-[50%] py-5">
-                    <button>Email</button>
-                    <button>Download CV</button>
+                  <div className="absolute flex flex-col items-start translate-x-[50%] py-5">
+                    <button onClick={() => setActiveSection("Email")}>Email</button>
+                    
+  <button>Download CV</button>
+
                   </div>
                 )}
               </div>
@@ -128,6 +132,10 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          )}
+
+          {activeSection === "Email" && (
+            <div className="text-3xl">georgegausden at gmail dot com</div>
           )}
         </div>
       </div>
