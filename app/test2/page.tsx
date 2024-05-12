@@ -27,13 +27,13 @@ export default function HomePage() {
     ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex md:h-screen flex-col">
-      <div className=" bg-[#F3F3F3] w-full h-[90%]">
+    <div className="flex md:h-screen flex-col max-w-[100rem] mx-auto">
+      <div className=" bg-[#F3F3F3] w-full h-[95%]">
         {/* section for navbar */}
         
           <nav
             
-            className="md:fixed py-10 top-0 z-10 text-center justify-center w-full"
+            className="md:fixed py-10 top-0 z-10 text-center justify-center w-full max-w-[100rem]"
           >
             <div className="flex text-center gap-[15%] md:gap-[20%] justify-center w-full">
               <div>
@@ -43,12 +43,13 @@ export default function HomePage() {
                     <button onClick={() => setActiveSection("Biography")}>
                       Biography
                     </button>
-                    <button onClick={() => window.open(CVLink, "_blank")}>CV</button>
+                   
                     <button
                       onClick={() => setActiveSection("Artist Statement")}
                     >
                       Artist Statement
                     </button>
+                    <button onClick={() => window.open(CVLink, "_blank")}>CV</button>
                   </div>
                 )}
               </div>
@@ -140,7 +141,7 @@ export default function HomePage() {
         </div>
       </div>
       <div
-        className="w-full h-[10%] bottom-0"
+        className="w-full h-[5%] bottom-0"
         style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
       ></div>{" "}
     </div>
