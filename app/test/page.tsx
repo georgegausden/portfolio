@@ -40,11 +40,7 @@ export default function Test() {
 
       
 
-      <div className="w-full mx-auto" ><LeftHandBar
-          activeButton={activeButton || ""}
-          onProjectClick={handleProjectClick || ""}
-        />
-    </div>
+      
         
 <div className="col-span-2">
       <VideoPlayer activeProject={activeProject} isClicked={isClicked} handleClick={handleClick}/>
