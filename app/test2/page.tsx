@@ -20,11 +20,16 @@ export default function HomePage() {
   );
   
   const contact = projects.find((project) => project.category === "Contact");
-  const CVLink = contact?.projects[1].links[0];
+  const CVLink = contact?.projects[1].links[0][0];
 
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
+
+    const activeProject = projects
+    .find((project) => project.category === "Projects")
+    ?.projects.find((experiment) => experiment.title === activeSection);
+
 
   return (
     <div className="flex md:h-screen flex-col max-w-[100rem] mx-auto">
@@ -109,27 +114,62 @@ export default function HomePage() {
       
 
         {/* section for content */}
-        <div className=" overflow-x-scroll flex items-center justify-center md:px-[20%] px-10 mt-[10%] h-[80%] py-10">
+        <div className="relative overflow-x-scroll flex items-center justify-center  md:px-10 mt-[8.5%] h-[85%] py-10">
           {activeSection === "Biography" && (
-            <p>{biography?.projects[0].description}</p>
+            <p className="px-[20%]">{biography?.projects[0].description}</p>
           )}
 
           {activeSection === "Artist Statement" && (
-            <p>{biography?.projects[1].description}</p>
+            <p className="px-[20%]">{biography?.projects[1].description}</p>
           )}
 
           {activeSection === activeExperiment?.title && (
-            <div className="flex flex-col md:flex-row gap-20  mx-10">
+            <div className="flex flex-col md:flex-row gap-20 pr-10 ">
               {activeExperiment?.links.map((link, index) => (
-                <div key={index} className="relative flex-shrink-0 group bg-blue-500 ">
+                <div key={index} className="relative flex-shrink-0 group bg-blue-500  ">
                 <Image
                   key={index}
-                  src={link}
+                  src={link[0]}
                   alt={activeExperiment.title}
                   width={500}
                   height={500}
                   />
-                <div id="imageCaption">{`${activeExperiment.title}, p5.js, 2018`}</div>
+                <div id="imageCaption">{link[1]}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+{activeSection === activeProject?.title && (
+            <div className="flex flex-col md:flex-row gap-20 ">
+
+              
+              <div className="md:px-[10%]">
+                <h1>{activeProject.title}</h1>
+                <p>{activeProject.description}</p>
+                
+                {activeProject.tags?.map((tag, index) => (
+                  <div key={index} className="inline-block bg-gray-200 p-2 m-1">
+                    {tag}
+                  </div>
+                ))}
+                
+              </div>
+
+              
+              
+              {activeProject?.links.map((link, index) => (
+                <div key={index} className="relative flex-shrink-0 group bg-blue-500  ">
+                  
+
+                <Image
+                  key={index}
+                  src={link[0]}
+                  alt={activeProject.title}
+                  width={500}
+                  height={500}
+                  />
+                <div id="imageCaption">{link[1]}</div>
                 </div>
               ))}
             </div>

@@ -27,7 +27,7 @@
   }
 
   h3{
-    @apply font-bold
+    @apply font-bold text-[#747474]
   }
   
 
@@ -56,7 +56,7 @@
   }
 
   #imageCaption{
-    @apply text-sm text-gray-400 group-hover:text-black transition-colors duration-500 ease-in-out bottom-0 right-0 translate-y-9 text-right absolute italic;
+    @apply text-sm text-gray-400 group-hover:text-black transition-colors duration-500 ease-in-out bottom-0 right-0 translate-y-10 text-right absolute italic;
   
   }
 
@@ -125,6 +125,8 @@
   
   
 }
+
+
 
 :root {
   --foreground-rgb: 0, 0, 0;

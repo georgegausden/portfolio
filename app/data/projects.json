@@ -5,11 +5,13 @@
             {
                 "title": "Biography",
                 "description": "George Gausden is a multimedia artist from Montréal. He has worked on a range of projects, from designing a book cover for an author to collaborating with a local artist to digitize and explore new ways to view their art. He has always been interested in creating art, whether it be using traditional mediums or more recently, digital ones. Recently, his main area of focus has been in the field of generative artwork and the emergence of complex behaviours from simple systems. George is in the final stage of completing his Computation Arts degree at Concordia University. Since last summer, he has been collaborating closely with a local Montreal start-up on creating content and designing a website for their brand.",
+                "tags":[],
                 "links": ["/0001.png"]
             },
             {
                 "title": "Artist Statement",
                 "description": "My artistic practice involves combining digital tools with traditional ones. I’m very interested in the mixing of mediums to achieve new results. A lot of my work is focused on aesthetics and there are a lot of repeated curved forms. Part of the reason I include so many curvatures has to do with a desire to bring organic shapes to the digital space. So much of what we do on computers nowadays is far removed from the natural world. I like to draw inspiration from the natural world to develop ideas for future projects. A large chunk of my artistic process involves watching or reading about science and then trying to represent elements of that using code or 3D software. Some projects involve multiple iterations that together form a body of work, while others are meant to be standalone pieces.",
+                "tags":[],
                 "links": ["/0001.png"]
             }
         ]
@@ -20,11 +22,13 @@
             {
                 "title": "Email",
                 "description": "This is the description for Project 3.",
+                "tags":[],
                 "links": ["george.philip.gausden@gmail.com"]
             },
             {
                 "title": "CV",
                 "description": "This is the description for Project 4.",
+                "tags":[],
                 "links": ["/CV.pdf"]
             }
         ]
@@ -35,11 +39,13 @@
             {
                 "title": "Geometries",
                 "description": "I've always been interested in the way that trigonometric functions can be used to create complex shapes. I wanted to experiment with this concept and see how far I could push it. Most of the iterations involved combining sine, cosine and tangent functions in different ways to create interesting patterns.",
-                "links": ["/geometries1.jpg", "/geometries2.jpg", "/geometries3.jpg"]
+                "tags":[],
+                "links": [["/geometries1.jpg","experiment1"], ["/geometries2.jpg","experiment1"], ["/geometries3.jpg","experiment1"]]
             },
             {
                 "title": "experiment 2",
                 "description": "This is the description for Project 4.",
+                "tags":[],
                 "links": ["https://example.com/contact/project4/media"]
             }
         ]
@@ -48,13 +54,15 @@
         "category": "Projects",
         "projects": [
             {
-                "title": "3d 1",
-                "description": "This is the description for Project 3.",
-                "links": ["https://example.com/contact/project3/media"]
+                "title": "Performance Flow",
+                "description": "An exploration into machine learning, piano performance & Argon Particle",
+                "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle"],
+                "links": [["/performanceFlow.jpeg","Argon Particle Microcontrollers, 2024"]]
             },
             {
                 "title": "3d 2",
                 "description": "This is the description for Project 4.",
+                "tags":[],
                 "links": ["https://example.com/contact/project4/media"]
             }
         ]
