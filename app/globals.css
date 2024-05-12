@@ -52,8 +52,13 @@
     @apply hover:text-black text-sm transition-all duration-500 ease-in-out hover:scale-105 my-10;
   }
 
+  #imageCaption{
+    @apply text-sm text-gray-400 group-hover:text-black transition-colors duration-500 ease-in-out bottom-0 right-0 translate-y-10 text-right absolute italic;
+  
+  }
+
  img{
-  @apply scale-[75%] hover:scale-[80%] ease-in-out transition-transform duration-700
+  @apply  hover:scale-[105%] ease-in-out transition-transform duration-700
  }
 
 
