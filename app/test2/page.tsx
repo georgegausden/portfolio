@@ -18,6 +18,11 @@ export default function HomePage() {
   const projectsSection = projects.find(
     (project) => project.category === "Projects"
   );
+  
+  const contact = projects.find((project) => project.category === "Contact");
+  const CVLink = contact?.projects[1].links[0];
+
+
 
 
 
@@ -42,7 +47,7 @@ export default function HomePage() {
                     <button onClick={() => setActiveSection("Biography")}>
                       Biography
                     </button>
-                    <button onClick={() => setActiveSection("CV")}>CV</button>
+                    <button onClick={() => window.open(CVLink, "_blank")}>CV</button>
                     <button
                       onClick={() => setActiveSection("Artist Statement")}
                     >
