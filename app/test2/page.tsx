@@ -21,95 +21,89 @@ export default function HomePage() {
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
-    const activeProject = projects
+  const activeProject = projects
     .find((project) => project.category === "Projects")
     ?.projects.find((experiment) => experiment.title === activeSection);
 
-
   return (
     <div className="flex md:h-screen flex-col max-w-[100rem] mx-auto">
-      <div className=" bg-[#F3F3F3] w-full h-[95%]">
+      <div className=" w-full h-[95%]">
         {/* section for navbar */}
-        
-          <nav
-            
-            className="md:fixed py-10 top-0 z-10 text-center justify-center w-full max-w-[100rem]"
-          >
-            <div className="flex text-center gap-[15%] md:gap-[20%] justify-center w-full">
-              <div>
-                <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
-                {hoveredSection === "About" && (
-                  <div id="navbarSection">
-                    <button onClick={() => setActiveSection("Biography")}>
-                      Biography
-                    </button>
-                   
-                    <button
-                      onClick={() => setActiveSection("Artist Statement")}
-                    >
-                      Artist Statement
-                    </button>
-                    <button onClick={() => window.open("/CV.pdf", "_blank")}>CV</button>
-                  </div>
-                )}
-              </div>
 
-              <div>
-                <h3 onMouseEnter={() => setHoveredSection("Experiments")}>
-                  Experiments
-                </h3>
-                {hoveredSection === "Experiments" && (
-                  <div id="navbarSection">
-                    {experimentsSection?.projects.map((experiment, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setActiveSection(experiment.title)}
-                      >
-                        {experiment.title}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+        <nav className="md:fixed py-10 top-0 z-10 text-center justify-center w-full max-w-[100rem]">
+          <div className="flex text-center gap-[15%] md:gap-[20%] justify-center w-full">
+            <div>
+              <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
+              {hoveredSection === "About" && (
+                <div id="navbarSection">
+                  <button onClick={() => setActiveSection("Biography")}>
+                    Biography
+                  </button>
 
-              <div>
-                <h3 onMouseEnter={() => setHoveredSection("Projects")}>
-                  Projects
-                </h3>
-
-                {hoveredSection === "Projects" && (
-                  <div id="navbarSection">
-                    {projectsSection?.projects.map((project, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setActiveSection(project.title)}
-                      >
-                        {project.title}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div className="hidden md:block">
-                <h3 onMouseEnter={() => setHoveredSection("Contact")}>
-                  Contact
-                </h3>
-                {hoveredSection === "Contact" && (
-                  <div id="navbarSection">
-                    <button onClick={() => setActiveSection("Email")}>Email</button>
-                    
-  <button>Download CV</button>
-
-                  </div>
-                )}
-              </div>
+                  <button onClick={() => setActiveSection("Artist Statement")}>
+                    Artist Statement
+                  </button>
+                  <button onClick={() => window.open("/CV.pdf", "_blank")}>
+                    CV
+                  </button>
+                </div>
+              )}
             </div>
-          </nav>
-      
+
+            <div>
+              <h3 onMouseEnter={() => setHoveredSection("Experiments")}>
+                Experiments
+              </h3>
+              {hoveredSection === "Experiments" && (
+                <div id="navbarSection">
+                  {experimentsSection?.projects.map((experiment, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveSection(experiment.title)}
+                    >
+                      {experiment.title}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div>
+              <h3 onMouseEnter={() => setHoveredSection("Projects")}>
+                Projects
+              </h3>
+
+              {hoveredSection === "Projects" && (
+                <div id="navbarSection">
+                  {projectsSection?.projects.map((project, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveSection(project.title)}
+                    >
+                      {project.title}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="hidden md:block">
+              <h3 onMouseEnter={() => setHoveredSection("Contact")}>Contact</h3>
+              {hoveredSection === "Contact" && (
+                <div id="navbarSection">
+                  <button onClick={() => setActiveSection("Email")}>
+                    Email
+                  </button>
+
+                  <button>Download CV</button>
+                </div>
+              )}
+            </div>
+          </div>
+        </nav>
 
         {/* section for content */}
-        <div className="relative overflow-x-scroll flex items-center justify-center  md:px-10 mt-[8.5%] h-[85%] py-10">
+        <div className="relative overflow-x-scroll flex items-center justify-center my-10  md:px-10  h-[85%] py-10">
           {activeSection === "Biography" && (
             <p className="px-[20%]">{biography?.projects[0].description}</p>
           )}
@@ -121,51 +115,49 @@ export default function HomePage() {
           {activeSection === activeExperiment?.title && (
             <div className="flex flex-col md:flex-row gap-20 pr-10 ">
               {activeExperiment?.links.map((link, index) => (
-                <div key={index} className="relative flex-shrink-0 group bg-blue-500  ">
-                <Image
+                <div
                   key={index}
-                  src={link[0]}
-                  alt={activeExperiment.title}
-                  width={500}
-                  height={500}
+                  className="relative flex-shrink-0 group bg-blue-500  "
+                >
+                  <Image
+                    key={index}
+                    src={link[0]}
+                    alt={activeExperiment.title}
+                    width={500}
+                    height={500}
                   />
-                <div id="imageCaption">{link[1]}</div>
+                  <div id="imageCaption">{link[1]}</div>
                 </div>
               ))}
             </div>
           )}
 
-{activeSection === activeProject?.title && (
+          {activeSection === activeProject?.title && (
             <div className="flex flex-col md:flex-row gap-20 ">
-
-              
               <div className="md:px-[10%]">
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
-                
+
                 {activeProject.tags?.map((tag, index) => (
                   <div key={index} className="inline-block bg-gray-200 p-2 m-1">
                     {tag}
                   </div>
                 ))}
-                
               </div>
 
-              
-              
               {activeProject?.links.map((link, index) => (
-                <div key={index} className="relative flex-shrink-0 group bg-blue-500  ">
-                  
-
+                <div
+                key={index}
+                className="relative flex-shrink-0 group bg-blue-500"
+              >
                 <Image
-                  key={index}
                   src={link[0]}
                   alt={activeProject.title}
-                  width={500}
-                  height={500}
-                  />
+                  layout="fill"
+                  objectFit="contain"
+                />
                 <div id="imageCaption">{link[1]}</div>
-                </div>
+              </div>
               ))}
             </div>
           )}
