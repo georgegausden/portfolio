@@ -8,7 +8,7 @@
   }
 
   button{
-    @apply text-gray-500  hover:text-black transition-colors duration-500 ease-in-out;
+    @apply text-blue-400  hover:text-blue-700 transition-colors duration-500 ease-in-out;
   }
 
   #videoPlayerButton{
