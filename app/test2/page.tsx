@@ -20,7 +20,6 @@ export default function HomePage() {
   );
   
   const contact = projects.find((project) => project.category === "Contact");
-  const CVLink = contact?.projects[1].links[0][0];
 
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
@@ -54,7 +53,7 @@ export default function HomePage() {
                     >
                       Artist Statement
                     </button>
-                    <button onClick={() => window.open(CVLink, "_blank")}>CV</button>
+                    <button onClick={() => window.open("/CV.pdf", "_blank")}>CV</button>
                   </div>
                 )}
               </div>
