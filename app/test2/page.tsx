@@ -37,17 +37,16 @@ export default function HomePage() {
 ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex md:h-screen flex-col max-w-[100rem] mx-auto">
-      <div className=" w-full h-[95%]">
+    <div className="flex  flex-col">
+      <div>
         {/* section for navbar */}
 
-        <nav className="md:fixed py-10 top-0 z-10 text-center justify-center w-full max-w-[100rem]">
-          <div className="flex text-center gap-[15%] md:gap-[20%] justify-center w-full">
+        <nav className="md:fixed pt-10 top-0 z-10 text-center justify-center w-full ">
+          <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
             <div>
               <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
               {hoveredSection === "About" && (
-                <div id="navbarSection">
-                  <button onClick={() => setActiveSection("Biography")}>
+<div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>                  <button onClick={() => setActiveSection("Biography")}>
                     Biography
                   </button>
 
@@ -66,7 +65,7 @@ export default function HomePage() {
                 Experiments
               </h3>
               {hoveredSection === "Experiments" && (
-                <div id="navbarSection">
+                <div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>
                   {experimentsSection?.projects.map((experiment, index) => (
                     <button
                       key={index}
@@ -85,7 +84,7 @@ export default function HomePage() {
               </h3>
 
               {hoveredSection === "Projects" && (
-                <div id="navbarSection">
+                <div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>
                   {projectsSection?.projects.map((project, index) => (
                     <button
                       key={index}
@@ -101,7 +100,7 @@ export default function HomePage() {
             <div className="hidden md:block">
               <h3 onMouseEnter={() => setHoveredSection("Contact")}>Contact</h3>
               {hoveredSection === "Contact" && (
-                <div id="navbarSection">
+                <div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>
                   <button onClick={() => setActiveSection("Email")}>
                     Email
                   </button>
@@ -114,8 +113,7 @@ export default function HomePage() {
         </nav>
 
         {/* section for content */}
-        <div className="relative overflow-x-scroll  flex justify-center items-center h-screen">
-          {activeSection === "Biography" && (
+<div className={` flex justify-center items-center py-[10%] px-[10%]  transition-all ease-in-out duration-500 ${hoveredSection !== "" ? 'blur-md' : ''}`}>          {activeSection === "Biography" && (
             <p className="px-[20%]">{biography?.projects[0].description}</p>
           )}
 
@@ -128,7 +126,7 @@ export default function HomePage() {
               {activeExperiment?.links.map((link, index) => (
                 <div
                   key={index}
-                  className="relative flex-shrink-0 group bg-blue-500  "
+                  className="relative flex-shrink-0 group   "
                 >
                   <Image
                     key={index}
@@ -143,25 +141,9 @@ export default function HomePage() {
             </div>
           )}
 
-          {/* {activeSection === "Performance Flow" && (
-            <div className="bg-pink-300 h-full w-full flex flex-row"> 
-
-              <div>
-                <h1>Performance Flow</h1>
-                <p>Performance Flow is a project that I worked on during my time at the Royal College of Art. It is a project that aims to create a new way of interacting with music. The project uses a combination of machine learning and computer vision to create a system that can interpret the movements of a performer and use them to control the music that is being played. The system is designed to be used in a live performance setting, allowing the performer to interact with the music in real-time.</p>
-              </div>
-
-              <div>
-                
-                </div>
-
-            
-            </div>
-          )} */}
-
           {activeSection === activeProject?.title && (
-            <div className="flex flex-col md:flex-row gap-20  items-center ">
-              <div className="md:px-[10%]">
+            <div className="flex flex-col  gap-20   items-center ">
+              <div >
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
 
@@ -172,9 +154,10 @@ export default function HomePage() {
                 ))}
               </div>
 
+
+              <div className="grid grid-cols-2 gap-10">
               <div
-               
-                className="relative flex-shrink-0 group bg-blue-500"
+                className="relative group flex flex-col items-center justify-center  "
               >
                 <Image
                   src={activeProject.links[0][0]}
@@ -184,16 +167,41 @@ export default function HomePage() {
                 />
                 <div id="imageCaption">{activeProject.links[0][1]}</div>
               </div>
-
               <div>
           <h2>Abstract</h2>
           {/* Use a type guard to check if the 'abstract' property exists */}
           {activeProject && 'abstract' in activeProject ? (
-            <p>{activeProject.abstract}</p>
+            <p className=" ">{activeProject.abstract}</p>
           ) : (
             <p>No abstract available.</p>
           )}
         </div>
+
+              </div>
+
+              <div className="grid grid-cols-2 gap-10">
+                <div><h2>Process</h2>
+                {activeProject && 'process' in activeProject ? (
+            <p>{activeProject.process}</p>
+          ) : (
+            <p>No process available.</p>
+          )}</div>
+           <div
+                className="relative group flex flex-col items-center justify-center  "
+              >
+                <Image
+                  src={activeProject.links[1][0]}
+                  alt={activeProject.title}
+                  width={500}
+                  height={500}
+                />
+                <div id="imageCaption">{activeProject.links[1][1]}</div>
+              </div>
+                
+                </div>
+              
+
+              
 
 
 
@@ -203,12 +211,15 @@ export default function HomePage() {
           {activeSection === "Email" && (
             <div className="text-3xl">georgegausden at gmail dot com</div>
           )}
-        </div>
-      </div>
-      <div
-        className="w-full h-[5%] bottom-0"
+        <div
+        className="absolute h-[5%] bottom-0"
         style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
       ></div>{" "}
+        
+        </div>
+        
+      </div>
+      
     </div>
   );
 }
