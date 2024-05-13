@@ -57,13 +57,15 @@
                 "title": "Performance Flow",
                 "description": "An exploration into machine learning, piano performance & Argon Particle",
                 "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle"],
-                "links": [["/performanceFlow.jpeg","Argon Particle Microcontrollers, 2024"]]
+                "links": [["/performanceFlow.jpeg","Argon Particle Microcontrollers, 2024"]],
+                "abstract":"This final project is an experiment in creative interactive machine learning and musical gesture control. Our project aims to transform musical performances by providing new ways for artists to interact with the music. Inspired by previous IML research and similar projects, we tried a few approaches to manipulating musical performances that combined audio processing, machine learning, and sensors. We used Wekinator, MaxMSP, and Particle Argon microcontrollers to control audio effects of a pre-recorded track using hand gestures. The Particle Argon microcontroller records real-time hand data, which is fed into a machine learning model trained with Wekinator, and mapped to control audio effects like pan, filters, pitch modulation, and delay. Throughout the process, we encountered some difficulties and evolved our vision, initially aiming for live performance with real-time audio manipulation and exploring visual integration."
             },
             {
                 "title": "3d 2",
                 "description": "This is the description for Project 4.",
                 "tags":[],
-                "links": ["https://example.com/contact/project4/media"]
+                "links": ["https://example.com/contact/project4/media"],
+                "abstract":"wetwetwet"
             }
         ]
     }

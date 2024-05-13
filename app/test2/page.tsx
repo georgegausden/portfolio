@@ -4,6 +4,14 @@ import { useState } from "react";
 import projects from "../data/projects.json";
 import Image from "next/image";
 
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  links: string[][];
+  abstract?: string; // Optional property
+}
+
 export default function HomePage() {
   const [hoveredSection, setHoveredSection] = useState("");
   const [activeSection, setActiveSection] = useState("");
@@ -21,13 +29,16 @@ export default function HomePage() {
   const activeExperiment = projects
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
+
+    
+
   const activeProject = projects
     .find((project) => project.category === "Projects")
-    ?.projects.find((experiment) => experiment.title === activeSection);
+?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex flex-col max-w-[100rem] mx-auto h-screen">
-      
+    <div className="flex md:h-screen flex-col max-w-[100rem] mx-auto">
+      <div className=" w-full h-[95%]">
         {/* section for navbar */}
 
         <nav className="md:fixed py-10 top-0 z-10 text-center justify-center w-full max-w-[100rem]">
@@ -103,7 +114,7 @@ export default function HomePage() {
         </nav>
 
         {/* section for content */}
-        <div className="relative overflow-x-scroll flex py-[15%] ">
+        <div className="relative overflow-x-scroll bg-blue-200 flex items-center justify-center my-10  md:px-10  h-[85%] py-10">
           {activeSection === "Biography" && (
             <p className="px-[20%]">{biography?.projects[0].description}</p>
           )}
@@ -113,11 +124,11 @@ export default function HomePage() {
           )}
 
           {activeSection === activeExperiment?.title && (
-            <div className="flex flex-col md:flex-row gap-20 pr-10">
+            <div className="flex flex-col md:flex-row gap-20 pr-10 ">
               {activeExperiment?.links.map((link, index) => (
                 <div
                   key={index}
-                  className="relative flex-shrink-0 group  "
+                  className="relative flex-shrink-0 group bg-blue-500  "
                 >
                   <Image
                     key={index}
@@ -132,45 +143,72 @@ export default function HomePage() {
             </div>
           )}
 
-          
-          
+          {/* {activeSection === "Performance Flow" && (
+            <div className="bg-pink-300 h-full w-full flex flex-row"> 
 
-{activeSection === activeProject?.title && (
-            <div className="flex flex-col md:flex-row w-full gap-[5%]">
+              <div>
+                <h1>Performance Flow</h1>
+                <p>Performance Flow is a project that I worked on during my time at the Royal College of Art. It is a project that aims to create a new way of interacting with music. The project uses a combination of machine learning and computer vision to create a system that can interpret the movements of a performer and use them to control the music that is being played. The system is designed to be used in a live performance setting, allowing the performer to interact with the music in real-time.</p>
+              </div>
+
+              <div>
+                
+                </div>
+
+            
+            </div>
+          )} */}
+
+          {activeSection === activeProject?.title && (
+            <div className="flex flex-col md:flex-row gap-20 bg-pink-200 h-96 ">
               <div className="md:px-[10%]">
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
 
                 {activeProject.tags?.map((tag, index) => (
-                  <div key={index} className="inline-block bg-blue-100 p-2 m-1">
+                  <div key={index} className="inline-block bg-gray-200 p-2 m-1">
                     {tag}
                   </div>
                 ))}
               </div>
 
-              <div className="relative flex-shrink-0 group"><Image
+              <div
+               
+                className="relative flex-shrink-0 group bg-blue-500"
+              >
+                <Image
                   src={activeProject.links[0][0]}
                   alt={activeProject.title}
                   width={300}
                   height={300}
                 />
-                <div id="imageCaption">{activeProject.links[0][1]}</div></div>
+                <div id="imageCaption">{activeProject.links[0][1]}</div>
+              </div>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam quos fugiat autem exercitationem quas possimus nam perspiciatis, blanditiis quam adipisci iure et nihil natus deserunt laudantium accusantium eligendi dolor quod, odit nostrum, facere doloribus. Soluta ipsum ipsa eligendi sequi? Molestiae sint labore ipsa dolore qui fugit. Perspiciatis cum repellat ratione distinctio facilis voluptatem inventore labore aut quidem sunt id a, itaque ullam autem doloremque, tenetur hic corporis officia reprehenderit natus veritatis culpa. Incidunt atque sed, dolor non reiciendis beatae nam deleniti magni. Officiis, officia velit eligendi amet natus, iste nobis ab voluptatem delectus nostrum quae nam quas iusto cumque?</p>
+              <div>
+          <h2>Abstract</h2>
+          {/* Use a type guard to check if the 'abstract' property exists */}
+          {activeProject && 'abstract' in activeProject ? (
+            <p>{activeProject.abstract}</p>
+          ) : (
+            <p>No abstract available.</p>
+          )}
+        </div>
+
+
+
             </div>
-
-            
           )}
 
           {activeSection === "Email" && (
             <div className="text-3xl">georgegausden at gmail dot com</div>
           )}
         </div>
-      
+      </div>
       <div
-        className="w-full h-[5%] "
+        className="w-full h-[5%] bottom-0"
         style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
-      ></div>
+      ></div>{" "}
     </div>
   );
 }
