@@ -1,6 +1,5 @@
 "use client";
 // import Branch from "../components/Branch";
-import RightHandBar from "../components/RightHandBar";
 import Image from "next/image";
 import { SetStateAction, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -48,7 +47,6 @@ export default function Test() {
       </div>
 
       <div className="col-span-2" >
-        <RightHandBar activeProject={activeProject} />
       </div>
     </div>
   );
