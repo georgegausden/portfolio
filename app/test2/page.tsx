@@ -26,8 +26,8 @@ export default function HomePage() {
     ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex md:h-screen flex-col max-w-[100rem] mx-auto">
-      <div className=" w-full h-[95%]">
+    <div className="flex flex-col max-w-[100rem] mx-auto h-screen">
+      
         {/* section for navbar */}
 
         <nav className="md:fixed py-10 top-0 z-10 text-center justify-center w-full max-w-[100rem]">
@@ -103,7 +103,7 @@ export default function HomePage() {
         </nav>
 
         {/* section for content */}
-        <div className="relative overflow-x-scroll flex items-center justify-center my-10  md:px-10  h-[85%] py-10">
+        <div className="relative overflow-x-scroll flex py-[15%] ">
           {activeSection === "Biography" && (
             <p className="px-[20%]">{biography?.projects[0].description}</p>
           )}
@@ -113,11 +113,11 @@ export default function HomePage() {
           )}
 
           {activeSection === activeExperiment?.title && (
-            <div className="flex flex-col md:flex-row gap-20 pr-10 ">
+            <div className="flex flex-col md:flex-row gap-20 pr-10">
               {activeExperiment?.links.map((link, index) => (
                 <div
                   key={index}
-                  className="relative flex-shrink-0 group bg-blue-500  "
+                  className="relative flex-shrink-0 group  "
                 >
                   <Image
                     key={index}
@@ -133,7 +133,7 @@ export default function HomePage() {
           )}
 
           {activeSection === activeProject?.title && (
-            <div className="flex flex-col md:flex-row gap-20 ">
+            <div className="flex flex-col md:flex-row w-full gap-[5%]">
               <div className="md:px-[10%]">
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
@@ -145,32 +145,29 @@ export default function HomePage() {
                 ))}
               </div>
 
-              {activeProject?.links.map((link, index) => (
-                <div
-                key={index}
-                className="relative flex-shrink-0 group bg-blue-500"
-              >
-                <Image
-                  src={link[0]}
+              <div className="relative flex-shrink-0 group"><Image
+                  src={activeProject.links[0][0]}
                   alt={activeProject.title}
-                  layout="fill"
-                  objectFit="contain"
+                  width={300}
+                  height={300}
                 />
-                <div id="imageCaption">{link[1]}</div>
-              </div>
-              ))}
+                <div id="imageCaption">{activeProject.links[0][1]}</div></div>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam quos fugiat autem exercitationem quas possimus nam perspiciatis, blanditiis quam adipisci iure et nihil natus deserunt laudantium accusantium eligendi dolor quod, odit nostrum, facere doloribus. Soluta ipsum ipsa eligendi sequi? Molestiae sint labore ipsa dolore qui fugit. Perspiciatis cum repellat ratione distinctio facilis voluptatem inventore labore aut quidem sunt id a, itaque ullam autem doloremque, tenetur hic corporis officia reprehenderit natus veritatis culpa. Incidunt atque sed, dolor non reiciendis beatae nam deleniti magni. Officiis, officia velit eligendi amet natus, iste nobis ab voluptatem delectus nostrum quae nam quas iusto cumque?</p>
             </div>
+
+            
           )}
 
           {activeSection === "Email" && (
             <div className="text-3xl">georgegausden at gmail dot com</div>
           )}
         </div>
-      </div>
+      
       <div
-        className="w-full h-[5%] bottom-0"
+        className="w-full h-[5%] "
         style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
-      ></div>{" "}
+      ></div>
     </div>
   );
 }
