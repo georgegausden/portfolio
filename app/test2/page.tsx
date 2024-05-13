@@ -114,7 +114,7 @@ export default function HomePage() {
         </nav>
 
         {/* section for content */}
-        <div className="relative overflow-x-scroll bg-blue-200 flex justify-center items-center h-screen">
+        <div className="relative overflow-x-scroll  flex justify-center items-center h-screen">
           {activeSection === "Biography" && (
             <p className="px-[20%]">{biography?.projects[0].description}</p>
           )}
@@ -160,7 +160,7 @@ export default function HomePage() {
           )} */}
 
           {activeSection === activeProject?.title && (
-            <div className="flex flex-col md:flex-row gap-20 bg-pink-200 items-center ">
+            <div className="flex flex-col md:flex-row gap-20  items-center ">
               <div className="md:px-[10%]">
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
