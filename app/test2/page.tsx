@@ -132,14 +132,17 @@ export default function HomePage() {
             </div>
           )}
 
-          {activeSection === activeProject?.title && (
+          
+          
+
+{activeSection === activeProject?.title && (
             <div className="flex flex-col md:flex-row w-full gap-[5%]">
               <div className="md:px-[10%]">
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
 
                 {activeProject.tags?.map((tag, index) => (
-                  <div key={index} className="inline-block bg-gray-200 p-2 m-1">
+                  <div key={index} className="inline-block bg-blue-100 p-2 m-1">
                     {tag}
                   </div>
                 ))}
