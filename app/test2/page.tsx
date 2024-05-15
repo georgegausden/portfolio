@@ -117,7 +117,7 @@ export default function HomePage() {
       </nav>
 
       <div
-        className={`flex flex-grow justify-center items-center  pl-[10%] transition-all ease-in-out duration-500 ${
+        className={`flex flex-grow justify-center items-center py-[7%]  pl-[10%] transition-all ease-in-out duration-500 ${
           hoveredSection !== "" ? "blur-xl" : ""
         }`}
         style={{ zIndex: 10 }}
