@@ -124,7 +124,11 @@ export default function HomePage() {
       >
         {activeSection === "" && (
           // eslint-disable-next-line react/no-unescaped-entities
-          <h1>Hey, I'm George. I'm a digital artist interested in the</h1>
+         
+<h2>Hey, I'm George. I'm a <i className="underline not-italic">digital</i> artist.</h2>            
+             
+          
+         
         )}
 
         {activeSection === "Biography" && (
@@ -166,10 +170,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            
-            <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
-            <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
-            <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
+            {activeProject.title === "Performance Flow" && (
+              <div className="relative"> <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
+              <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
+              <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard></div>
+            )}
+           
 
 
 
