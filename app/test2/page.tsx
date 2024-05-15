@@ -170,12 +170,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            {activeProject.title === "Performance Flow" && (
-              <div className="relative"> <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
-              <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
-              <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard></div>
-            )}
-           
+            
+            <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
+            <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
+            <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
 
 
 
