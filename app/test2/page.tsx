@@ -30,26 +30,28 @@ export default function HomePage() {
     .find((project) => project.category === "Experiments")
     ?.projects.find((experiment) => experiment.title === activeSection);
 
-    
-
   const activeProject = projects
     .find((project) => project.category === "Projects")
-?.projects.find((experiment) => experiment.title === activeSection);
+    ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
     <div className="flex  flex-col">
       <div>
         {/* section for navbar */}
 
-        <nav className="md:fixed pt-10 top-0 z-10 text-center justify-center w-full ">
+        <nav className="pt-10 top-0 z-10 text-center justify-center w-full ">
           <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
             <div>
               <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
               {hoveredSection === "About" && (
-<div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>                  <button onClick={() => setActiveSection("Biography")}>
+                <div
+                  id="navbarSection"
+                  onMouseLeave={() => setHoveredSection("")}
+                >
+                  {" "}
+                  <button onClick={() => setActiveSection("Biography")}>
                     Biography
                   </button>
-
                   <button onClick={() => setActiveSection("Artist Statement")}>
                     Artist Statement
                   </button>
@@ -65,7 +67,10 @@ export default function HomePage() {
                 Experiments
               </h3>
               {hoveredSection === "Experiments" && (
-                <div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>
+                <div
+                  id="navbarSection"
+                  onMouseLeave={() => setHoveredSection("")}
+                >
                   {experimentsSection?.projects.map((experiment, index) => (
                     <button
                       key={index}
@@ -84,7 +89,10 @@ export default function HomePage() {
               </h3>
 
               {hoveredSection === "Projects" && (
-                <div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>
+                <div
+                  id="navbarSection"
+                  onMouseLeave={() => setHoveredSection("")}
+                >
                   {projectsSection?.projects.map((project, index) => (
                     <button
                       key={index}
@@ -100,7 +108,10 @@ export default function HomePage() {
             <div className="hidden md:block">
               <h3 onMouseEnter={() => setHoveredSection("Contact")}>Contact</h3>
               {hoveredSection === "Contact" && (
-                <div id="navbarSection" onMouseLeave={() => setHoveredSection("")}>
+                <div
+                  id="navbarSection"
+                  onMouseLeave={() => setHoveredSection("")}
+                >
                   <button onClick={() => setActiveSection("Email")}>
                     Email
                   </button>
@@ -113,21 +124,26 @@ export default function HomePage() {
         </nav>
 
         {/* section for content */}
-<div className={` flex justify-center items-center py-[10%] px-[10%]  transition-all ease-in-out duration-500 ${hoveredSection !== "" ? 'blur-md' : ''}`}>          {activeSection === "Biography" && (
-            <p className="px-[20%]">{biography?.projects[0].description}</p>
+        <div
+          className={` flex justify-center items-center py-[10%] px-[10%]  transition-all ease-in-out duration-500 ${
+            hoveredSection !== "" ? "blur-md" : ""
+          }`}
+        >
+          {activeSection === "" && (
+            // eslint-disable-next-line react/no-unescaped-entities
+            <h1>Hey, I'm George. I'm a digital artist interested in the</h1>
           )}
 
+          {activeSection === "Biography" && (
+            <p className="px-[20%]">{biography?.projects[0].description}</p>
+          )}
           {activeSection === "Artist Statement" && (
             <p className="px-[20%]">{biography?.projects[1].description}</p>
           )}
-
           {activeSection === activeExperiment?.title && (
             <div className="flex flex-col md:flex-row gap-20 pr-10 ">
               {activeExperiment?.links.map((link, index) => (
-                <div
-                  key={index}
-                  className="relative flex-shrink-0 group   "
-                >
+                <div key={index} className="relative flex-shrink-0 group   ">
                   <Image
                     key={index}
                     src={link[0]}
@@ -140,10 +156,9 @@ export default function HomePage() {
               ))}
             </div>
           )}
-
           {activeSection === activeProject?.title && (
             <div className="flex flex-col  gap-20   items-center ">
-              <div >
+              <div>
                 <h1>{activeProject.title}</h1>
                 <p>{activeProject.description}</p>
 
@@ -154,72 +169,59 @@ export default function HomePage() {
                 ))}
               </div>
 
-
               <div className="grid grid-cols-2 gap-10">
-              <div
-                className="relative group flex flex-col items-center justify-center  "
-              >
-                <Image
-                  src={activeProject.links[0][0]}
-                  alt={activeProject.title}
-                  width={300}
-                  height={300}
-                />
-                <div id="imageCaption">{activeProject.links[0][1]}</div>
-              </div>
-              <div>
-          <h2>Abstract</h2>
-          {/* Use a type guard to check if the 'abstract' property exists */}
-          {activeProject && 'abstract' in activeProject ? (
-            <p className=" ">{activeProject.abstract}</p>
-          ) : (
-            <p>No abstract available.</p>
-          )}
-        </div>
-
-              </div>
-
-              <div className="grid grid-cols-2 gap-10">
-                <div><h2>Process</h2>
-                {activeProject && 'process' in activeProject ? (
-            <p>{activeProject.process}</p>
-          ) : (
-            <p>No process available.</p>
-          )}</div>
-           <div
-                className="relative group flex flex-col items-center justify-center  "
-              >
-                <Image
-                  src={activeProject.links[1][0]}
-                  alt={activeProject.title}
-                  width={500}
-                  height={500}
-                />
-                <div id="imageCaption">{activeProject.links[1][1]}</div>
-              </div>
-                
+                <div className="relative group flex flex-col items-center justify-center  ">
+                  <Image
+                    src={activeProject.links[0][0]}
+                    alt={activeProject.title}
+                    width={300}
+                    height={300}
+                  />
+                  <div id="imageCaption">{activeProject.links[0][1]}</div>
                 </div>
-              
+                <div>
+                  <h2>Abstract</h2>
+                  {/* Use a type guard to check if the 'abstract' property exists */}
+                  {activeProject && "abstract" in activeProject ? (
+                    <p className=" ">{activeProject.abstract}</p>
+                  ) : (
+                    <p>No abstract available.</p>
+                  )}
+                </div>
+              </div>
 
-              
-
-
-
+              <div className="grid grid-cols-2 gap-10">
+                <div>
+                  <h2>Process</h2>
+                  {activeProject && "process" in activeProject ? (
+                    <p>{activeProject.process}</p>
+                  ) : (
+                    <p>No process available.</p>
+                  )}
+                </div>
+                <div className="relative group flex flex-col items-center justify-center  ">
+                  <Image
+                    src={activeProject.links[1][0]}
+                    alt={activeProject.title}
+                    width={500}
+                    height={500}
+                  />
+                  <div id="imageCaption">{activeProject.links[1][1]}</div>
+                </div>
+              </div>
             </div>
           )}
-
           {activeSection === "Email" && (
             <div className="text-3xl">georgegausden at gmail dot com</div>
           )}
-        <div
-        className="absolute h-[5%] bottom-0"
-        style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
-      ></div>{" "}
-        
+          <div
+            className="absolute h-[5%] bottom-0"
+            style={{
+              background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)",
+            }}
+          ></div>{" "}
         </div>
-        
       </div>
-      
     </div>
   );
 }
