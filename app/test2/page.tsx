@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import { useState } from "react";
 import projects from "../data/projects.json";
 import Image from "next/image";
+import ProjectCard from "../components/ProjectCard";
 
 interface Project {
   title: string;
@@ -35,7 +36,7 @@ export default function HomePage() {
     ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <nav className="fixed pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
           <div>
@@ -116,7 +117,7 @@ export default function HomePage() {
       </nav>
 
       <div
-        className={`flex justify-center items-center py-[10%] px-[10%] transition-all ease-in-out duration-500 ${
+        className={`flex flex-grow justify-center items-center py-[10%] px-[10%] transition-all ease-in-out duration-500 ${
           hoveredSection !== "" ? "blur-md" : ""
         }`}
         style={{ zIndex: 10 }}
@@ -164,42 +165,12 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="relative group flex-shrink-0">
-              <Image
-                src={activeProject.links[0][0]}
-                alt={activeProject.title}
-                width={300}
-                height={300}
-              />
-              <div id="imageCaption">{activeProject.links[0][1]}</div>
-            </div>
-            <div className="min-w-[500px]">
-              <h2>Abstract</h2>
-              {activeProject?.abstract ? (
-                <p>{activeProject.abstract}</p>
-              ) : (
-                <p>No abstract available.</p>
-              )}
-            </div>
 
-            <div className="relative group flex-shrink-0">
-              <Image
-                src={activeProject.links[1][0]}
-                alt={activeProject.title}
-                width={300}
-                height={300}
-              />
-              <div id="imageCaption">{activeProject.links[1][1]}</div>
-            </div>
-            <div className="min-w-[500px]">
-              <h2>Process</h2>
-              {activeProject?.process ? (
-                <p>{activeProject.process}</p>
-              ) : (
-                <p>No process available.</p>
-              )}
-            </div>
-            
+            <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description="yoo" title="yes"></ProjectCard>
+            <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description="yoo" title="yes"></ProjectCard>
+
+
+           
           </div>
         )}
         {activeSection === "Email" && (
