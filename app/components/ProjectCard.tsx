@@ -18,10 +18,10 @@ export default function ProjectCard({
   return (
     <div className="flex flex-col md:flex-row gap-20 items-start">
       <div className="relative group flex-shrink-0">
-        <Image src={imageSrc} alt={imageAlt} width={300} height={300} />
+        <Image src={imageSrc} alt={imageAlt} width={400} height={300} />
         <div id="imageCaption">{imageCaption}</div>
       </div>
-      <div className="min-w-[500px]">
+      <div className="min-w-[500px] w-auto">
         <h2>{title}</h2>
         <p>{description}</p>
       </div>

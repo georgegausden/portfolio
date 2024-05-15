@@ -37,7 +37,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <nav className="fixed pt-10 top-0 z-20 text-center justify-center w-full">
+      <nav className="md:fixed pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
           <div>
             <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
@@ -117,8 +117,8 @@ export default function HomePage() {
       </nav>
 
       <div
-        className={`flex flex-grow justify-center items-center py-[10%] px-[10%] transition-all ease-in-out duration-500 ${
-          hoveredSection !== "" ? "blur-md" : ""
+        className={`flex flex-grow justify-center items-center  pl-[10%] transition-all ease-in-out duration-500 ${
+          hoveredSection !== "" ? "blur-xl" : ""
         }`}
         style={{ zIndex: 10 }}
       >
@@ -150,7 +150,7 @@ export default function HomePage() {
           </div>
         )}
         {activeSection === activeProject?.title && (
-          <div className="flex gap-20 items-start overflow-x-auto">
+          <div className="flex gap-20 items-start md:overflow-x-auto">
             <div className="min-w-[600px]">
               <h1>{activeProject.title}</h1>
               <p>{activeProject.description}</p>
@@ -166,8 +166,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description="yoo" title="yes"></ProjectCard>
-            <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description="yoo" title="yes"></ProjectCard>
+            
+            <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
+            <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
+            <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
+
 
 
            
