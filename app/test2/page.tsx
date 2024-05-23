@@ -36,7 +36,7 @@ export default function HomePage() {
     ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex flex-col min-h-screen " onClick={() => setHoveredSection("")}>
+    <div className="flex flex-col min-h-screen ">
       <nav className="md:fixed pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
           <div>
