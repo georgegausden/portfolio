@@ -39,7 +39,7 @@ export default function HomePage() {
     .find((project) => project.category === "Projects")
     ?.projects.find((experiment) => experiment.title === activeSection);
 
-    
+
 
   return (
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
@@ -53,24 +53,24 @@ export default function HomePage() {
                 onMouseLeave={() => setHoveredSection("")}
               >
                 <button id="subButton" onClick={() => {
-  setActiveSection("Biography");
-  setHoveredSection("");
-}}>
+                  setActiveSection("Biography");
+                  setHoveredSection("");
+                }}>
                   Biography
                 </button>
                 <button id="subButton" onClick={() => {
-  setActiveSection("Artist Statement");
-  setHoveredSection("");
-}}>
+                  setActiveSection("Artist Statement");
+                  setHoveredSection("");
+                }}>
                   Artist Statement
                 </button>
                 <button id="subButton" onClick={() => window.open("/CV.pdf", "_blank")}>
                   CV
                 </button>
                 <button id="subButton" className="md:hidden" onClick={() => {
-  setActiveSection("Email");
-  setHoveredSection("");
-}}>Email</button>
+                  setActiveSection("Email");
+                  setHoveredSection("");
+                }}>Email</button>
               </div>
             )}
           </div>
@@ -131,9 +131,9 @@ export default function HomePage() {
                 onMouseLeave={() => setHoveredSection("")}
               >
                 <button id="subButton" onClick={() => {
-  setActiveSection("Email");
-  setHoveredSection("");
-}}>Email</button>
+                  setActiveSection("Email");
+                  setHoveredSection("");
+                }}>Email</button>
                 <button id="subButton">Download CV</button>
               </div>
             )}
@@ -142,29 +142,28 @@ export default function HomePage() {
       </nav>
 
       <div
-        className={`flex flex-grow justify-center items-center py-[7%] px-[5%] transition-all ease-in-out duration-500 ${
-          hoveredSection !== "" ? "blur-xl" : ""
-        }`}
+        className={`flex flex-grow justify-center items-center py-[7%] px-[5%] transition-all ease-in-out duration-500 ${hoveredSection !== "" ? "blur-xl" : ""
+          }`}
         style={{ zIndex: 10 }}
       >
 
         {activeSection === "" && (
-         
-        <div className="md:grid md:grid-cols-2 gap-20 flex flex-col justify-center">
-          <div className="flex justify-center">
-    <Image
-      src="/webcam.png"
-      width={500}
-      alt="Image of George"
-      height={500}
-    />
-  </div>
-  <h2>Hey, I'm George. I'm a <i className="underline text-blue-500">digital</i> artist.</h2> 
-  
-</div>      
-             
-          
-         
+
+          <div className="md:grid md:grid-cols-2 gap-20 flex flex-col justify-center">
+            <div className="flex justify-center">
+              <Image
+                src="/webcam.png"
+                width={500}
+                alt="Image of George"
+                height={500}
+              />
+            </div>
+            <h2>Hey, I'm <i className="underline not-italic text-blue-500">George</i>. I'm a digital artist.</h2>
+
+          </div>
+
+
+
         )}
 
         {activeSection === "Biography" && (
@@ -173,41 +172,41 @@ export default function HomePage() {
         {activeSection === "Artist Statement" && (
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
-       {activeSection === activeExperiment?.title && (
-    <div className="flex flex-col text-center  gap-20">
-      <div >
-        <h1>{activeExperiment.title}</h1>
-        <p>{activeExperiment.description}</p>
-        <div className="flex flex-wrap justify-center">
-          {activeExperiment.tags?.map((tag, index) => (
-            
-            <div
-              key={index}
-              className="inline-block bg-gray-200 p-2 m-1"
-            >
-              {tag}
-            </div>
-          ))}
-          </div>
-      </div>
-      <div className="md:grid md:grid-cols-2 xl:grid-cols-3 gap-10">
-      {activeExperiment?.links.map((link, index) => (
-        
-        <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
-  <Image
-    key={index}
-    src={link[0]}
-    alt={activeExperiment.title}
-    width={300}
-    height={300}
-  />
-  <div id="imageCaption">{link[1]}</div>
-</div>
+        {activeSection === activeExperiment?.title && (
+          <div className="flex flex-col text-center  gap-20">
+            <div >
+              <h1>{activeExperiment.title}</h1>
+              <p>{activeExperiment.description}</p>
+              <div className="flex flex-wrap justify-center">
+                {activeExperiment.tags?.map((tag, index) => (
 
-      ))}
-      </div>
-    </div>
-  )}
+                  <div
+                    key={index}
+                    className="inline-block bg-gray-200 p-2 m-1"
+                  >
+                    {tag}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+              {activeExperiment?.links.map((link, index) => (
+
+                <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
+                  <Image
+                    key={index}
+                    src={link[0]}
+                    alt={activeExperiment.title}
+                    width={300}
+                    height={300}
+                  />
+                  <div id="imageCaption">{link[1]}</div>
+                </div>
+
+              ))}
+            </div>
+          </div>
+        )}
         {activeSection === activeProject?.title && (
           <div className="flex flex-col gap-20 items-start ">
             <div className="w-full justify-center">
@@ -225,14 +224,38 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex md:gap-20 flex-col ">
+
+
+            {activeProject?.links.map((link, index) => (
+              <div className="grid grid-cols-2 gap-20">
+                <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
+                  <Image
+                    key={index}
+                    src={link[0]}
+                    alt={activeProject.title}
+                    width={300}
+                    height={300}
+                  />
+                  <div id="imageCaption">{link[1]}</div>
+                </div>
+
+                <div className="md:min-w-[500px]">
+                  <h2>{activeProject.text[index][0]}</h2>
+                  <p className="md:mr-10">{activeProject.text[index][1]}</p>
+                </div>
+              </div>
+
+
+            ))}
+
+            {/* <div className="flex md:gap-20 flex-col ">
             <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
-            </div>
+            </div> */}
 
 
-           
+
           </div>
         )}
         {activeSection === "Email" && (
