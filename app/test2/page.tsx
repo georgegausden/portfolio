@@ -36,7 +36,7 @@ export default function HomePage() {
     ?.projects.find((experiment) => experiment.title === activeSection);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen " onClick={() => setHoveredSection("")}>
       <nav className="md:fixed pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
           <div>
@@ -169,7 +169,7 @@ export default function HomePage() {
       </div>
       
       {activeExperiment?.links.map((link, index) => (
-        <div key={index} className="relative flex-shrink-0 group flex flex-col items-center justify-center pr-10">
+        <div key={index} className="relative flex-shrink-0 group flex flex-col items-center justify-center lg:pr-10">
   <Image
     key={index}
     src={link[0]}
