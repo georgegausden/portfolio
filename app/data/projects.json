@@ -53,6 +53,13 @@
                 "tags":["Marketing","Photography","Photoshop","p5.js", "Illustration"],
                 "links": [["/newkid1.webp","NewKid, 2024"],["/newkid2.webp","NewKid, 2024"],["/newkid3.webp","NewKid, 2024"],["/newkid4.webp","NewKid, 2024"], ["/newkid5.webp","NewKid, 2024"], ["/newkidgif.gif","NewKid, 2024"]],
                 "text":[[]]
+            },
+            {
+                "title": "Lighthouse Diorama",
+                "description": "A mini project done in the context of a 3D modelling course",
+                "tags":["3D Modelling","Blender","Diorama", "Animation", "Low Poly"],
+                "links": [["/0001.mp4","Diorama, 2022"]],
+                "text":[[]]
             }
         ]
     },

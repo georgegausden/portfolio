@@ -206,24 +206,31 @@ export default function HomePage() {
 
                   <div
                     key={index}
-                    className="inline-block bg-gray-200 p-2 m-1"
+                   id="tag"
                   >
                     {tag}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div className={`md:grid ${activeExperiment?.links.length === 1 ? 'md:flex' : 'md:grid-cols-2'}  gap-10`}>
               {activeExperiment?.links.map((link, index) => (
 
                 <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
-                  <Image
-                    key={index}
-                    src={link[0]}
-                    alt={activeExperiment.title}
-                    width={300}
-                    height={300}
-                  />
+                  {link[0].endsWith('.mp4') ? (
+  <video width="600" height="600" controls>
+    <source src={link[0]} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+) : (
+  <Image
+    key={index}
+    src={link[0]}
+    alt={activeExperiment.title}
+    width={300}
+    height={300}
+  />
+)}
                   <div id="imageCaption">{link[1]}</div>
                 </div>
 
@@ -240,7 +247,7 @@ export default function HomePage() {
                 {activeProject.tags?.map((tag, index) => (
                   <div
                     key={index}
-                    className="inline-block bg-gray-200 p-2 m-1"
+                    id="tag"
                   >
                     {tag}
                   </div>
