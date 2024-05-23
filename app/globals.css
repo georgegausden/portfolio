@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components{
+  
   h1{
     @apply  text-8xl mb-20;
   }

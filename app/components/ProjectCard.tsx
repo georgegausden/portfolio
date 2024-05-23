@@ -16,17 +16,18 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <div className="flex flex-col md:flex-row gap-20 items-start">
+    <div className="flex gap-20 items-start">
       
       <div className="relative group flex-shrink-0 min-h-[300px] flex flex-col items-center">
-        <Image src={imageSrc} alt={imageAlt} width={400} height={300} />
+        <Image src={imageSrc} alt={imageAlt} width={300} height={200} />
         <div id="imageCaption">{imageCaption}</div>
       </div>
      
-      <div className="min-w-[500px] w-auto">
+      <div className="min-w-[500px]">
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p className="mr-10">{description}</p>
       </div>
+      
     </div>
   );
 }

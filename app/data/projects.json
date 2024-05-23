@@ -43,10 +43,10 @@
                 "links": [["/geometries1.jpg","experiment1"], ["/geometries2.jpg","experiment1"], ["/geometries3.jpg","experiment1"]]
             },
             {
-                "title": "experiment 2",
+                "title": "NewKid",
                 "description": "This is the description for Project 4.",
                 "tags":[],
-                "links": ["https://example.com/contact/project4/media"]
+                "links": [["/newkid1.webp","NewKid,2024"],["/newkid2.webp","NewKid,2024"],["/newkid3.webp","NewKid,2024"]]
             }
         ]
     },

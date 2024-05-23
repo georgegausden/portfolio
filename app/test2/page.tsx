@@ -137,22 +137,22 @@ export default function HomePage() {
         {activeSection === "Artist Statement" && (
           <p className="px-[20%]">{biography?.projects[1].description}</p>
         )}
-        {activeSection === activeExperiment?.title && (
-          <div className="flex flex-col md:flex-row gap-20 pr-10">
-            {activeExperiment?.links.map((link, index) => (
-              <div key={index} className="relative flex-shrink-0 group">
-                <Image
-                  key={index}
-                  src={link[0]}
-                  alt={activeExperiment.title}
-                  width={500}
-                  height={500}
-                />
-                <div id="imageCaption">{link[1]}</div>
-              </div>
-            ))}
-          </div>
-        )}
+       {activeSection === activeExperiment?.title && (
+    <div className="flex flex-col md:flex-row gap-20 pr-10">
+      {activeExperiment?.links.map((link, index) => (
+        <div key={index} className="relative flex-shrink-0 group flex flex-col items-center justify-center pr-10">
+  <Image
+    key={index}
+    src={link[0]}
+    alt={activeExperiment.title}
+    width={400}
+    height={200}
+  />
+  <div id="imageCaption">{link[1]}</div>
+</div>
+      ))}
+    </div>
+  )}
         {activeSection === activeProject?.title && (
           <div className="flex gap-20 items-start md:overflow-x-auto">
             <div className="min-w-[600px]">
@@ -170,11 +170,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            
+            <div className="flex gap-20 flex-row">
             <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
-
+            </div>
 
 
            
