@@ -79,7 +79,15 @@
                 "title": "Alien",
                 "description": "A 3D modelling project done in the context of a 3D course.",
                 "tags":["3D Modelling","Animation","Blender","Rigging"],
-                "links": ["https://example.com/contact/project4/media"],
+                "links": [["/humanoid.mp4","Humanoid Alien, Blender, 2023"]],
+                "text":[[]]
+                
+            },
+            {
+                "title": "Montréal Underground",
+                "description": "A 3D modelling project involving CGI and animation.",
+                "tags":["3D Modelling","Animation","Blender"],
+                "links": [["/vfx.webp","Final Result, Blender, 2023"]],
                 "text":[[]]
                 
             }

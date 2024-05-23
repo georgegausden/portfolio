@@ -19,7 +19,7 @@ interface Project {
 
 export default function HomePage() {
   const [hoveredSection, setHoveredSection] = useState("");
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("Me");
   const biography = projects.find((project) => project.category === "About");
   const artistStatement = projects.find(
     (project) => project.category === "About"
@@ -258,8 +258,8 @@ export default function HomePage() {
 
 
             {activeProject?.links.map((link, index) => (
-              <div className="grid grid-cols-2 gap-20">
-                <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
+              <div key={index} className="grid grid-cols-2 gap-20">
+                <div className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
                   <Image
                     key={index}
                     src={link[0]}
@@ -275,8 +275,6 @@ export default function HomePage() {
                   <p className="md:mr-10">{activeProject.text[index][1]}</p>
                 </div>
               </div>
-
-
             ))}
 
 
