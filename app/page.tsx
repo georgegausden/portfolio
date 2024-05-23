@@ -5,6 +5,8 @@ import projects from "./data/projects.json";
 import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
 import { useInView } from 'react-intersection-observer';
+/* eslint-disable react/no-unescaped-entities */
+
 
 
 interface Project {
@@ -147,7 +149,7 @@ export default function HomePage() {
       >
 
         {activeSection === "" && (
-          // eslint-disable-next-line react/no-unescaped-entities
+         
         <div className="md:grid md:grid-cols-2 gap-20 flex flex-col justify-center">
           <div className="flex justify-center">
     <Image
