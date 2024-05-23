@@ -152,7 +152,7 @@ export default function HomePage() {
           <p className="px-[20%]">{biography?.projects[1].description}</p>
         )}
        {activeSection === activeExperiment?.title && (
-    <div className="flex flex-col md:flex-row gap-20 pr-10">
+    <div className="flex flex-col md:flex-row gap-20 lg:pr-10">
       <div className="min-w-[600[x]">
         <h1>{activeExperiment.title}</h1>
         <p>{activeExperiment.description}</p>
