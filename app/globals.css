@@ -5,11 +5,11 @@
 @layer components{
   
   h1{
-    @apply text-6xl lg:text-8xl lg:mb-20 my-10;
+    @apply text-6xl lg:text-8xl lg:mb-20 my-10 text-center;
   }
 
   button{
-    @apply lg:text-blue-400  hover:text-blue-700 transition-colors duration-500 ease-in-out border lg:border-none p-2 bg-gray-200 rounded-md text-black lg:bg-transparent;
+    @apply lg:text-blue-400   transition-colors duration-500 ease-in-out border border-blue-400 hover:border-blue-800 hover:bg-blue-800 hover:text-white p-2 bg-gray-200 w-[150px] text-black lg:bg-transparent;
   }
 
   #videoPlayerButton{

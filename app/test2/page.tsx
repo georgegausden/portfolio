@@ -152,8 +152,8 @@ export default function HomePage() {
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
        {activeSection === activeExperiment?.title && (
-    <div className="flex flex-col  gap-20 lg:pr-10">
-      <div className="min-w-[600[x]">
+    <div className="flex flex-col  gap-20">
+      <div >
         <h1>{activeExperiment.title}</h1>
         <p>{activeExperiment.description}</p>
         <div className="flex flex-wrap">
@@ -167,9 +167,10 @@ export default function HomePage() {
           ))}
           </div>
       </div>
-      
+      <div className="md:grid md:grid-cols-2 gap-10">
       {activeExperiment?.links.map((link, index) => (
-        <div key={index} className="relative flex-shrink-0 group flex flex-col items-center justify-center lg:pr-10">
+        
+        <div key={index} className="relative flex-shrink-0 group flex flex-col ">
   <Image
     key={index}
     src={link[0]}
@@ -179,7 +180,9 @@ export default function HomePage() {
   />
   <div id="imageCaption">{link[1]}</div>
 </div>
+
       ))}
+      </div>
     </div>
   )}
         {activeSection === activeProject?.title && (
