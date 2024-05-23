@@ -37,7 +37,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen ">
-      <nav className="md:fixed pt-10 top-0 z-20 text-center justify-center w-full">
+      <nav className=" pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
           <div>
             <button onMouseEnter={() => setHoveredSection("About")}>About</button>
@@ -152,7 +152,7 @@ export default function HomePage() {
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
        {activeSection === activeExperiment?.title && (
-    <div className="flex flex-col md:flex-row gap-20 lg:pr-10">
+    <div className="flex flex-col  gap-20 lg:pr-10">
       <div className="min-w-[600[x]">
         <h1>{activeExperiment.title}</h1>
         <p>{activeExperiment.description}</p>
@@ -183,7 +183,7 @@ export default function HomePage() {
     </div>
   )}
         {activeSection === activeProject?.title && (
-          <div className="flex flex-col md:flex-row gap-20 items-start md:overflow-x-auto">
+          <div className="flex flex-col gap-20 items-start md:overflow-x-auto">
             <div className="md:min-w-[600px]">
               <h1>{activeProject.title}</h1>
               <p>{activeProject.description}</p>
@@ -199,7 +199,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex md:gap-20 flex-col md:flex-row">
+            <div className="flex md:gap-20 flex-col ">
             <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
