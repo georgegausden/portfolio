@@ -24,7 +24,7 @@
   
 
   h2{
-    @apply font-medium  text-4xl py-10 md:mb-10;
+    @apply font-medium  text-4xl py-10 md:py-5;
   }
 
   h3{
