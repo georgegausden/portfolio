@@ -124,8 +124,7 @@ export default function HomePage() {
       >
         {activeSection === "" && (
           // eslint-disable-next-line react/no-unescaped-entities
-         
-<h2>Hey, I'm George. I'm a <i className="underline not-italic">digital</i> artist.</h2>            
+         <h2>Hey, I'm George. I'm a <i className="underline not-italic">digital</i> artist.</h2>            
              
           
          
