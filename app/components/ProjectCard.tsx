@@ -18,7 +18,7 @@ export default function ProjectCard({
   return (
     <div className="flex flex-col md:flex-row md:gap-20 items-start">
       
-      <div className="relative group flex-shrink-0 md:min-h-[300px] flex flex-col items-center  justify-center">
+      <div className="relative group flex-shrink-0 md:min-h-[300px] flex flex-col items-center py-5 mx-auto  justify-center">
         <Image src={imageSrc} alt={imageAlt} width={300} height={200} />
         <div id="imageCaption">{imageCaption}</div>
       </div>
