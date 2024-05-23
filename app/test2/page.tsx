@@ -38,7 +38,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen ">
       <nav className=" pt-10 top-0 z-20 text-center justify-center w-full">
-        <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
+        <div className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full">
           <div>
             <button onMouseEnter={() => setHoveredSection("About")}>About</button>
             {hoveredSection === "About" && (
