@@ -215,7 +215,7 @@ export default function HomePage() {
       </div>
 
       <div
-        className="fixed bottom-0 left-0 w-full h-[5%] z-30"
+        className="fixed bottom-0 left-0 w-full h-[5%] z-30 hidden md:block"
         style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
       ></div>
     </div>
