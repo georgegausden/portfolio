@@ -138,14 +138,29 @@ export default function HomePage() {
         )}
        {activeSection === activeExperiment?.title && (
     <div className="flex flex-col md:flex-row gap-20 pr-10">
+      <div className="min-w-[600[x]">
+        <h1>{activeExperiment.title}</h1>
+        <p>{activeExperiment.description}</p>
+        <div className="flex flex-wrap">
+          {activeExperiment.tags?.map((tag, index) => (
+            <div
+              key={index}
+              className="inline-block bg-gray-200 p-2 m-1"
+            >
+              {tag}
+            </div>
+          ))}
+          </div>
+      </div>
+      
       {activeExperiment?.links.map((link, index) => (
         <div key={index} className="relative flex-shrink-0 group flex flex-col items-center justify-center pr-10">
   <Image
     key={index}
     src={link[0]}
     alt={activeExperiment.title}
-    width={400}
-    height={200}
+    width={300}
+    height={300}
   />
   <div id="imageCaption">{link[1]}</div>
 </div>

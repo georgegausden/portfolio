@@ -50,8 +50,8 @@
         "projects": [
             {
                 "title": "Geometries",
-                "description": "I've always been interested in the way that trigonometric functions can be used to create complex shapes. I wanted to experiment with this concept and see how far I could push it. Most of the iterations involved combining sine, cosine and tangent functions in different ways to create interesting patterns.",
-                "tags":[],
+                "description": "Playing around with p5.js and trigonometry to create generative art.",
+                "tags":["p5.js","Trigonometry","Generative Art","Mathematics"],
                 "links": [["/geometries1.jpg","experiment1"], ["/geometries2.jpg","experiment1"], ["/geometries3.jpg","experiment1"]],
                 "abstract":"",
                 "process":"",
