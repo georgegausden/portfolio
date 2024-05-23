@@ -13,7 +13,7 @@
   }
 
   #subButton{
-    @apply bg-none italic text-blue-600 no-underline text-left
+    @apply bg-none italic text-blue-600 no-underline text-left md:text-center;
   }
 
   #videoPlayerButton{
