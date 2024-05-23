@@ -132,7 +132,7 @@ export default function HomePage() {
       </nav>
 
       <div
-        className={`flex flex-grow justify-center items-center py-[7%]  pl-[10%] transition-all ease-in-out duration-500 ${
+        className={`flex flex-grow justify-center items-center py-[7%]  lg:pl-[10%] transition-all ease-in-out duration-500 ${
           hoveredSection !== "" ? "blur-xl" : ""
         }`}
         style={{ zIndex: 10 }}
@@ -146,10 +146,10 @@ export default function HomePage() {
         )}
 
         {activeSection === "Biography" && (
-          <p className="px-[20%]">{biography?.projects[0].description}</p>
+          <p className="lg:px-[20%]">{biography?.projects[0].description}</p>
         )}
         {activeSection === "Artist Statement" && (
-          <p className="px-[20%]">{biography?.projects[1].description}</p>
+          <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
        {activeSection === activeExperiment?.title && (
     <div className="flex flex-col md:flex-row gap-20 lg:pr-10">
