@@ -183,8 +183,8 @@ export default function HomePage() {
     </div>
   )}
         {activeSection === activeProject?.title && (
-          <div className="flex gap-20 items-start md:overflow-x-auto">
-            <div className="min-w-[600px]">
+          <div className="flex flex-col md:flex-row gap-20 items-start md:overflow-x-auto">
+            <div className="md:min-w-[600px]">
               <h1>{activeProject.title}</h1>
               <p>{activeProject.description}</p>
               <div className="flex flex-wrap">
@@ -199,7 +199,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex gap-20 flex-row">
+            <div className="flex md:gap-20 flex-col md:flex-row">
             <ProjectCard imageSrc={activeProject.links[0][0]} imageCaption={activeProject.links[0][1]} imageAlt="alt" description={activeProject.abstract} title="Abstract"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[1][0]} imageCaption={activeProject.links[1][1]} imageAlt="alt" description={activeProject.process} title="Process"></ProjectCard>
             <ProjectCard imageSrc={activeProject.links[2][0]} imageCaption={activeProject.links[2][1]} imageAlt="alt" description={activeProject.mapping} title="Mapping"></ProjectCard>
