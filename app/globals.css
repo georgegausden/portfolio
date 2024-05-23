@@ -18,7 +18,7 @@
 
 
   #navbarSection{
-    @apply absolute flex flex-col items-start md:translate-x-[0%] py-5 gap-3 md:gap-0;
+    @apply absolute flex flex-col items-start md:translate-x-[0%] py-5 gap-3 ;
   }
 
   
