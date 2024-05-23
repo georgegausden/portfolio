@@ -40,16 +40,22 @@ export default function HomePage() {
       <nav className="md:fixed pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[15%] md:gap-[10%] justify-center w-full">
           <div>
-            <h3 onMouseEnter={() => setHoveredSection("About")}>About</h3>
+            <button onMouseEnter={() => setHoveredSection("About")}>About</button>
             {hoveredSection === "About" && (
               <div
                 id="navbarSection"
                 onMouseLeave={() => setHoveredSection("")}
               >
-                <button onClick={() => setActiveSection("Biography")}>
+                <button onClick={() => {
+  setActiveSection("Biography");
+  setHoveredSection("");
+}}>
                   Biography
                 </button>
-                <button onClick={() => setActiveSection("Artist Statement")}>
+                <button onClick={() => {
+  setActiveSection("Artist Statement");
+  setHoveredSection("");
+}}>
                   Artist Statement
                 </button>
                 <button onClick={() => window.open("/CV.pdf", "_blank")}>
@@ -60,9 +66,9 @@ export default function HomePage() {
           </div>
 
           <div>
-            <h3 onMouseEnter={() => setHoveredSection("Experiments")}>
+            <button onMouseEnter={() => setHoveredSection("Experiments")}>
               Experiments
-            </h3>
+            </button>
             {hoveredSection === "Experiments" && (
               <div
                 id="navbarSection"
@@ -71,7 +77,10 @@ export default function HomePage() {
                 {experimentsSection?.projects.map((experiment, index) => (
                   <button
                     key={index}
-                    onClick={() => setActiveSection(experiment.title)}
+                    onClick={() => {
+                      setActiveSection(experiment.title);
+                      setHoveredSection("");
+                    }}
                   >
                     {experiment.title}
                   </button>
@@ -81,9 +90,9 @@ export default function HomePage() {
           </div>
 
           <div>
-            <h3 onMouseEnter={() => setHoveredSection("Projects")}>
+            <button onMouseEnter={() => setHoveredSection("Projects")}>
               Projects
-            </h3>
+            </button>
             {hoveredSection === "Projects" && (
               <div
                 id="navbarSection"
@@ -92,7 +101,10 @@ export default function HomePage() {
                 {projectsSection?.projects.map((project, index) => (
                   <button
                     key={index}
-                    onClick={() => setActiveSection(project.title)}
+                    onClick={() => {
+                      setActiveSection(project.title);
+                      setHoveredSection("");
+                    }}
                   >
                     {project.title}
                   </button>
@@ -102,13 +114,16 @@ export default function HomePage() {
           </div>
 
           <div className="hidden md:block">
-            <h3 onMouseEnter={() => setHoveredSection("Contact")}>Contact</h3>
+            <button onMouseEnter={() => setHoveredSection("Contact")}>Contact</button>
             {hoveredSection === "Contact" && (
               <div
                 id="navbarSection"
                 onMouseLeave={() => setHoveredSection("")}
               >
-                <button onClick={() => setActiveSection("Email")}>Email</button>
+                <button onClick={() => {
+  setActiveSection("Email");
+  setHoveredSection("");
+}}>Email</button>
                 <button>Download CV</button>
               </div>
             )}
