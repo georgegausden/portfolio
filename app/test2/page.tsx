@@ -46,19 +46,19 @@ export default function HomePage() {
                 id="navbarSection"
                 onMouseLeave={() => setHoveredSection("")}
               >
-                <button onClick={() => {
+                <button id="subButton" onClick={() => {
   setActiveSection("Biography");
   setHoveredSection("");
 }}>
                   Biography
                 </button>
-                <button onClick={() => {
+                <button id="subButton" onClick={() => {
   setActiveSection("Artist Statement");
   setHoveredSection("");
 }}>
                   Artist Statement
                 </button>
-                <button onClick={() => window.open("/CV.pdf", "_blank")}>
+                <button id="subButton" onClick={() => window.open("/CV.pdf", "_blank")}>
                   CV
                 </button>
               </div>
@@ -75,7 +75,7 @@ export default function HomePage() {
                 onMouseLeave={() => setHoveredSection("")}
               >
                 {experimentsSection?.projects.map((experiment, index) => (
-                  <button
+                  <button id="subButton"
                     key={index}
                     onClick={() => {
                       setActiveSection(experiment.title);
@@ -99,7 +99,7 @@ export default function HomePage() {
                 onMouseLeave={() => setHoveredSection("")}
               >
                 {projectsSection?.projects.map((project, index) => (
-                  <button
+                  <button id="subButton"
                     key={index}
                     onClick={() => {
                       setActiveSection(project.title);
@@ -120,11 +120,11 @@ export default function HomePage() {
                 id="navbarSection"
                 onMouseLeave={() => setHoveredSection("")}
               >
-                <button onClick={() => {
+                <button id="subButton" onClick={() => {
   setActiveSection("Email");
   setHoveredSection("");
 }}>Email</button>
-                <button>Download CV</button>
+                <button id="subButton">Download CV</button>
               </div>
             )}
           </div>
@@ -132,7 +132,7 @@ export default function HomePage() {
       </nav>
 
       <div
-        className={`flex flex-grow justify-center items-center py-[7%]  lg:pl-[10%] transition-all ease-in-out duration-500 ${
+        className={`flex flex-grow justify-center items-center py-[7%] px-[5%] transition-all ease-in-out duration-500 ${
           hoveredSection !== "" ? "blur-xl" : ""
         }`}
         style={{ zIndex: 10 }}
@@ -170,7 +170,7 @@ export default function HomePage() {
       <div className="md:grid md:grid-cols-2 gap-10">
       {activeExperiment?.links.map((link, index) => (
         
-        <div key={index} className="relative flex-shrink-0 group flex flex-col ">
+        <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
   <Image
     key={index}
     src={link[0]}
@@ -186,11 +186,11 @@ export default function HomePage() {
     </div>
   )}
         {activeSection === activeProject?.title && (
-          <div className="flex flex-col gap-20 items-start md:overflow-x-auto">
-            <div className="md:min-w-[600px]">
+          <div className="flex flex-col gap-20 items-start ">
+            <div className="w-full justify-center">
               <h1>{activeProject.title}</h1>
-              <p>{activeProject.description}</p>
-              <div className="flex flex-wrap">
+              <p className="text-center">{activeProject.description}</p>
+              <div className="flex flex-wrap justify-center">
                 {activeProject.tags?.map((tag, index) => (
                   <div
                     key={index}
