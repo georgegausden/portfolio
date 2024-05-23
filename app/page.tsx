@@ -145,9 +145,21 @@ export default function HomePage() {
         }`}
         style={{ zIndex: 10 }}
       >
+
         {activeSection === "" && (
           // eslint-disable-next-line react/no-unescaped-entities
-         <h2>Hey, I'm George. I'm a <i className="underline not-italic">digital</i> artist.</h2>            
+        <div className="md:grid md:grid-cols-2 gap-20 flex flex-col justify-center">
+          <div className="flex justify-center">
+    <Image
+      src="/webcam.png"
+      width={500}
+      alt="Image of George"
+      height={500}
+    />
+  </div>
+  <h2>Hey, I'm George. I'm a <i className="underline text-blue-500">digital</i> artist.</h2> 
+  
+</div>      
              
           
          
