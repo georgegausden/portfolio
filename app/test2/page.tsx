@@ -4,6 +4,8 @@ import { useState } from "react";
 import projects from "../data/projects.json";
 import Image from "next/image";
 import ProjectCard from "../components/ProjectCard";
+import { useInView } from 'react-intersection-observer';
+
 
 interface Project {
   title: string;
@@ -35,8 +37,10 @@ export default function HomePage() {
     .find((project) => project.category === "Projects")
     ?.projects.find((experiment) => experiment.title === activeSection);
 
+    
+
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
       <nav className=" pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full">
           <div>
@@ -162,6 +166,7 @@ export default function HomePage() {
         <p>{activeExperiment.description}</p>
         <div className="flex flex-wrap justify-center">
           {activeExperiment.tags?.map((tag, index) => (
+            
             <div
               key={index}
               className="inline-block bg-gray-200 p-2 m-1"
@@ -171,7 +176,7 @@ export default function HomePage() {
           ))}
           </div>
       </div>
-      <div className="md:grid md:grid-cols-2 gap-10">
+      <div className="md:grid md:grid-cols-2 xl:grid-cols-3 gap-10">
       {activeExperiment?.links.map((link, index) => (
         
         <div key={index} className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
