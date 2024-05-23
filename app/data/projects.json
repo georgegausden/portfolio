@@ -52,7 +52,7 @@
                 "title": "Geometries",
                 "description": "Playing around with p5.js and trigonometry to create generative art.",
                 "tags":["p5.js","Trigonometry","Generative Art","Mathematics"],
-                "links": [["/geometries1.jpg","experiment1"], ["/geometries2.jpg","experiment1"], ["/geometries3.jpg","experiment1"]],
+                "links": [["/geometries1.jpg","Iteration #1, p5.js, 2023"], ["/geometries2.jpg","Iteration #2, p5.js, 2023"], ["/geometries3.jpg","Iteration #3, p5.js, 2023"]],
                 "abstract":"",
                 "process":"",
                 "mapping":""

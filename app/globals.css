@@ -160,13 +160,13 @@ body {
 }
 
 ::-moz-selection {
-  background: #ffffff;
+  background: #cc1515;
 }
 ::-webkit-selection {
-  background: #BAC5B6;
+  background: #50b82a;
 }
 ::selection {
-  background: rgb(96 165 250 / var(--tw-text-opacity));
+  background:  rgb(96 165 250);
 }
 
 
