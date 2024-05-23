@@ -61,6 +61,10 @@ export default function HomePage() {
                 <button id="subButton" onClick={() => window.open("/CV.pdf", "_blank")}>
                   CV
                 </button>
+                <button id="subButton" className="md:hidden" onClick={() => {
+  setActiveSection("Email");
+  setHoveredSection("");
+}}>Email</button>
               </div>
             )}
           </div>
@@ -152,11 +156,11 @@ export default function HomePage() {
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
        {activeSection === activeExperiment?.title && (
-    <div className="flex flex-col  gap-20">
+    <div className="flex flex-col text-center  gap-20">
       <div >
         <h1>{activeExperiment.title}</h1>
         <p>{activeExperiment.description}</p>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center">
           {activeExperiment.tags?.map((tag, index) => (
             <div
               key={index}
