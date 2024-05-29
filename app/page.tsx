@@ -207,17 +207,17 @@ export default function HomePage() {
 
           <div className=" flex flex-col justify-center mb-24">
            
-           <div className="h-screen flex items-center">
-            <h2 className="text-8xl">Hey, I'm George. I'm a <i id="specialText" className=" not-italic">digital artist</i>. </h2>
-            <button     onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+           <motion.div initial="hidden" animate="show" exit="hidden" variants={containerVariants} className="h-screen flex items-center">
+            <motion.h2 variants={itemVariants}   className="text-8xl">Hey, I'm George. I'm a <i id="specialText" className=" not-italic">digital artist</i>. </motion.h2>
+            <motion.button variants={itemVariants}     onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
 
  className="absolute bottom-28 right-0 animate-bounce"><svg width="90" height="90" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.1683 2.19324C4.85508 2.19324 2.16699 4.88132 2.16699 8.19454C2.16699 11.5078 4.85508 14.1959 8.1683 14.1959C11.4815 14.1959 14.1696 11.5078 14.1696 8.19454C14.1696 4.88132 11.4815 2.19324 8.1683 2.19324Z" stroke="gray" stroke-width="0.5" stroke-miterlimit="10"/>
 <path d="M11.1699 6.94427L8.16881 9.94536L5.16772 6.94427" stroke="gray" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-</button>
+</motion.button>
             
-            </div> 
+            </motion.div> 
 
 
             <div>
@@ -347,10 +347,10 @@ export default function HomePage() {
         )}
       </div>
 
-      <div
+      {/* <div
         className="fixed bottom-0 left-0 w-full h-[5%] z-30 hidden md:block"
         style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
-      ></div>
+      ></div> */}
     </div>
   );
 }
