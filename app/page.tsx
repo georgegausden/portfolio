@@ -22,13 +22,13 @@ const containerVariants = {
   hidden: {
     opacity: 0,
     transition: {
-      staggerChildren: 0.05, // Stagger children by 0.2 seconds
+      staggerChildren: 0.1, // Stagger children by 0.2 seconds
     },
   },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05, // Stagger children by 0.2 seconds
+      staggerChildren: 0.1, // Stagger children by 0.2 seconds
     },
   },
 
@@ -66,8 +66,8 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
       <nav className=" pt-10 top-0 z-20 text-center justify-center w-full">
-        <div className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full">
-          <div>
+        <motion.div initial="hidden" animate="show" exit="hidden" variants={containerVariants} className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full">
+          <motion.div variants={itemVariants}>
             <button  onMouseEnter={() => setHoveredSection("About")}>About</button>
             <AnimatePresence>
             {hoveredSection === "About" && (
@@ -106,10 +106,10 @@ export default function HomePage() {
               </motion.div>
             )}
             </AnimatePresence>
-          </div>
+          </motion.div>
           
 
-          <div>
+          <motion.div variants={itemVariants}>
             <button onMouseEnter={() => setHoveredSection("Experiments")}>
               Experiments
             </button>
@@ -140,9 +140,9 @@ export default function HomePage() {
         </motion.div>
       )}
       </AnimatePresence>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={itemVariants}>
             <button onMouseEnter={() => setHoveredSection("Projects")}>
               Projects
             </button>
@@ -171,9 +171,9 @@ export default function HomePage() {
               </motion.div>
             )}
             </AnimatePresence>
-          </div>
+          </motion.div>
 
-          <div className="hidden md:block">
+          <motion.div variants={itemVariants} className="hidden md:block">
             <button onMouseEnter={() => setHoveredSection("Contact")}>Contact</button>
             <AnimatePresence>
             {hoveredSection === "Contact" && (
@@ -193,8 +193,8 @@ export default function HomePage() {
               </motion.div>
             )}
             </AnimatePresence>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </nav>
 
       <div
