@@ -5,6 +5,7 @@ import projects from "./data/projects.json";
 import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
 import { useInView } from 'react-intersection-observer';
+import {motion} from 'framer-motion';
 /* eslint-disable react/no-unescaped-entities */
 
 
@@ -16,6 +17,24 @@ interface Project {
   links: string[][];
   abstract?: string; // Optional property
 }
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05, // Stagger children by 0.2 seconds
+    },
+  },
+
+};
+
+const itemVariants = {
+  hidden: { opacity: 0},
+  show: { opacity: 1 },
+};
 
 export default function HomePage() {
   const [hoveredSection, setHoveredSection] = useState("");
@@ -48,34 +67,38 @@ export default function HomePage() {
           <div>
             <button onMouseEnter={() => setHoveredSection("About")}>About</button>
             {hoveredSection === "About" && (
-              <div
+              <motion.div
                 id="navbarSection"
+                initial="hidden"
+                variants={containerVariants}
+                animate="show"
+                exit="hidden"
                 onMouseLeave={() => setHoveredSection("")}
               >
-                 <button id="subButton" onClick={() => {
+                 <motion.button id="subButton" variants={itemVariants} onClick={() => {
                   setActiveSection("Me");
                   setHoveredSection("");
-                }}>Me</button>
-                <button id="subButton" onClick={() => {
+                }}>Me</motion.button>
+                <motion.button id="subButton" variants={itemVariants} onClick={() => {
                   setActiveSection("Biography");
                   setHoveredSection("");
                 }}>
                   Biography
-                </button>
-                <button id="subButton" onClick={() => {
+                </motion.button>
+                <motion.button id="subButton" variants={itemVariants} onClick={() => {
                   setActiveSection("Artist Statement");
                   setHoveredSection("");
                 }}>
                   Artist Statement
-                </button>
-                <button id="subButton" onClick={() => window.open("/CV.pdf", "_blank")}>
+                </motion.button>
+                <motion.button id="subButton" variants={itemVariants} onClick={() => window.open("/CV.pdf", "_blank")}>
                   CV
-                </button>
-                <button id="subButton" className="md:hidden" onClick={() => {
+                </motion.button>
+                <motion.button id="subButton" variants={itemVariants} className="md:hidden" onClick={() => {
                   setActiveSection("Email");
                   setHoveredSection("");
-                }}>Email</button>
-              </div>
+                }}>Email</motion.button>
+              </motion.div>
             )}
           </div>
 
@@ -84,23 +107,29 @@ export default function HomePage() {
               Experiments
             </button>
             {hoveredSection === "Experiments" && (
-              <div
-                id="navbarSection"
-                onMouseLeave={() => setHoveredSection("")}
-              >
-                {experimentsSection?.projects.map((experiment, index) => (
-                  <button id="subButton"
-                    key={index}
-                    onClick={() => {
-                      setActiveSection(experiment.title);
-                      setHoveredSection("");
-                    }}
-                  >
-                    {experiment.title}
-                  </button>
-                ))}
-              </div>
-            )}
+        <motion.div
+          id="navbarSection"
+          onMouseLeave={() => setHoveredSection("")}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          variants={containerVariants}
+        >
+          {experimentsSection?.projects.map((experiment, index) => (
+            <motion.button
+              id="subButton"
+              key={index}
+              variants={itemVariants}
+              onClick={() => {
+                setActiveSection(experiment.title);
+                setHoveredSection("");
+              }}
+            >
+              {experiment.title}
+            </motion.button>
+          ))}
+        </motion.div>
+      )}
           </div>
 
           <div>
@@ -108,38 +137,47 @@ export default function HomePage() {
               Projects
             </button>
             {hoveredSection === "Projects" && (
-              <div
+              <motion.div
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                variants={containerVariants}
                 id="navbarSection"
                 onMouseLeave={() => setHoveredSection("")}
               >
                 {projectsSection?.projects.map((project, index) => (
-                  <button id="subButton"
+                  <motion.button id="subButton"
                     key={index}
+                    variants={itemVariants}
                     onClick={() => {
                       setActiveSection(project.title);
                       setHoveredSection("");
                     }}
                   >
                     {project.title}
-                  </button>
+                  </motion.button>
                 ))}
-              </div>
+              </motion.div>
             )}
           </div>
 
           <div className="hidden md:block">
             <button onMouseEnter={() => setHoveredSection("Contact")}>Contact</button>
             {hoveredSection === "Contact" && (
-              <div
+              <motion.div
                 id="navbarSection"
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
                 onMouseLeave={() => setHoveredSection("")}
               >
-                <button id="subButton" onClick={() => {
+                <motion.button variants={itemVariants} id="subButton" onClick={() => {
                   setActiveSection("Email");
                   setHoveredSection("");
-                }}>Email</button>
+                }}>Email</motion.button>
                
-              </div>
+              </motion.div>
             )}
           </div>
         </div>
@@ -155,12 +193,12 @@ export default function HomePage() {
 
           <div className="md:grid md:grid-cols-2 gap-20 flex flex-col justify-center">
             <div className="flex justify-center">
-              <Image
+              {/* <Image
                 src="/webcam.png"
                 width={500}
                 alt="Image of George"
                 height={500}
-              />
+              /> */}
             </div>
             <div>
             <h2>Hey, I'm <i className="underline not-italic text-blue-500">George</i>. I'm a digital artist.</h2>
