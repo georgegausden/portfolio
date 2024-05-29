@@ -5,7 +5,7 @@ import projects from "./data/projects.json";
 import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
 import { useInView } from 'react-intersection-observer';
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 /* eslint-disable react/no-unescaped-entities */
 
 
@@ -21,6 +21,9 @@ interface Project {
 const containerVariants = {
   hidden: {
     opacity: 0,
+    transition: {
+      staggerChildren: 0.05, // Stagger children by 0.2 seconds
+    },
   },
   show: {
     opacity: 1,
@@ -65,8 +68,10 @@ export default function HomePage() {
       <nav className=" pt-10 top-0 z-20 text-center justify-center w-full">
         <div className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full">
           <div>
-            <button onMouseEnter={() => setHoveredSection("About")}>About</button>
+            <button  onMouseEnter={() => setHoveredSection("About")}>About</button>
+            <AnimatePresence>
             {hoveredSection === "About" && (
+             
               <motion.div
                 id="navbarSection"
                 initial="hidden"
@@ -100,12 +105,15 @@ export default function HomePage() {
                 }}>Email</motion.button>
               </motion.div>
             )}
+            </AnimatePresence>
           </div>
+          
 
           <div>
             <button onMouseEnter={() => setHoveredSection("Experiments")}>
               Experiments
             </button>
+            <AnimatePresence>
             {hoveredSection === "Experiments" && (
         <motion.div
           id="navbarSection"
@@ -115,6 +123,7 @@ export default function HomePage() {
           exit="hidden"
           variants={containerVariants}
         >
+         
           {experimentsSection?.projects.map((experiment, index) => (
             <motion.button
               id="subButton"
@@ -130,12 +139,14 @@ export default function HomePage() {
           ))}
         </motion.div>
       )}
+      </AnimatePresence>
           </div>
 
           <div>
             <button onMouseEnter={() => setHoveredSection("Projects")}>
               Projects
             </button>
+            <AnimatePresence>
             {hoveredSection === "Projects" && (
               <motion.div
                 initial="hidden"
@@ -159,10 +170,12 @@ export default function HomePage() {
                 ))}
               </motion.div>
             )}
+            </AnimatePresence>
           </div>
 
           <div className="hidden md:block">
             <button onMouseEnter={() => setHoveredSection("Contact")}>Contact</button>
+            <AnimatePresence>
             {hoveredSection === "Contact" && (
               <motion.div
                 id="navbarSection"
@@ -179,6 +192,7 @@ export default function HomePage() {
                
               </motion.div>
             )}
+            </AnimatePresence>
           </div>
         </div>
       </nav>
@@ -201,7 +215,7 @@ export default function HomePage() {
               /> */}
             </div>
             <div>
-            <h2>Hey, I'm <i className="underline not-italic text-blue-500">George</i>. I'm a digital artist.</h2>
+            <h2>Hey, I'm George. I'm a digital artist.</h2>
 
 <div className="flex">
 <button onClick={() => window.open('https://www.linkedin.com/in/george-gausden/', '_blank')}>
