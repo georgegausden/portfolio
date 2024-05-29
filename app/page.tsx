@@ -173,7 +173,7 @@ export default function HomePage() {
             </AnimatePresence>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="hidden md:block">
+          <motion.div variants={itemVariants} className="hidden lg:block">
             <button onMouseEnter={() => setHoveredSection("Contact")}>Contact</button>
             <AnimatePresence>
             {hoveredSection === "Contact" && (
