@@ -60,6 +60,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
+
       <nav className="absolute left-1/2 transform -translate-x-1/2 pt-10 top-0 z-20 text-center justify-center w-full">
         <motion.div
           initial="hidden"
@@ -235,6 +236,7 @@ export default function HomePage() {
           hoveredSection !== "" ? "blur-xl" : ""
         }`}
         style={{ zIndex: 10 }}
+        onClick={() => setHoveredSection("")}
       >
         {activeSection === "Me" && (
           <div className=" flex flex-col justify-center mb-24">
