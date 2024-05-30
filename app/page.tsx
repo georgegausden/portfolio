@@ -22,13 +22,13 @@ const containerVariants = {
   hidden: {
     opacity: 0,
     transition: {
-      staggerChildren: 0.1, // Stagger children by 0.2 seconds
+      staggerChildren: 0.05, // Stagger children by 0.2 seconds
     },
   },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Stagger children by 0.2 seconds
+      staggerChildren: 0.05, // Stagger children by 0.2 seconds
     },
   },
 
