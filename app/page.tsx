@@ -237,18 +237,19 @@ export default function HomePage() {
         onClick={() => setHoveredSection("")}
       >
         {activeSection === "Me" && (
-          <div className=" flex flex-col justify-center mb-24">
+          <div className=" flex flex-col mb-24 ">
             <motion.div
               initial="hidden"
               animate="show"
               exit="hidden"
               variants={containerVariants}
-              className="h-screen flex items-center"
+              className="h-screen flex items-center  border-b-2 border-gray-500"
             >
+
               <motion.h2 variants={itemVariants} className="text-8xl">
-                Hey, I'm George. I'm a{" "}
+                Hey, I'm George. I'm a freelance{" "}
                 <i id="specialText" className=" not-italic">
-                  digital artist
+                  UI/UX Designer
                 </i>
                 .{" "}
               </motion.h2>
@@ -286,70 +287,25 @@ export default function HomePage() {
               </motion.button>
             </motion.div>
 
-            <div>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus eos nulla velit facere, in sed consectetur odit,
-              ipsa culpa ullam, voluptatem illo ducimus nihil. Eius repellendus
-              exercitationem amet natus aut at, atque vitae, veritatis impedit
-              aliquid eum ab consequuntur doloribus earum dignissimos vel qui
-              deserunt. Provident veritatis quas hic aperiam neque ipsam numquam
-              debitis dignissimos commodi, quaerat, doloremque tempore
-              blanditiis eos voluptate, delectus accusantium. Vero assumenda
-              dolorum laboriosam, odio veniam similique fuga esse alias eaque
-              eius odit a impedit iusto. Laborum accusamus dicta aliquam cum quo
-              voluptatum, dignissimos facere voluptate possimus sint suscipit
-              delectus aperiam fuga. Aliquam vero aspernatur nemo vel animi
-              dolor temporibus accusantium, mollitia cupiditate, quis optio,
-              dolores modi consequuntur doloremque saepe voluptates et ad
-              necessitatibus? Reiciendis blanditiis cum velit odio modi
-              accusantium, optio saepe beatae, hic neque distinctio in vitae
-              quidem pariatur sed aperiam enim? Praesentium voluptate, non
-              corrupti facere molestiae earum sit deleniti quae repellendus
-              veniam, sint exercitationem consequuntur. Enim, explicabo
-              repellat. Perspiciatis optio hic, asperiores doloremque expedita
-              pariatur? Architecto ea maxime quia officiis necessitatibus beatae
-              deserunt molestias nisi incidunt esse numquam voluptatibus neque
-              magnam adipisci eos voluptate sint, animi iure quisquam provident
-              soluta repellat sed praesentium? Quas tenetur laudantium minus,
-              illum ea delectus omnis quia eos recusandae corporis neque earum
-              voluptatibus tempora praesentium. Ad odio reiciendis quisquam quam
-              maiores nam atque doloribus ducimus quo minus sequi quaerat
-              placeat consequatur dolore alias magni consectetur corrupti,
-              laborum ipsam tempore ratione magnam. Ut alias molestias debitis
-              earum, asperiores necessitatibus, ipsam culpa, excepturi commodi
-              beatae velit veritatis quisquam aperiam voluptatibus qui
-              distinctio nobis repellendus molestiae amet. In magni suscipit
-              est, saepe soluta velit tenetur magnam provident maxime deserunt,
-              explicabo autem perspiciatis excepturi? Dolor consequatur aut rem!
-              Porro, itaque maiores iusto exercitationem consectetur facilis ad
-              maxime distinctio molestias! Excepturi voluptate numquam ab magnam
-              dolores eaque accusantium expedita alias quibusdam quo molestias
-              velit culpa aut beatae labore, impedit odit perspiciatis ea
-              asperiores quam voluptates suscipit natus dignissimos quidem!
-              Tempora, vitae. Iste quos odio repellat tenetur unde in sapiente
-              deleniti nobis asperiores, tempora maxime eius iusto placeat,
-              officiis, alias quas. Amet consequatur labore provident, natus ea
-              omnis, dolores eos reiciendis minima facere incidunt, quas
-              aspernatur nobis dignissimos sunt accusamus pariatur. Vero minus
-              cupiditate, reiciendis quam blanditiis dolores velit repellendus
-              aliquid neque iusto. Voluptates, illum veritatis nulla, modi
-              dolore delectus ab odio repellendus, atque deserunt error
-              perferendis tempore quo natus quos vero eius vel necessitatibus
-              earum? Impedit perspiciatis fugiat officia tempore quasi neque
-              dicta ipsum consequatur, nobis dolore ratione iste magnam
-              inventore voluptatibus, voluptatum odio laboriosam repellendus
-              consequuntur eum, sunt eveniet delectus! Voluptate repellat maxime
-              cumque, inventore sit quod quas temporibus dolorem blanditiis
-              corrupti ullam officia quisquam accusantium impedit cum mollitia
-              voluptatibus enim quis pariatur adipisci. Molestiae perferendis
-              facere reiciendis mollitia aspernatur cumque autem fugit porro
-              eligendi earum deleniti deserunt nisi, quia natus soluta modi ad
-              eius voluptate iusto, eum quasi beatae animi? Laborum autem,
-              architecto delectus, provident optio modi laudantium officia
-              maxime obcaecati doloribus corrupti esse illo. Tempora quis dolore
-              non, illo minus iste ea cumque ducimus ipsa voluptatem quisquam
-              unde repellat.
-            </div>
+            <motion.div className="mt-10">
+            <motion.h1 >
+              What I do
+            </motion.h1>
+            <motion.li>
+              <motion.div className="grid grid-cols-2">
+
+
+
+                <h2><strong>UI/UX Design</strong></h2>
+                <p>
+                  I design user interfaces and experiences for web and mobile
+                  applications.
+                </p>
+                
+              </motion.div>
+              </motion.li>
+              </motion.div>
+
 
             {/* <div className="flex">
 <button onClick={() => window.open('https://www.linkedin.com/in/george-gausden/', '_blank')}>
