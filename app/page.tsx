@@ -434,7 +434,7 @@ export default function HomePage() {
             </div>
 
             {activeProject?.links.map((link, index) => (
-              <div key={index} className="grid md:grid-cols-2 gap-20">
+              <div key={index} className="grid lg:grid-cols-2 gap-20">
                 <div className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
                   <Image
                     key={index}
@@ -446,7 +446,7 @@ export default function HomePage() {
                   <div id="imageCaption">{link[1]}</div>
                 </div>
 
-                <div className="md:min-w-[500px]">
+                <div className="lg:min-w-[500px]">
                   <h2>{activeProject.text[index][0]}</h2>
                   <p className="md:mr-10">{activeProject.text[index][1]}</p>
                 </div>
