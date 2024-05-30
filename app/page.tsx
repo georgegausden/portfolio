@@ -301,6 +301,9 @@ export default function HomePage() {
                   I design user interfaces and experiences for web and mobile
                   applications.
                 </p>
+
+                <h2>Wedding Website</h2>
+                
                 
               </motion.div>
               </motion.li>
