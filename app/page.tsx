@@ -212,8 +212,8 @@ export default function HomePage() {
             <motion.button variants={itemVariants}     onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
 
  className="absolute bottom-28 right-0 animate-bounce"><svg width="90" height="90" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.1683 2.19324C4.85508 2.19324 2.16699 4.88132 2.16699 8.19454C2.16699 11.5078 4.85508 14.1959 8.1683 14.1959C11.4815 14.1959 14.1696 11.5078 14.1696 8.19454C14.1696 4.88132 11.4815 2.19324 8.1683 2.19324Z" stroke="gray" stroke-width="0.5" stroke-miterlimit="10"/>
-<path d="M11.1699 6.94427L8.16881 9.94536L5.16772 6.94427" stroke="gray" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.1683 2.19324C4.85508 2.19324 2.16699 4.88132 2.16699 8.19454C2.16699 11.5078 4.85508 14.1959 8.1683 14.1959C11.4815 14.1959 14.1696 11.5078 14.1696 8.19454C14.1696 4.88132 11.4815 2.19324 8.1683 2.19324Z" stroke="gray" strokeWidth="0.5" strokeMiterlimit="10"/>
+<path d="M11.1699 6.94427L8.16881 9.94536L5.16772 6.94427" stroke="gray" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 </motion.button>
             
