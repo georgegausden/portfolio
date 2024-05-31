@@ -33,19 +33,36 @@
   
   }
 
-#specialText {
-  color: transparent;
-  background: linear-gradient(90deg, violet, blue, green, green, blue, violet);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  transition: color 0.5s ease-in-out;
-  animation: gradient 5s ease-in-out infinite, rotation 2s infinite linear;
+
+
+@media (max-width: 1024px) {
+  #specialText {
+    color: transparent;
+    background: linear-gradient(90deg, violet, blue, green, green, blue, violet);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    transition: color 0.5s ease-in-out;
+    animation: gradient 5s ease-in-out infinite, rotation 2s infinite linear;
+  }
 }
 
+/* Styles for large screens */
+@media (min-width: 1024px) {
+  #specialText:hover {
+    color: transparent; /* Equivalent to text-gray-600 in Tailwind CSS */
+    background: linear-gradient(90deg, violet, blue, green, green, blue, violet);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    transition: color 0.5s ease-in-out;
+    animation: gradient 5s ease-in-out infinite, rotation 2s infinite linear;
 
+  }
 
+}
 
 
 @keyframes gradient {
