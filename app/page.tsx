@@ -247,9 +247,9 @@ export default function HomePage() {
             >
 
               <motion.h2 variants={itemVariants} className="text-8xl">
-                Hey, I'm George. I'm a freelance{" "}
+                Hey, I'm George. I'm a little{" "}
                 <i id="specialText" className=" not-italic">
-                  UI/UX Designer
+                  bitch
                 </i>
                 .{" "}
               </motion.h2>
