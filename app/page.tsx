@@ -4,7 +4,7 @@ import projects from "./data/projects.json";
 import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
 import { useInView } from "react-intersection-observer";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 /* eslint-disable react/no-unescaped-entities */
 
 interface Project {
@@ -33,6 +33,21 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
+};
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 300
+  },
+  onscreen: {
+    y: 50,
+   
+    transition: {
+      type: "bounce",
+      bounce: 0.4,
+      duration: 0.2
+    }
+  }
 };
 
 export default function HomePage() {
@@ -302,9 +317,25 @@ export default function HomePage() {
                   applications.
                 </p>
 
-                <h2>Wedding Website</h2>
                 
-                
+              
+              </motion.div>
+
+              <motion.div >
+                <motion.img 
+                 initial="hidden"
+                 whileInView="visible"
+                 viewport={{ once: true }}
+                    src='johnandgen.png'
+                    alt="wedding"
+                    
+                   ></motion.img>
+                   <motion.img 
+                  variants={cardVariants}
+                    src='johnandgen2.png'
+                    alt="wedding"
+                    
+                   ></motion.img>
               </motion.div>
               </motion.li>
               </motion.div>
