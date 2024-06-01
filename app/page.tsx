@@ -261,7 +261,7 @@ export default function HomePage() {
               className="h-screen flex items-center  border-b-2 border-gray-500"
             >
 
-              <motion.h2 variants={itemVariants} className="text-8xl">
+              <motion.h2 variants={itemVariants} className="text-7xl lg:text-8xl">
                 Hey, I'm George. I'm a freelance{" "}
                 <i id="specialText" className=" not-italic">
                   UI/UX Designer
@@ -328,6 +328,7 @@ export default function HomePage() {
                  viewport={{ once: true }}
                     src='johnandgen.png'
                     alt="wedding"
+                    className="w-1/2"
                     
                    ></motion.img>
                    <motion.img 

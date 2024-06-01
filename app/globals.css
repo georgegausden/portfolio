@@ -16,6 +16,10 @@
     @apply text-gray-500
   }
 
+  li{
+    @apply list-none
+  }
+
   ul{
     @apply text-xl list-none list-inside;
   
@@ -150,9 +154,6 @@
   
   }
 
- img{
-  @apply rounded-sm  hover:scale-[105%] ease-in-out transition-transform duration-700
- }
 
 
 
