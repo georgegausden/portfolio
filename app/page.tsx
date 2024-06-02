@@ -7,9 +7,11 @@ import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import ImageCarousel from "./components/imageCarousel";
 import ExperimentSection from "./components/experimentSection";
+import ProjectSection from "./components/projectSection";
 /* eslint-disable react/no-unescaped-entities */
 
 export type Project = {
+  text: any;
   title: string;
   description: string;
   tags: string[];
@@ -343,54 +345,20 @@ export default function HomePage() {
          
           <ExperimentSection selectedExperiment={activeExperiment}/>
           
-
+        )}
 
              
         {activeSection === activeProject?.title && (
-          
-          <div className="flex flex-col gap-20 items-start my-24">
-            <div className="w-full justify-center">
-              <h1>{activeProject.title}</h1>
-              <p className="text-center">{activeProject.description}</p>
-              <div className="flex flex-wrap justify-center">
-                {activeProject.tags?.map((tag, index) => (
-                  <div key={index} id="tag">
-                    {tag}
-                  </div>
-                ))}
-              </div>
-            </div> 
-
-            {activeProject?.links.map((link, index) => (
-              <div key={index} className="grid lg:grid-cols-2 gap-20">
-                <div className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
-                  <Image
-                    key={index}
-                    src={link[0]}
-                    alt={activeProject.title}
-                    width={300}
-                    height={300}
-                  />
-                  <div id="imageCaption">{link[1]}</div>
-                </div>
-
-                <div className="lg:min-w-[500px]">
-                  <h2>{activeProject.text[index][0]}</h2>
-                  <p className="md:mr-10">{activeProject.text[index][1]}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProjectSection selectedProject={activeProject} />
         )}
+
         {activeSection === "Email" && (
           <div className="text-3xl">georgegausden at gmail dot com</div>
         )}
-      </div>
+      
 
-      {/* <div
-        className="fixed bottom-0 left-0 w-full h-[5%] z-30 hidden md:block"
-        style={{ background: "linear-gradient(to bottom, #D2D2D2, #C5C5C5)" }}
-      ></div> */}
+     
+    </div>
     </div>
   );
 }
