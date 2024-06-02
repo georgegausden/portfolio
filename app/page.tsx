@@ -110,7 +110,7 @@ export default function HomePage() {
                   >
                     Me
                   </motion.button>
-                  <motion.button
+                  {/* <motion.button
                     id="subButton"
                     variants={itemVariants}
                     onClick={() => {
@@ -119,8 +119,8 @@ export default function HomePage() {
                     }}
                   >
                     Biography
-                  </motion.button>
-                  <motion.button
+                  </motion.button> */}
+                  {/* <motion.button
                     id="subButton"
                     variants={itemVariants}
                     onClick={() => {
@@ -129,7 +129,7 @@ export default function HomePage() {
                     }}
                   >
                     Artist Statement
-                  </motion.button>
+                  </motion.button> */}
                   <motion.button
                     id="subButton"
                     variants={itemVariants}
