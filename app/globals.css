@@ -154,7 +154,9 @@
   
   }
 
-
+img{
+  @apply hover:scale-105 ease-in-out duration-500 transition-transform;
+}
 
 
   iframe{
