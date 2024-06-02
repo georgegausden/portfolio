@@ -26,13 +26,20 @@ export default function ProjectSection({ selectedProject }: ProjectSectionProps)
     {selectedProject?.links.map((link, index) => (
       <div key={index} className="grid lg:grid-cols-2 gap-20">
         <div className="relative flex-shrink-0 group justify-center items-center flex flex-col ">
-          <Image
-            key={index}
-            src={link[0]}
-            alt={selectedProject.title}
-            width={300}
-            height={300}
-          />
+        {link[0].endsWith('.mp4') ? (
+            <video width="600" height="600" controls>
+              <source src={link[0]} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <Image
+              key={index}
+              src={link[0]}
+              alt={selectedProject.title}
+              width={300}
+              height={300}
+            />
+          )}
           <div id="imageCaption">{link[1]}</div>
         </div>
 
