@@ -5,16 +5,16 @@
             {
                 "title": "Biography",
                 "description": "George Gausden is a multimedia artist from Montréal. He has worked on a range of projects, from designing a book cover for an author to collaborating with a local artist to digitize and explore new ways to view their art. He has always been interested in creating art, whether it be using traditional mediums or more recently, digital ones. Recently, his main area of focus has been in the field of generative artwork and the emergence of complex behaviours from simple systems. George is in the final stage of completing his Computation Arts degree at Concordia University. Since last summer, he has been collaborating closely with a local Montreal start-up on creating content and designing a website for their brand.",
-                "tags":[],
-                "links": ["/0001.png"],
-                "text":[[]]
+                "tags": [],
+                "links": [["/0001.png"]],
+                "text": [[]]
             },
             {
                 "title": "Artist Statement",
                 "description": "My artistic practice involves combining digital tools with traditional ones. I’m very interested in the mixing of mediums to achieve new results. A lot of my work is focused on aesthetics and there are a lot of repeated curved forms. Part of the reason I include so many curvatures has to do with a desire to bring organic shapes to the digital space. So much of what we do on computers nowadays is far removed from the natural world. I like to draw inspiration from the natural world to develop ideas for future projects. A large chunk of my artistic process involves watching or reading about science and then trying to represent elements of that using code or 3D software. Some projects involve multiple iterations that together form a body of work, while others are meant to be standalone pieces.",
-                "tags":[],
-                "links": ["/0001.png"],
-                "text":[[]]
+                "tags": [],
+                "links": [["/0001.png"]],
+                "text": [[]]
             }
         ]
     },
@@ -24,16 +24,16 @@
             {
                 "title": "Email",
                 "description": "This is the description for Project 3.",
-                "tags":[],
-                "links": ["george.philip.gausden@gmail.com"],
-                "text":[[]]
+                "tags": [],
+                "links": [["george.philip.gausden@gmail.com"]],
+                "text": [[]]
             },
             {
                 "title": "CV",
                 "description": "This is the description for Project 4.",
-                "tags":[],
-                "links": ["/CV.pdf"],
-                "text":[[]]
+                "tags": [],
+                "links": [["/CV.pdf"]],
+                "text": [[]]
             }
         ]
     },
@@ -43,23 +43,23 @@
             {
                 "title": "Geometries",
                 "description": "Playing around with p5.js and trigonometry to create generative art.",
-                "tags":["p5.js","Trigonometry","Generative Art","Mathematics"],
-                "links": [["/geometries1.jpg","Iteration #1, p5.js, 2023"], ["/geometries2.jpg","Iteration #2, p5.js, 2023"], ["/geometries3.jpg","Iteration #3, p5.js, 2023"]],
-                "text":[[]]
+                "tags": ["p5.js", "Trigonometry", "Generative Art", "Mathematics"],
+                "links": [["/geometries1.jpg", "Iteration #1, p5.js, 2023"], ["/geometries2.jpg", "Iteration #2, p5.js, 2023"], ["/geometries3.jpg", "Iteration #3, p5.js, 2023"]],
+                "text": [[]]
             },
             {
                 "title": "Studio NewKid",
                 "description": "A combination of photographic/photoshopping work done for Studio NewKid.",
-                "tags":["Marketing","Photography","Photoshop","p5.js", "Illustration"],
-                "links": [["/newkid1.webp","NewKid, 2024"],["/newkid2.webp","NewKid, 2024"],["/newkid3.webp","NewKid, 2024"],["/newkid4.webp","NewKid, 2024"], ["/newkid5.webp","NewKid, 2024"], ["/newkidgif.gif","NewKid, 2024"]],
-                "text":[[]]
+                "tags": ["Marketing", "Photography", "Photoshop", "p5.js", "Illustration"],
+                "links": [["/newkid1.webp", "NewKid, 2024"], ["/newkid2.webp", "NewKid, 2024"], ["/newkid3.webp", "NewKid, 2024"], ["/newkid4.webp", "NewKid, 2024"], ["/newkid5.webp", "NewKid, 2024"], ["/newkidgif.gif", "NewKid, 2024"]],
+                "text": [[]]
             },
             {
                 "title": "Lighthouse Diorama",
                 "description": "A mini project done in the context of a 3D modelling course",
-                "tags":["3D Modelling","Blender","Diorama", "Animation", "Low Poly"],
-                "links": [["/0001.mp4","Diorama, 2022"]],
-                "text":[[]]
+                "tags": ["3D Modelling", "Blender", "Diorama", "Animation", "Low Poly"],
+                "links": [["/0001.mp4", "Diorama, 2022"]],
+                "text": [[]]
             }
         ]
     },
@@ -69,27 +69,23 @@
             {
                 "title": "Performance Flow",
                 "description": "A look into machine learning, piano performance & Argon Particle microcontrollers.",
-                
                 "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle"],
-                "links": [["/performanceFlow.jpeg","Argon Particle Microcontrollers, 2024"],["/process.png", "Diagram of the process, 2024"],["/mapping.png", "Diagram of the mapping in MaxMSP, 2024"]],
-                "text": [["Abstract","This final project is an experiment in creative interactive machine learning and musical gesture control. Our project aims to transform musical performances by providing new ways for artists to interact with the music. Inspired by previous IML research and similar projects, we tried a few approaches to manipulating musical performances that combined audio processing, machine learning, and sensors. We used Wekinator, MaxMSP, and Particle Argon microcontrollers to control audio effects of a pre-recorded track using hand gestures. The Particle Argon microcontroller records real-time hand data, which is fed into a machine learning model trained with Wekinator, and mapped to control audio effects like pan, filters, pitch modulation, and delay. Throughout the process, we encountered some difficulties and evolved our vision, initially aiming for live performance with real-time audio manipulation and exploring visual integration."],["Process","The  Particle Argon microcontroller is used to capture hand rotation and position data in real time. This data serves as input for a machine learning model trained using Wekinator. We collected the training data using two MPU6050 sensors, one for each hand, providing three continuous data outputs representing the rotation of each hand. This results in a total of six outputs. These continuous data streams from the microcontrollers are sent to Wekinator as continuous float values via OSC."],["Mapping","In Wekinator, these six inputs are mapped using a regression model to four outputs. These outputs are scaled to match the range of the corresponding audio effect input in MaxMSP. Wekinator relays these outputs as OSC messages to MaxMSP, where they trigger audio effects applied to a pre-recorded piano performance. Through a many-to-many mapping approach, the four outputs from Wekinator control four MaxMSPs parameter, manipulating the audio effects. These effects include: Pan: Controlled by rotating wrists left and right. Highpass filter cutoff frequency: Adjusted by rotating wrists outwards. Pitch modulation: Increased or decreased by moving hands up and down. Delay with feedback: Activated by holding palms face up."]]
-
+                "links": [["/performanceFlow.jpeg", "Argon Particle Microcontrollers, 2024"], ["/process.png", "Diagram of the process, 2024"], ["/mapping.png", "Diagram of the mapping in MaxMSP, 2024"]],
+                "text": [["Abstract", "This final project is an experiment in creative interactive machine learning and musical gesture control. Our project aims to transform musical performances by providing new ways for artists to interact with the music. Inspired by previous IML research and similar projects, we tried a few approaches to manipulating musical performances that combined audio processing, machine learning, and sensors. We used Wekinator, MaxMSP, and Particle Argon microcontrollers to control audio effects of a pre-recorded track using hand gestures. The Particle Argon microcontroller records real-time hand data, which is fed into a machine learning model trained with Wekinator, and mapped to control audio effects like pan, filters, pitch modulation, and delay. Throughout the process, we encountered some difficulties and evolved our vision, initially aiming for live performance with real-time audio manipulation and exploring visual integration."], ["Process", "The Particle Argon microcontroller is used to capture hand rotation and position data in real time. This data serves as input for a machine learning model trained using Wekinator. We collected the training data using two MPU6050 sensors, one for each hand, providing three continuous data outputs representing the rotation of each hand. This results in a total of six outputs. These continuous data streams from the microcontrollers are sent to Wekinator as continuous float values via OSC."], ["Mapping", "In Wekinator, these six inputs are mapped using a regression model to four outputs. These outputs are scaled to match the range of the corresponding audio effect input in MaxMSP. Wekinator relays these outputs as OSC messages to MaxMSP, where they trigger audio effects applied to a pre-recorded piano performance. Through a many-to-many mapping approach, the four outputs from Wekinator control four MaxMSPs parameter, manipulating the audio effects. These effects include: Pan: Controlled by rotating wrists left and right. Highpass filter cutoff frequency: Adjusted by rotating wrists outwards. Pitch modulation: Increased or decreased by moving hands up and down. Delay with feedback: Activated by holding palms face up."]]
             },
             {
                 "title": "Alien",
                 "description": "A 3D modelling project done in the context of a 3D course.",
-                "tags":["3D Modelling","Animation","Blender","Rigging"],
-                "links": [["/humanoid.mp4","Humanoid Alien, Blender, 2023"]],
-                "text":[[]]
-                
+                "tags": ["3D Modelling", "Animation", "Blender", "Rigging"],
+                "links": [["/humanoid.mp4", "Humanoid Alien, Blender, 2023"]],
+                "text": [[]]
             },
             {
                 "title": "Montréal Underground",
                 "description": "A 3D modelling project involving CGI and animation.",
-                "tags":["3D Modelling","Animation","Blender"],
-                "links": [["/vfx.webp","Final Result, Blender, 2023"]],
-                "text":[[]]
-                
+                "tags": ["3D Modelling", "Animation", "Blender"],
+                "links": [["/vfx.webp", "Final Result, Blender, 2023"]],
+                "text": [[]]
             }
         ]
     }

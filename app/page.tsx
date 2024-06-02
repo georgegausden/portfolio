@@ -11,13 +11,14 @@ import ProjectSection from "./components/projectSection";
 /* eslint-disable react/no-unescaped-entities */
 
 export type Project = {
-  text: any;
+  text: string[][];
   title: string;
   description: string;
   tags: string[];
   links: string[][];
   abstract?: string; // Optional property
 }
+
 
 const containerVariants = {
   hidden: {
