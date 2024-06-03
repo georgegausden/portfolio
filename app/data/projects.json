@@ -88,5 +88,31 @@
                 "text": [[]]
             }
         ]
+    },
+    {
+        "category": "Web Development",
+        "projects": [
+            {
+                "title": "Chef Aloko",
+                "description": "A look into machine learning, piano performance & Argon Particle microcontrollers.",
+                "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle"],
+                "links": [["/performanceFlow.jpeg", "Argon Particle Microcontrollers, 2024"], ["/process.png", "Diagram of the process, 2024"], ["/mapping.png", "Diagram of the mapping in MaxMSP, 2024"]],
+                "text": [["Abstract", "This final project is an experiment in creative interactive machine learning and musical gesture control. Our project aims to transform musical performances by providing new ways for artists to interact with the music. Inspired by previous IML research and similar projects, we tried a few approaches to manipulating musical performances that combined audio processing, machine learning, and sensors. We used Wekinator, MaxMSP, and Particle Argon microcontrollers to control audio effects of a pre-recorded track using hand gestures. The Particle Argon microcontroller records real-time hand data, which is fed into a machine learning model trained with Wekinator, and mapped to control audio effects like pan, filters, pitch modulation, and delay. Throughout the process, we encountered some difficulties and evolved our vision, initially aiming for live performance with real-time audio manipulation and exploring visual integration."], ["Process", "The Particle Argon microcontroller is used to capture hand rotation and position data in real time. This data serves as input for a machine learning model trained using Wekinator. We collected the training data using two MPU6050 sensors, one for each hand, providing three continuous data outputs representing the rotation of each hand. This results in a total of six outputs. These continuous data streams from the microcontrollers are sent to Wekinator as continuous float values via OSC."], ["Mapping", "In Wekinator, these six inputs are mapped using a regression model to four outputs. These outputs are scaled to match the range of the corresponding audio effect input in MaxMSP. Wekinator relays these outputs as OSC messages to MaxMSP, where they trigger audio effects applied to a pre-recorded piano performance. Through a many-to-many mapping approach, the four outputs from Wekinator control four MaxMSPs parameter, manipulating the audio effects. These effects include: Pan: Controlled by rotating wrists left and right. Highpass filter cutoff frequency: Adjusted by rotating wrists outwards. Pitch modulation: Increased or decreased by moving hands up and down. Delay with feedback: Activated by holding palms face up."]]
+            },
+            {
+                "title": "Alien",
+                "description": "A 3D modelling project done in the context of a 3D course.",
+                "tags": ["3D Modelling", "Animation", "Blender", "Rigging"],
+                "links": [["/humanoid.mp4", "Humanoid Alien, Blender, 2023"]],
+                "text": [[]]
+            },
+            {
+                "title": "Montréal Underground",
+                "description": "A 3D modelling project involving CGI and animation.",
+                "tags": ["3D Modelling", "Animation", "Blender"],
+                "links": [["/vfx.webp", "Final Result, Blender, 2023"]],
+                "text": [[]]
+            }
+        ]
     }
 ]
