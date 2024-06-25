@@ -312,29 +312,48 @@ export default function HomePage() {
               </motion.button>
             </motion.div>
 
-            <motion.div className="mt-10">
-            <motion.h1 >
-              What I do
-            </motion.h1>
-            <motion.li>
-              <motion.div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+    <h2 className="text-2xl font-bold mb-4">
+      <span className="text-green-600">UI</span>/
+      <span className="text-blue-600">UX</span> 
+      <span className="text-purple-600">Design</span>
+    </h2>
+    <p className="text-gray-700">
+      From wireframing to prototyping, I create seamless user experiences that keep your audience engaged. I design user interfaces and experiences for web and mobile applications.
+    </p>
+  </div>
 
+  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+    <h2 className="text-2xl font-bold mb-4">
+      <span className="text-purple-600">Web</span> 
+      <span className="text-green-600">Design</span>
+    </h2>
+    <p className="text-gray-700">
+      I develop responsive websites that look great on any device and leave a lasting impression.
+    </p>
+  </div>
 
+  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+    <h2 className="text-2xl font-bold mb-4">
+      <span className="text-purple-600">Frontend</span> 
+      <span className="text-blue-600">Development</span>
+    </h2>
+    <p className="text-gray-700">
+      I can bring designs to life with HTML, CSS, and JavaScript.
+    </p>
+  </div>
 
-                <h2><strong>UI/UX Design</strong></h2>
-                <p>
-                  I design user interfaces and experiences for web and mobile
-                  applications.
-                </p>
-
-                
-              
-              </motion.div>
-
-              <ImageCarousel/>
-              </motion.li>
-              </motion.div>
-
+  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+    <h2 className="text-2xl font-bold mb-4">
+      <span className="text-purple-600">Backend</span> 
+      <span className="text-green-600">Integration</span>
+    </h2>
+    <p className="text-gray-700">
+      While my focus is on the frontend, I have experience working with backend technologies to ensure smooth functionality.
+    </p>
+  </div>
+</div>
 
             
           </div>
