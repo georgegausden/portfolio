@@ -91,7 +91,7 @@ export default function HomePage() {
           animate="show"
           exit="hidden"
           variants={containerVariants}
-          className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full"
+          className="flex text-center gap-[10%] md:gap-[10%] justify-center w-full"
         >
           <motion.div variants={itemVariants}>
             <button onMouseEnter={() => setHoveredSection("About")}>
@@ -224,7 +224,7 @@ export default function HomePage() {
             </AnimatePresence>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="hidden lg:block">
+          <motion.div variants={itemVariants} >
             <button onMouseEnter={() => setHoveredSection("Contact")}>
               Contact
             </button>
