@@ -302,18 +302,18 @@ export default function HomePage() {
 
         {activeSection === "Email" && (
           <div className="text-center grid grid-row-3 gap-10">
-          <a href="mailto:george.philip.gausden@gmail.com" 
-    className="text-3xl"
+          <a id="subButton" href="mailto:george.philip.gausden@gmail.com" 
+    className="text-3xl !not-italic "
     target="_blank" 
     rel="noopener noreferrer">Email
           </a>
-          <a href="https://www.instagram.com/georgegausden/" 
-    className="text-3xl"
+          <a id="subButton" href="https://www.instagram.com/georgegausden/" 
+    className="text-3xl !not-italic"
     target="_blank" 
     rel="noopener noreferrer">Instagram
           </a>
-          <a href="mailto:george.philip.gausden@gmail.com" 
-    className="text-3xl"
+          <a id="subButton" href="https://www.linkedin.com/in/george-gausden/" 
+    className="text-3xl !not-italic"
     target="_blank" 
     rel="noopener noreferrer">LinkedIn
           </a>
