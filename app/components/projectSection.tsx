@@ -36,8 +36,8 @@ export default function ProjectSection({ selectedProject }: ProjectSectionProps)
               key={index}
               src={link[0]}
               alt={selectedProject.title}
-              width={300}
-              height={300}
+              width={600}
+              height={600}
             />
           )}
           <div id="imageCaption">{link[1]}</div>

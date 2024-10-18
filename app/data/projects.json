@@ -78,8 +78,8 @@
                 "title": "Montréal Underground",
                 "description": "A 3D modelling project involving CGI and animation.",
                 "tags": ["3D Modelling", "Animation", "Blender"],
-                "links": [["/vfx.webp", "Final Result, Blender, 2023"]],
-                "text": [[]]
+                "links": [["/vfx2.webp","In situ measurements"],["/vfx.webp", "Final Result, Blender, 2023"],["/vfxvideo.mp4", "Final Result, Blender, 2023"]],
+                "text": [["Initial Steps","This project was made using Blender. The goal was to create a 3D model of the Montréal underground metro system. The model was then animated to simulate a train moving through the tunnels."],[ "Challenges","The most challenging part of this project was creating the 3D model of the metro system. The model had to be accurate and detailed, which required a lot of time and effort. Another challenge was animating the train to move through the tunnels. This required a good understanding of keyframe animation and camera movement."], ["Final Result","The final result is a 3D animation of the Montréal underground metro system. The animation shows a train moving through the tunnels, passing by different stations and landmarks. The animation is realistic and detailed, with accurate lighting and textures."]]
             },
 
             {
