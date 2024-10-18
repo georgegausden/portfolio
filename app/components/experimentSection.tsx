@@ -41,8 +41,8 @@ export default function ExperimentSection({ selectedExperiment }: ExperimentSect
               key={index}
               src={link[0]}
               alt={selectedExperiment.title}
-              width={300}
-              height={300}
+              width={500}
+              height={500}
             />
           )}
           <div id="imageCaption">{link[1]}</div>

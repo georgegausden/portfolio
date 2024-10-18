@@ -64,7 +64,7 @@
                 "title": "3D Modelling",
                 "description": "A compilation of 3D experiments & projects",
                 "tags": ["3D Modelling", "Animation", "Blender", "Rigging"],
-                "links": [["/humanoid.mp4", "Humanoid Alien, Blender, 2023"],["/GeorgeG_Wireman_Model.png","Wireman Model, Blender, 2023"]],
+                "links": [["/humanoid.mp4", "Humanoid Alien, Blender, 2023"],["/GeorgeG_Wireman_Model.png","Wireman Model, Blender, 2023"],["/0001.png","Glass Bubbles, Blender, 2023"],["/0002.png","NewKid, Blender, 2023"]],
                 "text": [[],[]]
             }
         ]
@@ -86,7 +86,16 @@
                 "tags": ["3D Modelling", "Animation", "Blender"],
                 "links": [["/vfx.webp", "Final Result, Blender, 2023"]],
                 "text": [[]]
+            },
+
+            {
+                "title": "Max Richter",
+                "description": "",
+                "tags": ["TouchDesigner", "Animation", "Noise"],
+                "links": [["/movieout.3.mp4", "Final Result, Blender, 2023"]],
+                "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."]]
             }
+
         ]
     },
     {
