@@ -269,7 +269,7 @@ export default function HomePage() {
               animate="show"
               exit="hidden"
               variants={containerVariants}
-              className="h-screen flex items-center  border-b-2 border-gray-500"
+              className="h-screen flex items-center "
             >
 
               <motion.h2 variants={itemVariants} className="text-7xl lg:text-8xl">
