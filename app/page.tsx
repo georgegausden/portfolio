@@ -262,25 +262,42 @@ export default function HomePage() {
         style={{ zIndex: 10 }}
         onClick={() => setHoveredSection("")}
       >
-        {activeSection === "Me" && (
-          <div className=" flex flex-col mb-24 ">
-            <motion.div
-              initial="hidden"
-              animate="show"
-              exit="hidden"
-              variants={containerVariants}
-              className="h-screen flex items-center "
-            >
-
-              <motion.h2 variants={itemVariants} className="text-7xl lg:text-8xl">
-                Hey, I'm George. I'm a {" "}
-                <TypewriterTitle />.{" "}
-              </motion.h2>
-             
-            </motion.div> 
-          </div>
-
-        )}
+       {activeSection === "Me" && (
+  <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 items-center px-4 md:px-8">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      exit="hidden"
+      variants={containerVariants}
+      className="flex justify-center md:mt-0"
+    >
+      <div className="relative top-[10vh] md:top-0">
+        <Image
+          alt="image of me"
+          src={"/me.webp"}
+          width={300}
+          height={300}
+          className="backdrop-blur-md drop-shadow-lg shadow-md"
+          priority
+        />
+      </div>
+    </motion.div>
+    <motion.div
+      initial="hidden"
+      animate="show"
+      exit="hidden"
+      variants={containerVariants}
+      className="flex items-center"
+    >
+      <motion.h2
+        variants={itemVariants}
+        className="text-2xl md:text-5xl lg:text-7xl min-h-[150px] md:min-h-0"
+      >
+        Hey, I'm George. I'm a <TypewriterTitle />.
+      </motion.h2>
+    </motion.div>
+  </div>
+)}
 
         {activeSection === "Biography" && (
           <p className="lg:px-[20%]">{biography?.projects[0].description}</p>
