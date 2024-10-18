@@ -64,7 +64,7 @@
                 "title": "3D Modelling",
                 "description": "A compilation of 3D experiments & projects",
                 "tags": ["3D Modelling", "Animation", "Blender", "Rigging"],
-                "links": [["/humanoid.mp4", "Humanoid Alien, Blender, 2023"],["/GeorgeG_Wireman_Model.png","Wireman Model, Blender, 2023"],["/0001.png","Glass Bubbles, Blender, 2023"],["/0002.png","NewKid, Blender, 2023"]],
+                "links": [["/humanoid.mp4", "Humanoid Alien, Blender, 2023"],["/GeorgeG_Wireman_Model.png","Wireman Model, Blender, 2023"],["/0001.png","Glass Bubbles, Blender, 2023"],["/0002.png","NewKid, Blender, 2023"],["/worms.jpg","Fluff, Blender, 2020"],["/boat.png","Sailing, Blender, 2020"], ["/egg2.png","Egg, Blender, 2024"],["/egg6.png","Egg, Blender, 2024"]],
                 "text": [[],[]]
             }
         ]
