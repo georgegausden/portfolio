@@ -85,14 +85,14 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
 
       {/* <Header/> */}
-      <nav className="absolute left-1/2 transform -translate-x-1/2 pt-10 top-0 z-20 text-center justify-center w-full px-4 md:px-0">
-      <motion.div
-    initial="hidden"
-    animate="show"
-    exit="hidden"
-    variants={containerVariants}
-    className="flex text-center gap-10 md:gap-[10%] justify-center w-full"
-  >
+      <nav className="absolute left-1/2 transform -translate-x-1/2 pt-10 top-0 z-20 text-center justify-center w-full">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          variants={containerVariants}
+          className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full"
+        >
           <motion.div variants={itemVariants}>
             <button onMouseEnter={() => setHoveredSection("About")}>
               About
@@ -147,13 +147,13 @@ export default function HomePage() {
                   <motion.button
                     id="subButton"
                     variants={itemVariants}
-                    className="md:hidden"
+                    className="lg:hidden"
                     onClick={() => {
                       setActiveSection("Email");
                       setHoveredSection("");
                     }}
                   >
-                    Email
+                    Contact
                   </motion.button>
                 </motion.div>
               )}
@@ -224,7 +224,7 @@ export default function HomePage() {
             </AnimatePresence>
           </motion.div>
 
-          <motion.div variants={itemVariants} >
+          <motion.div variants={itemVariants} className="hidden lg:block">
             <button onMouseEnter={() => setHoveredSection("Contact")}>
               Contact
             </button>
