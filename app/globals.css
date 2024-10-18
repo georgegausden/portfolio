@@ -87,6 +87,15 @@
     
   }
 
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
 
 #subButton {
     @apply bg-none italic no-underline text-left relative;

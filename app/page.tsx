@@ -9,6 +9,7 @@ import ImageCarousel from "./components/imageCarousel";
 import ExperimentSection from "./components/experimentSection";
 import ProjectSection from "./components/projectSection";
 import Header from "./components/header";
+import TypewriterTitle from "./components/typewritertitle";
 /* eslint-disable react/no-unescaped-entities */
 
 export type Project = {
@@ -272,91 +273,13 @@ export default function HomePage() {
             >
 
               <motion.h2 variants={itemVariants} className="text-7xl lg:text-8xl">
-                Hey, I'm George. I'm a freelance{" "}
-                <i id="specialText" className=" not-italic">
-                  UI/UX Designer
-                </i>
-                .{" "}
+                Hey, I'm George. I'm a {" "}
+                <TypewriterTitle />.{" "}
               </motion.h2>
-              <motion.button
-                variants={itemVariants}
-                onClick={() =>
-                  window.scrollTo({
-                    top: window.innerHeight,
-                    behavior: "smooth",
-                  })
-                }
-                className="absolute bottom-28 right-0 animate-bounce"
-              >
-                <svg
-                  width="90"
-                  height="90"
-                  viewBox="0 0 17 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.1683 2.19324C4.85508 2.19324 2.16699 4.88132 2.16699 8.19454C2.16699 11.5078 4.85508 14.1959 8.1683 14.1959C11.4815 14.1959 14.1696 11.5078 14.1696 8.19454C14.1696 4.88132 11.4815 2.19324 8.1683 2.19324Z"
-                    stroke="gray"
-                    strokeWidth="0.5"
-                    strokeMiterlimit="10"
-                  />
-                  <path
-                    d="M11.1699 6.94427L8.16881 9.94536L5.16772 6.94427"
-                    stroke="gray"
-                    strokeWidth="0.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </motion.button>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
-    <h2 className="text-2xl font-bold mb-4">
-      <span className="text-green-600">UI</span>/
-      <span className="text-blue-600">UX</span> 
-      <span className="text-purple-600">Design</span>
-    </h2>
-    <p className="text-gray-700">
-      From wireframing to prototyping, I create seamless user experiences that keep your audience engaged. I design user interfaces and experiences for web and mobile applications.
-    </p>
-  </div>
-
-  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
-    <h2 className="text-2xl font-bold mb-4">
-      <span className="text-purple-600">Web</span> 
-      <span className="text-green-600">Design</span>
-    </h2>
-    <p className="text-gray-700">
-      I develop responsive websites that look great on any device and leave a lasting impression.
-    </p>
-  </div>
-
-  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
-    <h2 className="text-2xl font-bold mb-4">
-      <span className="text-purple-600">Frontend</span> 
-      <span className="text-blue-600">Development</span>
-    </h2>
-    <p className="text-gray-700">
-      I can bring designs to life with HTML, CSS, and JavaScript.
-    </p>
-  </div>
-
-  <div className="bg-white rounded-xl shadow-md p-6 transition duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
-    <h2 className="text-2xl font-bold mb-4">
-      <span className="text-purple-600">Backend</span> 
-      <span className="text-green-600">Integration</span>
-    </h2>
-    <p className="text-gray-700">
-      While my focus is on the frontend, I have experience working with backend technologies to ensure smooth functionality.
-    </p>
-  </div>
-</div>
-
-            
+             
+            </motion.div> 
           </div>
+
         )}
 
         {activeSection === "Biography" && (
