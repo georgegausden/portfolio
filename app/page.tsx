@@ -244,7 +244,7 @@ export default function HomePage() {
         onClick={() => setHoveredSection("")}
       >
        {activeSection === "Me" && (
-  <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center px-4 md:px-8">
+  <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-8 items-center px-4 md:px-8">
     <motion.div
       initial="hidden"
       animate="show"
@@ -252,7 +252,7 @@ export default function HomePage() {
       variants={containerVariants}
       className="flex justify-center md:mt-0"
     >
-      <div className="relative top-[10vh] md:top-0">
+      <div className="relative top-[5vh] md:top-0">
         <Image
           alt="image of me"
           src={"/me.webp"}
@@ -272,7 +272,7 @@ export default function HomePage() {
     >
       <motion.h2
         variants={itemVariants}
-        className="text-2xl md:text-5xl lg:text-7xl min-h-[150px] md:min-h-0"
+        className="text-2xl md:text-5xl pt-0 lg:text-7xl min-h-[150px] md:min-h-0"
       >
         Hey, I'm George and I'm a <TypewriterTitle />
       </motion.h2>
