@@ -104,7 +104,7 @@
 
 
 #subButton {
-    @apply bg-none italic no-underline text-left relative;
+    @apply bg-none italic no-underline text-left pr-2 relative;
 }
 
 #subButton::after {
@@ -126,7 +126,7 @@
 
 
   #navbarSection{
-    @apply absolute flex flex-col items-start md:translate-x-[0%] py-5 gap-3 ;
+    @apply absolute flex flex-col items-start  md:translate-x-[0%] py-5 gap-3 ;
   }
 
   
