@@ -117,26 +117,7 @@ export default function HomePage() {
                   >
                     Me
                   </motion.button>
-                  {/* <motion.button
-                    id="subButton"
-                    variants={itemVariants}
-                    onClick={() => {
-                      setActiveSection("Biography");
-                      setHoveredSection("");
-                    }}
-                  >
-                    Biography
-                  </motion.button> */}
-                  {/* <motion.button
-                    id="subButton"
-                    variants={itemVariants}
-                    onClick={() => {
-                      setActiveSection("Artist Statement");
-                      setHoveredSection("");
-                    }}
-                  >
-                    Artist Statement
-                  </motion.button> */}
+               
                   <motion.button
                     id="subButton"
                     variants={itemVariants}
@@ -293,7 +274,7 @@ export default function HomePage() {
         variants={itemVariants}
         className="text-2xl md:text-5xl lg:text-7xl min-h-[150px] md:min-h-0"
       >
-        Hey, I'm George. I'm a <TypewriterTitle />.
+        Hey, I'm George and I'm a <TypewriterTitle />
       </motion.h2>
     </motion.div>
   </div>
