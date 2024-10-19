@@ -8,7 +8,6 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 import ImageCarousel from "./components/imageCarousel";
 import ExperimentSection from "./components/experimentSection";
 import ProjectSection from "./components/projectSection";
-import Header from "./components/header";
 import TypewriterTitle from "./components/typewritertitle";
 /* eslint-disable react/no-unescaped-entities */
 
