@@ -88,6 +88,13 @@
                 "tags": ["TouchDesigner", "Animation", "Noise"],
                 "links": [["/movieout.3.mp4", "Final Result, Blender, 2023"]],
                 "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."]]
+            },
+            {
+                "title": "Asma's Portfolio",
+                "description": "",
+                "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
+                "links": [["/MacBook Air - 18.jpg", "Final Result, Blender, 2023"],["/MacBook Air - 22.jpg", "Final Result, Blender, 2023"],["/MacBook Air - 20.jpg", "Final Result, Blender, 2023"]],
+                "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."],[ "Challenges","The most challenging part of this project was creating the 3D model of the metro system. The model had to be accurate and detailed, which required a lot of time and effort. Another challenge was animating the train to move through the tunnels. This required a good understanding of keyframe animation and camera movement."],[ "Final Result","The final result is a 3D animation of the Montréal underground metro system. The animation shows a train moving through the tunnels, passing by different stations and landmarks. The animation is realistic and detailed, with accurate lighting and textures."]]
             }
 
         ]
