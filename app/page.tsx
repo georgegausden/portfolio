@@ -244,7 +244,7 @@ export default function HomePage() {
         onClick={() => setHoveredSection("")}
       >
        {activeSection === "Me" && (
-  <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 items-center px-4 md:px-8">
+  <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center px-4 md:px-8">
     <motion.div
       initial="hidden"
       animate="show"
