@@ -85,7 +85,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
 
       {/* <Header/> */}
-      <nav className="absolute left-1/2 transform -translate-x-1/2 pt-10 top-0 z-20 text-center justify-center w-full">
+      <nav className="absolute left-1/2 transform -translate-x-1/2 pt-5 md:pt-10 lg:pt-10 top-0 z-20 text-center justify-center w-full">
         <motion.div
           initial="hidden"
           animate="show"
