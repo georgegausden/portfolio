@@ -9,7 +9,7 @@ export default function ProjectSection({ selectedProject }: ProjectSectionProps)
   if (!selectedProject || !selectedProject.links) return null;
 
   return (
-    <div className="flex flex-col gap-20 items-start my-24">
+    <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
       <div className="w-full justify-center">
         <h1 className='text-center'>{selectedProject.title}</h1>
         <p className="text-center">{selectedProject.description}</p>
