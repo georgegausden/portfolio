@@ -298,8 +298,7 @@ export default function HomePage() {
         )}
 
         {activeSection === "Email" && (
-          <div className="text-center grid grid-row-3 gap-10">
-          <a id="subButton" href="mailto:george.philip.gausden@gmail.com" 
+          <div className="text-center justify-center items-center grid grid-rows-3 gap-10">          <a id="subButton" href="mailto:george.philip.gausden@gmail.com" 
     className="text-3xl !not-italic "
     target="_blank" 
     rel="noopener noreferrer">Email
