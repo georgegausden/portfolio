@@ -90,7 +90,7 @@ export default function HomePage() {
           animate="show"
           exit="hidden"
           variants={containerVariants}
-          className="flex text-center gap-[12%] md:gap-[10%] justify-center w-full"
+          className="flex text-center gap-[5%] md:gap-[10%] justify-center w-full"
         >
           <motion.div variants={itemVariants}>
             <button onMouseEnter={() => setHoveredSection("About")}>
