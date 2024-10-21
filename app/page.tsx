@@ -237,7 +237,7 @@ export default function HomePage() {
 
       <div
         className={`flex flex-grow justify-center items-center  px-[5%] transition-all ease-in-out duration-500 ${
-          hoveredSection !== "" ? "blur-xl" : ""
+          hoveredSection !== "" ? "blur-xl bg-white opacity-30" : ""
         }`}
         style={{ zIndex: 10 }}
         onClick={() => setHoveredSection("")}
