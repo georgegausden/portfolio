@@ -297,24 +297,37 @@ export default function HomePage() {
           <ProjectSection selectedProject={activeProject} />
         )}
 
-        {activeSection === "Email" && (
-          <div className="text-center justify-center items-center grid grid-rows-3 gap-10">          <a id="subButton" href="mailto:george.philip.gausden@gmail.com" 
-    className="text-3xl !not-italic "
-    target="_blank" 
-    rel="noopener noreferrer">Email
-          </a>
-          <a id="subButton" href="https://www.instagram.com/georgegausden/" 
-    className="text-3xl !not-italic"
-    target="_blank" 
-    rel="noopener noreferrer">Instagram
-          </a>
-          <a id="subButton" href="https://www.linkedin.com/in/george-gausden/" 
-    className="text-3xl !not-italic"
-    target="_blank" 
-    rel="noopener noreferrer">LinkedIn
-          </a>
-          </div>
-        )}
+{activeSection === "Email" && (
+  <div className="text-center justify-center items-center grid grid-rows-3 gap-10">
+    <a 
+      id="subButton" 
+      href="mailto:george.philip.gausden@gmail.com"
+      className="text-3xl !not-italic justify-self-center"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Email
+    </a>
+    <a 
+      id="subButton" 
+      href="https://www.instagram.com/georgegausden/"
+      className="text-3xl !not-italic justify-self-center"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram
+    </a>
+    <a 
+      id="subButton" 
+      href="https://www.linkedin.com/in/george-gausden/"
+      className="text-3xl !not-italic justify-self-center"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+  </div>
+)}
       
 
      
