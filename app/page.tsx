@@ -9,6 +9,7 @@ import ImageCarousel from "./components/imageCarousel";
 import ExperimentSection from "./components/experimentSection";
 import ProjectSection from "./components/projectSection";
 import TypewriterTitle from "./components/typewritertitle";
+import Tag from "./components/tags";
 /* eslint-disable react/no-unescaped-entities */
 
 export type Project = {
@@ -235,6 +236,7 @@ export default function HomePage() {
         </motion.div>
       </nav>
 
+
       <div
         className={`flex flex-grow justify-center items-center  px-[5%] transition-all ease-in-out duration-500 ${
           hoveredSection !== "" ? "blur-xl bg-white opacity-30" : ""
@@ -296,6 +298,8 @@ export default function HomePage() {
         {activeSection === activeProject?.title && (
           <ProjectSection selectedProject={activeProject} />
         )}
+
+        
 
 {activeSection === "Email" && (
   <div className="text-center justify-center items-center grid grid-rows-3 gap-10">
