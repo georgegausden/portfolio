@@ -83,10 +83,10 @@
             },
 
             {
-                "title": "Max Richter",
-                "description": "",
+                "title": "Flows",
+                "description": "A look into particle systems and noise functions using TouchDesigner. Music by Max Richter.",
                 "tags": ["TouchDesigner", "Animation", "Noise"],
-                "links": [["/movieout.3.mp4", "Final Result, Blender, 2023"]],
+                "links": [["/movieout.3.mp4", "Flows, TouchDesigner, 2023"]],
                 "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."]]
             },
             {
