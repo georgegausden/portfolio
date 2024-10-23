@@ -11,6 +11,7 @@ import ProjectSection from "./components/projectSection";
 import TypewriterTitle from "./components/typewritertitle";
 import Tag from "./components/tags";
 import TagFilterSection from "./components/tags";
+import UnifiedSection from "./components/unifiedSection";
 /* eslint-disable react/no-unescaped-entities */
 
 export type Project = {
@@ -289,16 +290,17 @@ export default function HomePage() {
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
 
-        {activeSection === activeExperiment?.title && (
-         
-          <ExperimentSection selectedExperiment={activeExperiment}/>
-          
-        )}
+{activeSection === activeExperiment?.title && (
+  <UnifiedSection 
+    selectedItem={{ ...activeExperiment, type: 'experiment' }}
+    setActiveSection={setActiveSection}
 
-             
+  />
+)}
+
 {activeSection === activeProject?.title && (
-  <ProjectSection 
-    selectedProject={activeProject} 
+  <UnifiedSection 
+    selectedItem={{ ...activeProject, type: 'project' }}
     setActiveSection={setActiveSection}
   />
 )}

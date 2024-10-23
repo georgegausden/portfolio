@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '../page';
-import Image from 'next/image';
+import ProjectPreview from './projectPreview';
 
 type TagFilterSectionProps = {
   allProjects: {
@@ -45,11 +45,15 @@ export default function TagFilterSection({
   )).sort();
 
   // Filter projects that have the selected tag
-  const filteredProjects = allProjects.flatMap(category => 
-    category.projects.filter(project => 
+  const filteredProjects = allProjects.flatMap(category => {
+    // Determine if it's a project or experiment based on category
+    return category.projects.filter(project => 
       project.tags.includes(selectedTag)
-    )
-  );
+    ).map(project => ({
+      ...project,
+      type: category.category.toLowerCase() === 'projects' ? 'project' : 'experiment'
+    }));
+  });
 
   return (
     <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
@@ -82,85 +86,25 @@ export default function TagFilterSection({
         </div>
       </motion.div>
 
-      {/* Filtered Projects */}
+      {/* Filtered Projects Grid */}
       <AnimatePresence mode="wait">
         <motion.div
           initial="hidden"
           animate="show"
           exit="hidden"
           variants={containerVariants}
-          className="w-full"
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20"
         >
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((item, index) => (
             <motion.div
-              key={`${project.title}-${index}`}
+              key={`${item.title}-${index}`}
               variants={itemVariants}
-              className="mb-20"
+              className="w-full"
             >
-              <div className="w-full justify-center">
-                <h2 className="text-center">{project.title}</h2>
-                <p className="text-center">{project.description}</p>
-                {/* <div className="flex flex-wrap justify-center">
-                  {project.tags?.map((tag, tagIndex) => (
-                    <div 
-                      key={tagIndex} 
-                      id="tag"
-                      className={tag === selectedTag ? 'bg-black' : ''}
-                    >
-                      {tag}
-                    </div>
-                  ))}
-                </div> */}
-              </div>
-
-              {project.links?.map((link, linkIndex) => {
-                const MediaContent = (
-                  <div className="relative flex-shrink-0 group justify-center items-center flex flex-col">
-                    {link[0].endsWith('.mp4') ? (
-                      <video width="600" height="600" controls>
-                        <source src={link[0]} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    ) : (
-                      <Image
-                        key={linkIndex}
-                        src={link[0]}
-                        alt={project.title}
-                        width={600}
-                        height={600}
-                      />
-                    )}
-                    <div id="imageCaption">{link[1]}</div>
-                  </div>
-                );
-
-                const TextContent = project.text && project.text[linkIndex] ? (
-                  <div className="lg:min-w-[500px]">
-                    <h2>{project.text[linkIndex][0]}</h2>
-                    <p className="md:mr-10">{project.text[linkIndex][1]}</p>
-                  </div>
-                ) : null;
-
-                return TextContent ? (
-                  <div key={linkIndex} className="grid lg:grid-cols-2 gap-20">
-                    {linkIndex % 2 === 0 ? (
-                      <>
-                        {MediaContent}
-                        {TextContent}
-                      </>
-                    ) : (
-                      <>
-                        {TextContent}
-                        {MediaContent}
-                      </>
-                    )}
-                  </div>
-                ) : (
-                  <div key={linkIndex} className="flex justify-center">
-                    {MediaContent}
-                  </div>
-                );
-              })}
+              <ProjectPreview
+                item={item}
+                onClick={() => setActiveSection(item.title)}
+              />
             </motion.div>
           ))}
         </motion.div>
