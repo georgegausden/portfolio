@@ -8,13 +8,19 @@ type ProjectPreviewProps = {
 
 export default function ProjectPreview({ item, onClick }: ProjectPreviewProps) {
   const firstMedia = item.links?.[0];
-  
   if (!firstMedia) return null;
+
+  const handleClick = () => {
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Then call the original onClick handler
+    onClick?.();
+  };
 
   return (
     <div
       className="flex flex-col  cursor-pointer  bg-gray-200 hover:bg-gray-300 p-5 rounded-sm duration-500"
-      onClick={onClick}
+      onClick={handleClick}
     >
       <div className="flex flex-col mt-5 md:mt-0 text-center">
         <h2>{item.title}</h2>
