@@ -44,19 +44,23 @@ export default function TagFilterSection({
     ).filter(Boolean)
   )).sort();
 
-  // Filter projects that have the selected tag
-  const filteredProjects = allProjects.flatMap(category => {
-    // Determine if it's a project or experiment based on category
-    return category.projects.filter(project => 
-      project.tags.includes(selectedTag)
-    ).map(project => ({
-      ...project,
-      type: category.category.toLowerCase() === 'projects' ? 'project' : 'experiment'
-    }));
-  });
+  // In TagFilterSection.tsx, modify the filteredProjects mapping:
+
+const filteredProjects = allProjects.flatMap(category => {
+  // Explicitly type the project type
+  const projectType: 'project' | 'experiment' = 
+    category.category.toLowerCase() === 'projects' ? 'project' : 'experiment';
+    
+  return category.projects.filter(project =>
+    project.tags.includes(selectedTag)
+  ).map(project => ({
+    ...project,
+    type: projectType
+  }));
+});
 
   return (
-    <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
+    <div className="flex flex-col gap-10 items-start my-24">
       {/* Tags Section */}
       <motion.div 
         initial="hidden"

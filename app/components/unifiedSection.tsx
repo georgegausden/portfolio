@@ -1,14 +1,14 @@
 import Image from 'next/image';
 
 export type ContentItem = {
-  text?: string[][];
-  title: string;
-  description: string;
-  tags: string[];
-  links: string[][];
-  abstract?: string;
-  type: 'project' | 'experiment';
-};
+    type: 'project' | 'experiment';
+    text: string[][];
+    title: string;
+    description: string;
+    tags: string[];
+    links: string[][];
+    abstract?: string;
+  };
 
 type UnifiedSectionProps = {
   selectedItem: ContentItem;
