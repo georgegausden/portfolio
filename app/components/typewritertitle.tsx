@@ -12,9 +12,8 @@ const TypewriterTitle = () => {
   ];
 
   const titles = [
-    { text: "UI/UX designer.", pauseTime: 3000 },
-    { text: "3D modeller.", pauseTime: 2000 },
     { text: "web designer.", pauseTime: 2500 },
+    { text: "3D modeller.", pauseTime: 2000 },
     { text: "frontend developer.", pauseTime: 2000 },
     { text: "brother.", pauseTime: 2000 },
     { text: "creative developer.", pauseTime: 3000 },

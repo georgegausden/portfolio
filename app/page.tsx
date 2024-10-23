@@ -10,6 +10,7 @@ import ExperimentSection from "./components/experimentSection";
 import ProjectSection from "./components/projectSection";
 import TypewriterTitle from "./components/typewritertitle";
 import Tag from "./components/tags";
+import TagFilterSection from "./components/tags";
 /* eslint-disable react/no-unescaped-entities */
 
 export type Project = {
@@ -295,9 +296,20 @@ export default function HomePage() {
         )}
 
              
-        {activeSection === activeProject?.title && (
-          <ProjectSection selectedProject={activeProject} />
-        )}
+{activeSection === activeProject?.title && (
+  <ProjectSection 
+    selectedProject={activeProject} 
+    setActiveSection={setActiveSection}
+  />
+)}
+
+{activeSection.startsWith('tag-') && (
+  <TagFilterSection
+    allProjects={projects}
+    selectedTag={activeSection.replace('tag-', '')}
+    setActiveSection={setActiveSection}
+  />
+)}
 
         
 

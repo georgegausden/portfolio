@@ -1,27 +1,41 @@
 import Image from 'next/image';
-import { Project } from '../page';
+
+export type Project = {
+  text: string[][];
+  title: string;
+  description: string;
+  tags: string[];
+  links: string[][];
+  abstract?: string;
+};
 
 type ProjectSectionProps = {
   selectedProject: Project;
+  setActiveSection: (section: string) => void;
 };
 
-export default function ProjectSection({ selectedProject }: ProjectSectionProps) {
+export default function ProjectSection({ selectedProject, setActiveSection }: ProjectSectionProps) {
   if (!selectedProject || !selectedProject.links) return null;
 
   return (
     <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
       <div className="w-full justify-center">
-        <h1 className='text-center'>{selectedProject.title}</h1>
+        <h1 className="text-center">{selectedProject.title}</h1>
         <p className="text-center">{selectedProject.description}</p>
         <div className="flex flex-wrap justify-center">
           {selectedProject.tags?.map((tag, index) => (
-            <div key={index} id="tag">
+            <div
+              key={index}
+              id="tag"
+              onClick={() => setActiveSection(`tag-${tag}`)}
+              className="cursor-pointer"
+            >
               {tag}
             </div>
           ))}
         </div>
       </div>
-      
+
       {selectedProject?.links.map((link, index) => {
         const MediaContent = (
           <div className="relative flex-shrink-0 group justify-center items-center flex flex-col">
