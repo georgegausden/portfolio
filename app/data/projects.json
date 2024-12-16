@@ -88,13 +88,20 @@
                 "tags": ["TouchDesigner", "Animation", "Noise"],
                 "links": [["/movieout.3.mp4", "Flows, TouchDesigner, 2023"]],
                 "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."]]
-            },
+            },  
             {
                 "title": "Asma's Portfolio",
                 "description": "A website design project for a local Montréal-based artist. The website was built from the ground up using Next.js.",
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
                 "links": [["/MacBook Air - 18.jpg", " akhanstudio - Homepage, 2024"],["/MacBook Air - 22.jpg", "Final Result, Blender, 2023"],["/MacBook Air - 20.jpg", "Final Result, Blender, 2023"]],
                 "text": [["Process","I recently collaborated with local Montreal artist Asma Khan to design a website that showcases her portfolio. We began the project in Figma, working closely to craft a clean, modern layout that reflected her artistic style. Figma allowed us to easily iterate on design elements and gather feedback. Once the design was finalized, I developed the components from scratch using Next.js."],[ "Challenges","Working on the website for Asma Khan presented several challenges. One of the main difficulties was translating the detailed Figma design into a fully responsive layout with Next.js. Ensuring that the design looked great across all devices required a lot of trial and error, especially with custom components that needed to scale smoothly. Another challenge was balancing aesthetics with performance; optimizing images and assets to load quickly without sacrificing visual quality took time and careful attention. Additionally, integrating dynamic content, such as Asma's latest projects and exhibitions, posed a learning curve as I had to work with APIs and database management. Despite these challenges, the project pushed me to improve both my design-to-development workflow and my technical skills."],[ "Final Result","The final result was a sleek, visually engaging website that perfectly captured Asma Khan's artistic vision while providing a seamless user experience. The site’s responsive design ensured that it looked great on all devices, and the custom-built components gave it a unique feel that stood out from template-based designs. We were both pleased with how well the site balanced aesthetics and functionality. From a technical perspective, this project was a huge learning experience for me—improving my proficiency with Next.js, mastering responsive design techniques, and understanding the importance of optimization. Overall, the collaboration was a success, and it strengthened my ability to bring creative projects from concept to reality."]]
+            },  
+            {
+                "title": "John & Gen's Wedding",
+                "description": "A custom wedding invitation website built using Next.js.",
+                "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
+                "links": [["/wedding1.jpg", " Wedding invitation landing page"],["/wedding2.jpg", "Wedding invitation countdown and information"]],
+                "text": [["Process","I designed and implemented a custom wedding invitation website for my brother and his wife. The design stage was done in Figma and then I coded the website using Next.js."],[ "Link","Here's a link to the full website: https://johnandgen.vercel.app"]]
             }
 
         ]

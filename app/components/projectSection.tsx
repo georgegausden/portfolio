@@ -60,7 +60,7 @@ export default function ProjectSection({ selectedProject, setActiveSection }: Pr
         const TextContent = (
           <div className="lg:min-w-[500px]">
             <h2>{selectedProject.text[index][0]}</h2>
-            <p className="md:mr-10">{selectedProject.text[index][1]}</p>
+            <p className="md:mr-10">{renderTextWithLinks(selectedProject.text[index][1])}</p>
           </div>
         );
 
@@ -82,4 +82,20 @@ export default function ProjectSection({ selectedProject, setActiveSection }: Pr
       })}
     </div>
   );
+}
+
+function renderTextWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, index) => {
+    if (urlRegex.test(part)) {
+      return (
+        <a key={index} href={part} target="_blank" rel="noopener noreferrer">
+          {part}
+        </a>
+      );
+    } else {
+      return part;
+    }
+  });
 }
