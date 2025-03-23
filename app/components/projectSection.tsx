@@ -40,7 +40,10 @@ export default function ProjectSection({ selectedProject, setActiveSection }: Pr
         const MediaContent = (
           <div className="relative flex-shrink-0 group justify-center items-center flex flex-col">
             {link[0].endsWith('.mp4') ? (
-              <video width="600" height="600" controls>
+              <video width="600" height="600" autoPlay 
+              loop 
+              muted 
+              playsInline>
                 <source src={link[0]} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
