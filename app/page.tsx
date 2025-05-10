@@ -225,11 +225,33 @@ export default function HomePage() {
                     variants={itemVariants}
                     id="subButton"
                     onClick={() => {
-                      setActiveSection("Email");
+                      window.open("mailto:george.philip.gausden@gmail.com", "_blank");
                       setHoveredSection("");
                     }}
                   >
                     Email
+                  </motion.button>
+
+                  <motion.button
+                    variants={itemVariants}
+                    id="subButton"
+                    onClick={() => {
+                      window.open("https://www.instagram.com/georgegausden/", "_blank");
+                      setHoveredSection("");
+                    }}
+                  >
+                    Instagram
+                  </motion.button>
+
+                  <motion.button
+                    variants={itemVariants}
+                    id="subButton"
+                    onClick={() => {
+                      window.open("https://www.linkedin.com/in/george-gausden/", "_blank");
+                      setHoveredSection("");
+                    }}
+                  >
+                    LinkedIn
                   </motion.button>
                 </motion.div>
               )}
