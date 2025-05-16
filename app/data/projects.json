@@ -91,6 +91,8 @@
             },  
             {
                 "title": "Asma's Portfolio",
+                 "projectUrl": "https://www.akhanstudio.com",
+
                 "description": "A website design project for a local Montréal-based artist. The website was built from the ground up using Next.js. The frontend was designed in Figma and implemented using Tailwind CSS. Xata was used for structured data, and Vercel Blob for media storage.",
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
                 "links": [["/homepage.jpg", " akhanstudio - Homepage, 2024"],["/portfolio.mp4", "Final Result, Blender, 2023"],["/MacBook Air - 20.jpg", "Final Result, Blender, 2023"]],
@@ -99,9 +101,19 @@
             {
                 "title": "John & Gen's Wedding",
                 "description": "A custom wedding invitation website built using Next.js.",
+                "projectUrl": "https://johnandgen.vercel.app",
+
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
                 "links": [["/wedding1.jpg", " Wedding invitation landing page"],["/wedding2.jpg", "Wedding invitation countdown and information"]],
-                "text": [["Process","I designed and implemented a custom wedding invitation website for my brother and his wife. The design stage was done in Figma and then I coded the website using Next.js."],[ "Link","Here's a link to the full website: https://johnandgen.vercel.app"]]
+                "text": [["Process","I designed and implemented a custom wedding invitation website for my brother and his wife. The design stage was done in Figma and then I coded the website using Next.js."]]
+            },
+            {
+                "title": "Playxana Game Center",
+                "description": "A custom menu website for a retro game center located in Erbil, Kurdistan. Built using Next.js.",
+                "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
+                "projectUrl": "http://www.playxana.com",
+                "links": [["/playxana1.mp4", " menu page"],["/playxana3.mp4", "Wedding invitation countdown and information"]],
+                "text": [["Process","The owner and I iterated over a few different designs for the menu website. The idea was to have a retro feel/look to reflect the atmosphere of the game center. The design stage was done in Figma and then I coded the website using Next.js."],[ "Game Section","The owner of the game center wanted to have a section where customers could play some basic retro games online. I used p5.js to create a few simple games that could be played directly on the website. The games are simple and easy to play, making them perfect for a retro game center."]]
             }
 
         ]

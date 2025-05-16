@@ -21,6 +21,7 @@ export type Project = {
   tags: string[];
   links: string[][];
   abstract?: string; // Optional property
+  projectUrl?: string; // Add projectUrl here
 }
 
 

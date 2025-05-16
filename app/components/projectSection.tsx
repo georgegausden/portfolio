@@ -7,6 +7,7 @@ export type Project = {
   tags: string[];
   links: string[][];
   abstract?: string;
+  projectUrl?: string; // Add projectUrl here
 };
 
 type ProjectSectionProps = {
@@ -15,6 +16,9 @@ type ProjectSectionProps = {
 };
 
 export default function ProjectSection({ selectedProject, setActiveSection }: ProjectSectionProps) {
+  // Add this console.log to inspect the selectedProject prop
+  console.log('Selected Project Data:', selectedProject);
+
   if (!selectedProject || !selectedProject.links) return null;
 
   return (
@@ -22,6 +26,18 @@ export default function ProjectSection({ selectedProject, setActiveSection }: Pr
       <div className="w-full justify-center">
         <h1 className="text-center">{selectedProject.title}</h1>
         <p className="text-center">{selectedProject.description}</p>
+        {selectedProject.projectUrl && (
+          <p className="text-center">
+            <a
+              href={selectedProject.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              View Project
+            </a>
+          </p>
+        )}
         <div className="flex flex-wrap justify-center">
           {selectedProject.tags?.map((tag, index) => (
             <div
@@ -40,10 +56,7 @@ export default function ProjectSection({ selectedProject, setActiveSection }: Pr
         const MediaContent = (
           <div className="relative flex-shrink-0 group justify-center items-center flex flex-col">
             {link[0].endsWith('.mp4') ? (
-              <video width="600" height="600" autoPlay 
-              loop 
-              muted 
-              playsInline>
+              <video width="600" height="600" autoPlay loop muted playsInline>
                 <source src={link[0]} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

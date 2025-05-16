@@ -8,6 +8,7 @@ export type ContentItem = {
     tags: string[];
     links: string[][];
     abstract?: string;
+    projectUrl?: string; // Add projectUrl here
   };
 
 type UnifiedSectionProps = {
@@ -60,6 +61,19 @@ export default function UnifiedSection({ selectedItem, setActiveSection }: Unifi
       <div className="w-full justify-center">
         <h1 className="text-center">{selectedItem.title}</h1>
         <p className="text-center">{selectedItem.description}</p>
+        {selectedItem.projectUrl && ( // Add this block to display projectUrl
+          <p className="text-center">
+            <a
+              href={selectedItem.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-md text-blue-500 border border-blue-500 p-2 rounded-sm hover:bg-blue-500 hover:text-white transition-colors ease-in-out duration-300"
+              
+            >
+              View Project
+            </a>
+          </p>
+        )}
         {renderTags()}
       </div>
       {selectedItem.links.map((link, index) => {
