@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import { ContentItem } from './unifiedSection';
+import React from 'react'; // Import React
 
 type ProjectPreviewProps = {
   item: ContentItem;
   onClick?: () => void;
 };
 
-export default function ProjectPreview({ item, onClick }: ProjectPreviewProps) {
+// Wrap ProjectPreview with React.memo
+const ProjectPreview = React.memo(({ item, onClick }: ProjectPreviewProps) => {
   const firstMedia = item.links?.[0];
   if (!firstMedia) return null;
 
@@ -54,4 +56,9 @@ export default function ProjectPreview({ item, onClick }: ProjectPreviewProps) {
       </div>
     </div>
   );
-}
+});
+
+// Assign a display name for better debugging in React DevTools
+ProjectPreview.displayName = 'ProjectPreview';
+
+export default ProjectPreview;

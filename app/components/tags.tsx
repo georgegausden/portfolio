@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '../page';
 import ProjectPreview from './projectPreview';
@@ -44,20 +44,26 @@ export default function TagFilterSection({
     ).filter(Boolean)
   )).sort();
 
-  // In TagFilterSection.tsx, modify the filteredProjects mapping:
-
-const filteredProjects = allProjects.flatMap(category => {
-  // Explicitly type the project type
-  const projectType: 'project' | 'experiment' = 
-    category.category.toLowerCase() === 'projects' ? 'project' : 'experiment';
+  const filteredProjects = allProjects.flatMap(category => {
+    const projectType: 'project' | 'experiment' = 
+      category.category.toLowerCase() === 'projects' ? 'project' : 'experiment';
     
-  return category.projects.filter(project =>
-    project.tags.includes(selectedTag)
-  ).map(project => ({
-    ...project,
-    type: projectType
-  }));
-});
+    return category.projects.filter(project =>
+      project.tags.includes(selectedTag)
+    ).map(project => ({
+      ...project,
+      type: projectType
+    }));
+  });
+
+  // Memoize the onClick handler for ProjectPreview
+  const handleProjectPreviewClick = useCallback((itemTitle: string) => {
+    setActiveSection(itemTitle);
+  }, [setActiveSection]);
+
+  const handleTagClick = useCallback((tag: string) => {
+    setActiveSection(`tag-${tag}`);
+  }, [setActiveSection]);
 
   return (
     <div className="flex flex-col gap-10 items-start my-24">
@@ -75,7 +81,7 @@ const filteredProjects = allProjects.flatMap(category => {
               key={tag}
               variants={itemVariants}
               id='tag'
-              onClick={() => setActiveSection(`tag-${tag}`)}
+              onClick={() => handleTagClick(tag)} // Use memoized handler
               className={`
                 cursor-pointer px-4 py-2 rounded-full
                 transition-colors duration-200 ease-in-out
@@ -107,7 +113,7 @@ const filteredProjects = allProjects.flatMap(category => {
             >
               <ProjectPreview
                 item={item}
-                onClick={() => setActiveSection(item.title)}
+                onClick={() => handleProjectPreviewClick(item.title)} // Use memoized handler
               />
             </motion.div>
           ))}
