@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import dynamic from 'next/dynamic'; // Import dynamic
 import projects from "./data/projects.json";
 import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
@@ -9,10 +10,18 @@ import ImageCarousel from "./components/imageCarousel";
 import ExperimentSection from "./components/experimentSection";
 import ProjectSection from "./components/projectSection";
 import TypewriterTitle from "./components/typewritertitle";
-import Tag from "./components/tags";
-import TagFilterSection from "./components/tags";
-import UnifiedSection from "./components/unifiedSection";
+// TagFilterSection is imported as default from ./components/tags
+// UnifiedSection is imported as default from ./components/unifiedSection
+
 /* eslint-disable react/no-unescaped-entities */
+
+// Dynamically import components
+const DynamicUnifiedSection = dynamic(() => import('./components/unifiedSection'), {
+  loading: () => <p>Loading...</p>,
+});
+const DynamicTagFilterSection = dynamic(() => import('./components/tags'), {
+  loading: () => <p>Loading...</p>,
+});
 
 export type Project = {
   text: string[][];
@@ -314,7 +323,7 @@ export default function HomePage() {
         )}
 
 {activeSection === activeExperiment?.title && (
-  <UnifiedSection 
+  <DynamicUnifiedSection 
     selectedItem={{ ...activeExperiment, type: 'experiment' }}
     setActiveSection={setActiveSection}
 
@@ -322,14 +331,14 @@ export default function HomePage() {
 )}
 
 {activeSection === activeProject?.title && (
-  <UnifiedSection 
+  <DynamicUnifiedSection 
     selectedItem={{ ...activeProject, type: 'project' }}
     setActiveSection={setActiveSection}
   />
 )}
 
 {activeSection.startsWith('tag-') && (
-  <TagFilterSection
+  <DynamicTagFilterSection
     allProjects={projects}
     selectedTag={activeSection.replace('tag-', '')}
     setActiveSection={setActiveSection}
