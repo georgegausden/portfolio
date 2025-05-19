@@ -309,7 +309,7 @@ export default function HomePage() {
         variants={itemVariants}
         className="text-2xl md:text-5xl pt-0 lg:text-7xl min-h-[150px] md:min-h-0"
       >
-        Hey, I'm Ali and I'm a <TypewriterTitle />
+        Hey, I'm Ali and I'm a rat <TypewriterTitle />
       </motion.h2>
     </motion.div>
   </div>
