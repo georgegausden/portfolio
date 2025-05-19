@@ -38,84 +38,8 @@
         ]
     },
     {
-        "category": "Experiments",
+        "category": "Websites",
         "projects": [
-            {
-                "title": "Geometries",
-                "description": "Playing around with p5.js and trigonometry to create generative art.",
-                "tags": ["p5.js", "Trigonometry", "Generative Art", "Mathematics"],
-                "links": [["/geometries1.jpg", "Geometric Pattern Iteration #1, p5.js, 2023"], ["/geometries2.jpg", "Geometric Pattern Iteration #2, p5.js, 2023"], ["/geometries3.jpg", "Geometric Pattern Iteration #3, p5.js, 2023"]],
-                "text": [[]]
-            },
-            {
-                "title": "Studio NewKid",
-                "description": "I worked with Studio NewKid to develop their brand image. I wanted to use tools that I was already familiar with, such as p5.js, Procreate and Photoshop to create compelling animations verging on the experimental side. During the course of my work at Studio NewKid, I was responsible for some of the photography and graphic design.",
-                "tags": ["Marketing", "Photography", "Photoshop", "p5.js", "Illustration"],
-                "links": [
-                    ["/newkid1.webp", "Studio NewKid Branding Example 1, 2024"], 
-                    ["/newkid2.webp", "Studio NewKid Branding Example 2, 2024"], 
-                    ["/newkid3.webp", "Studio NewKid Branding Example 3, 2024"], 
-                    ["/newkid4.webp", "Studio NewKid Branding Example 4, 2024"], 
-                    ["/newkid5.webp", "Studio NewKid Branding Example 5, 2024"], 
-                    ["/newkidgif.gif", "Studio NewKid Animated Graphic, 2024"], 
-                    ["/newkidad.gif","Studio NewKid Advertisement Animation, 2024"], 
-                    ["/newkidlogo.gif", "Studio NewKid Animated Logo, 2024"]
-                ],
-                "text": [[]]
-            },
-            {
-                "title": "3D Modelling",
-                "description": "A compilation of 3D experiments & projects created using Blender.",
-                "tags": ["3D Modelling", "Animation", "Blender", "Rigging"],
-                "links": [
-                    ["/humanoid.mp4", "Humanoid Alien Animation, Blender, 2023"],
-                    ["/GeorgeG_Wireman_Model.png","Wireman Character Model, Blender, 2023"],
-                    ["/0001.png","Abstract Glass Bubbles, Blender, 2023"],
-                    ["/0002.png","Character Concept 'NewKid', Blender, 2023"],
-                    ["/worms.jpg","Abstract Fluffy Worms, Blender, 2020"],
-                    ["/boat.png","Stylized Sailboat Scene, Blender, 2020"], 
-                    ["/egg2.png","Photorealistic Egg Study 1, Blender, 2024"],
-                    ["/egg6.png","Photorealistic Egg Study 2, Blender, 2024"],
-                    ["/0001.mp4", "Low Poly Diorama Animation, Blender, 2022"]
-                ],
-                "text": [[],[]]
-            }
-        ]
-    },
-    {
-        "category": "Projects",
-        "projects": [
-            {
-                "title": "Performance Flow",
-                "description": "An exploration of machine learning, piano performance, and interactive gesture control using Argon Particle microcontrollers and Wekinator.",
-                "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle", "Wekinator", "MaxMSP"],
-                "links": [
-                    ["/performanceFlow.jpeg", "Argon Particle Microcontrollers Setup, 2024"], 
-                    ["/process.png", "System Diagram for Performance Flow, 2024"], 
-                    ["/mapping.png", "Gesture to Audio Effect Mapping in MaxMSP, 2024"]
-                ],
-                "text": [["Abstract", "This final project is an experiment in creative interactive machine learning and musical gesture control. Our project aims to transform musical performances by providing new ways for artists to interact with the music. Inspired by previous IML research and similar projects, we tried a few approaches to manipulating musical performances that combined audio processing, machine learning, and sensors. We used Wekinator, MaxMSP, and Particle Argon microcontrollers to control audio effects of a pre-recorded track using hand gestures. The Particle Argon microcontroller records real-time hand data, which is fed into a machine learning model trained with Wekinator, and mapped to control audio effects like pan, filters, pitch modulation, and delay. Throughout the process, we encountered some difficulties and evolved our vision, initially aiming for live performance with real-time audio manipulation and exploring visual integration."], ["Process", "The Particle Argon microcontroller is used to capture hand rotation and position data in real time. This data serves as input for a machine learning model trained using Wekinator. We collected the training data using two MPU6050 sensors, one for each hand, providing three continuous data outputs representing the rotation of each hand. This results in a total of six outputs. These continuous data streams from the microcontrollers are sent to Wekinator as continuous float values via OSC."], ["Mapping", "In Wekinator, these six inputs are mapped using a regression model to four outputs. These outputs are scaled to match the range of the corresponding audio effect input in MaxMSP. Wekinator relays these outputs as OSC messages to MaxMSP, where they trigger audio effects applied to a pre-recorded piano performance. Through a many-to-many mapping approach, the four outputs from Wekinator control four MaxMSPs parameter, manipulating the audio effects. These effects include: Pan: Controlled by rotating wrists left and right. Highpass filter cutoff frequency: Adjusted by rotating wrists outwards. Pitch modulation: Increased or decreased by moving hands up and down. Delay with feedback: Activated by holding palms face up."]]
-            },
-           
-            {
-                "title": "Montréal Underground",
-                "description": "A 3D modelling and animation project depicting the Montréal metro system using CGI techniques in Blender.",
-                "tags": ["3D Modelling", "Animation", "Blender", "CGI"],
-                "links": [
-                    ["/vfx2.webp","Reference image for in-situ measurements"],
-                    ["/vfx.webp", "Final Render of Metro Station, Blender, 2023"],
-                    ["/vfxvideo.mp4", "Metro Train Animation, Blender, 2023"]
-                ],
-                "text": [["Initial Steps","This project was made using Blender. The goal was to create a 3D model of the Montréal underground metro system. The model was then animated to simulate a train moving through the tunnels."],[ "Challenges","The most challenging part of this project was creating the 3D model of the metro system. The model had to be accurate and detailed, which required a lot of time and effort. Another challenge was animating the train to move through the tunnels. This required a good understanding of keyframe animation and camera movement."], ["Final Result","The final result is a 3D animation of the Montréal underground metro system. The animation shows a train moving through the tunnels, passing by different stations and landmarks. The animation is realistic and detailed, with accurate lighting and textures."]]
-            },
-
-            {
-                "title": "Flows",
-                "description": "An abstract animation exploring particle systems and noise functions in TouchDesigner, set to music by Max Richter.",
-                "tags": ["TouchDesigner", "Animation", "Noise", "Particle Systems"],
-                "links": [["/movieout.3.mp4", "Abstract Particle Animation, TouchDesigner, 2023"]],
-                "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."]]
-            },  
             {
                 "title": "Asma's Portfolio",
                  "projectUrl": "https://www.akhanstudio.com",
@@ -127,7 +51,7 @@
                     ["/MacBook Air - 20.jpg", "Website Mockup on MacBook Air, 2024"]
                 ],
                 "text": [["Process","I recently collaborated with local Montreal artist Asma Khan to design a website that showcases her portfolio. We began the project in Figma, working closely to craft a clean, modern layout that reflected her artistic style. Figma allowed us to easily iterate on design elements and gather feedback. Once the design was finalized, I developed the components from scratch using Next.js."],[ "Challenges","Working on the website for Asma Khan presented several challenges. One of the main difficulties was translating the detailed Figma design into a fully responsive layout with Next.js. Ensuring that the design looked great across all devices required a lot of trial and error, especially with custom components that needed to scale smoothly. Another challenge was balancing aesthetics with performance; optimizing images and assets to load quickly without sacrificing visual quality took time and careful attention. Additionally, integrating dynamic content, such as Asma's latest projects and exhibitions, posed a learning curve as I had to work with APIs and database management. Despite these challenges, the project pushed me to improve both my design-to-development workflow and my technical skills."],[ "Final Result","The final result was a sleek, visually engaging website that perfectly captured Asma Khan's artistic vision while providing a seamless user experience. The site’s responsive design ensured that it looked great on all devices, and the custom-built components gave it a unique feel that stood out from template-based designs. We were both pleased with how well the site balanced aesthetics and functionality. From a technical perspective, this project was a huge learning experience for me—improving my proficiency with Next.js, mastering responsive design techniques, and understanding the importance of optimization. Overall, the collaboration was a success, and it strengthened my ability to bring creative projects from concept to reality."]]
-            },  
+            },
             {
                 "title": "John & Gen's Wedding",
                 "description": "A custom wedding invitation website designed in Figma and built using Next.js for my brother and his wife.",
@@ -150,7 +74,80 @@
                 ],
                 "text": [["Process","The owner and I iterated over a few different designs for the menu website. The idea was to have a retro feel/look to reflect the atmosphere of the game center. The design stage was done in Figma and then I coded the website using Next.js."],[ "Game Section","The owner of the game center wanted to have a section where customers could play some basic retro games online. I used p5.js to create a few simple games that could be played directly on the website. The games are simple and easy to play, making them perfect for a retro game center."]]
             }
-
+        ]
+    },
+    {
+        "category": "Projects",
+        "projects": [
+            {
+                "title": "Performance Flow",
+                "description": "An exploration of machine learning, piano performance, and interactive gesture control using Argon Particle microcontrollers and Wekinator.",
+                "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle", "Wekinator", "MaxMSP"],
+                "links": [
+                    ["/performanceFlow.jpeg", "Argon Particle Microcontrollers Setup, 2024"],
+                    ["/process.png", "System Diagram for Performance Flow, 2024"],
+                    ["/mapping.png", "Gesture to Audio Effect Mapping in MaxMSP, 2024"]
+                ],
+                "text": [["Abstract", "This final project is an experiment in creative interactive machine learning and musical gesture control. Our project aims to transform musical performances by providing new ways for artists to interact with the music. Inspired by previous IML research and similar projects, we tried a few approaches to manipulating musical performances that combined audio processing, machine learning, and sensors. We used Wekinator, MaxMSP, and Particle Argon microcontrollers to control audio effects of a pre-recorded track using hand gestures. The Particle Argon microcontroller records real-time hand data, which is fed into a machine learning model trained with Wekinator, and mapped to control audio effects like pan, filters, pitch modulation, and delay. Throughout the process, we encountered some difficulties and evolved our vision, initially aiming for live performance with real-time audio manipulation and exploring visual integration."], ["Process", "The Particle Argon microcontroller is used to capture hand rotation and position data in real time. This data serves as input for a machine learning model trained using Wekinator. We collected the training data using two MPU6050 sensors, one for each hand, providing three continuous data outputs representing the rotation of each hand. This results in a total of six outputs. These continuous data streams from the microcontrollers are sent to Wekinator as continuous float values via OSC."], ["Mapping", "In Wekinator, these six inputs are mapped using a regression model to four outputs. These outputs are scaled to match the range of the corresponding audio effect input in MaxMSP. Wekinator relays these outputs as OSC messages to MaxMSP, where they trigger audio effects applied to a pre-recorded piano performance. Through a many-to-many mapping approach, the four outputs from Wekinator control four MaxMSPs parameter, manipulating the audio effects. These effects include: Pan: Controlled by rotating wrists left and right. Highpass filter cutoff frequency: Adjusted by rotating wrists outwards. Pitch modulation: Increased or decreased by moving hands up and down. Delay with feedback: Activated by holding palms face up."]]
+            },
+            {
+                "title": "Montréal Underground",
+                "description": "A 3D modelling and animation project depicting the Montréal metro system using CGI techniques in Blender.",
+                "tags": ["3D Modelling", "Animation", "Blender", "CGI"],
+                "links": [
+                    ["/vfx2.webp","Reference image for in-situ measurements"],
+                    ["/vfx.webp", "Final Render of Metro Station, Blender, 2023"],
+                    ["/vfxvideo.mp4", "Metro Train Animation, Blender, 2023"]
+                ],
+                "text": [["Initial Steps","This project was made using Blender. The goal was to create a 3D model of the Montréal underground metro system. The model was then animated to simulate a train moving through the tunnels."],[ "Challenges","The most challenging part of this project was creating the 3D model of the metro system. The model had to be accurate and detailed, which required a lot of time and effort. Another challenge was animating the train to move through the tunnels. This required a good understanding of keyframe animation and camera movement."], ["Final Result","The final result is a 3D animation of the Montréal underground metro system. The animation shows a train moving through the tunnels, passing by different stations and landmarks. The animation is realistic and detailed, with accurate lighting and textures."]]
+            },
+            {
+                "title": "Flows",
+                "description": "An abstract animation exploring particle systems and noise functions in TouchDesigner, set to music by Max Richter.",
+                "tags": ["TouchDesigner", "Animation", "Noise", "Particle Systems"],
+                "links": [["/movieout.3.mp4", "Abstract Particle Animation, TouchDesigner, 2023"]],
+                "text": [["Process","This video was made entirely using TouchDesigner. Multiple particle systems and noise functions were used to generate a 3D flowing effect."]]
+            },
+            {
+                "title": "Geometries",
+                "description": "Playing around with p5.js and trigonometry to create generative art.",
+                "tags": ["p5.js", "Trigonometry", "Generative Art", "Mathematics"],
+                "links": [["/geometries1.jpg", "Geometric Pattern Iteration #1, p5.js, 2023"], ["/geometries2.jpg", "Geometric Pattern Iteration #2, p5.js, 2023"], ["/geometries3.jpg", "Geometric Pattern Iteration #3, p5.js, 2023"]],
+                "text": [[]]
+            },
+            {
+                "title": "Studio NewKid",
+                "description": "I worked with Studio NewKid to develop their brand image. I wanted to use tools that I was already familiar with, such as p5.js, Procreate and Photoshop to create compelling animations verging on the experimental side. During the course of my work at Studio NewKid, I was responsible for some of the photography and graphic design.",
+                "tags": ["Marketing", "Photography", "Photoshop", "p5.js", "Illustration"],
+                "links": [
+                    ["/newkid1.webp", "Studio NewKid Branding Example 1, 2024"],
+                    ["/newkid2.webp", "Studio NewKid Branding Example 2, 2024"],
+                    ["/newkid3.webp", "Studio NewKid Branding Example 3, 2024"],
+                    ["/newkid4.webp", "Studio NewKid Branding Example 4, 2024"],
+                    ["/newkid5.webp", "Studio NewKid Branding Example 5, 2024"],
+                    ["/newkidgif.gif", "Studio NewKid Animated Graphic, 2024"],
+                    ["/newkidad.gif","Studio NewKid Advertisement Animation, 2024"],
+                    ["/newkidlogo.gif", "Studio NewKid Animated Logo, 2024"]
+                ],
+                "text": [[]]
+            },
+            {
+                "title": "3D Modelling",
+                "description": "A compilation of 3D experiments & projects created using Blender.",
+                "tags": ["3D Modelling", "Animation", "Blender", "Rigging"],
+                "links": [
+                    ["/humanoid.mp4", "Humanoid Alien Animation, Blender, 2023"],
+                    ["/GeorgeG_Wireman_Model.png","Wireman Character Model, Blender, 2023"],
+                    ["/0001.png","Abstract Glass Bubbles, Blender, 2023"],
+                    ["/0002.png","Character Concept 'NewKid', Blender, 2023"],
+                    ["/worms.jpg","Abstract Fluffy Worms, Blender, 2020"],
+                    ["/boat.png","Stylized Sailboat Scene, Blender, 2020"], 
+                    ["/egg2.png","Photorealistic Egg Study 1, Blender, 2024"],
+                    ["/egg6.png","Photorealistic Egg Study 2, Blender, 2024"],
+                    ["/0001.mp4", "Low Poly Diorama Animation, Blender, 2022"]
+                ],
+                "text": [[],[]]
+            }
         ]
     }
 ]

@@ -76,8 +76,8 @@ export default function HomePage() {
   const artistStatement = projects.find(
     (project) => project.category === "About"
   );
-  const experimentsSection = projects.find(
-    (project) => project.category === "Experiments"
+  const websitesSection = projects.find(
+    (project) => project.category === "Websites"
   );
   const projectsSection = projects.find(
     (project) => project.category === "Projects"
@@ -85,9 +85,9 @@ export default function HomePage() {
   
   const contact = projects.find((project) => project.category === "Contact");
 
-  const activeExperiment = projects
-    .find((project) => project.category === "Experiments")
-    ?.projects.find((experiment) => experiment.title === activeSection);
+  const activeWebsite = projects
+    .find((project) => project.category === "Websites")
+    ?.projects.find((website) => website.title === activeSection);
 
   const activeProject = projects
     .find((project) => project.category === "Projects")
@@ -154,11 +154,11 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <button onMouseEnter={() => setHoveredSection("Experiments")}>
-              Experiments
+            <button onMouseEnter={() => setHoveredSection("Websites")}>
+              Websites
             </button>
             <AnimatePresence>
-              {hoveredSection === "Experiments" && (
+              {hoveredSection === "Websites" && (
                 <motion.div
                   id="navbarSection"
                   onMouseLeave={() => setHoveredSection("")}
@@ -167,17 +167,17 @@ export default function HomePage() {
                   exit="hidden"
                   variants={containerVariants}
                 >
-                  {experimentsSection?.projects.map((experiment, index) => (
+                  {websitesSection?.projects.map((website, index) => (
                     <motion.button
                       id="subButton"
                       key={index}
                       variants={itemVariants}
                       onClick={() => {
-                        setActiveSection(experiment.title);
+                        setActiveSection(website.title);
                         setHoveredSection("");
                       }}
                     >
-                      {experiment.title}
+                      {website.title}
                     </motion.button>
                   ))}
                 </motion.div>
@@ -322,9 +322,9 @@ export default function HomePage() {
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
 
-{activeSection === activeExperiment?.title && (
+{activeSection === activeWebsite?.title && (
   <DynamicUnifiedSection 
-    selectedItem={{ ...activeExperiment, type: 'experiment' }}
+    selectedItem={{ ...activeWebsite, type: 'website' }}
     setActiveSection={setActiveSection}
 
   />
