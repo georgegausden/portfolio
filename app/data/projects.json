@@ -53,7 +53,7 @@
                 "text": [["Process","I recently collaborated with local Montreal artist Asma Khan to design a website that showcases her portfolio. We began the project in Figma, working closely to craft a clean, modern layout that reflected her artistic style. Figma allowed us to easily iterate on design elements and gather feedback. Once the design was finalized, I developed the components from scratch using Next.js."],[ "Challenges","Working on the website for Asma Khan presented several challenges. One of the main difficulties was translating the detailed Figma design into a fully responsive layout with Next.js. Ensuring that the design looked great across all devices required a lot of trial and error, especially with custom components that needed to scale smoothly. Another challenge was balancing aesthetics with performance; optimizing images and assets to load quickly without sacrificing visual quality took time and careful attention. Additionally, integrating dynamic content, such as Asma's latest projects and exhibitions, posed a learning curve as I had to work with APIs and database management. Despite these challenges, the project pushed me to improve both my design-to-development workflow and my technical skills."],[ "Final Result","The final result was a sleek, visually engaging website that perfectly captured Asma Khan's artistic vision while providing a seamless user experience. The site’s responsive design ensured that it looked great on all devices, and the custom-built components gave it a unique feel that stood out from template-based designs. We were both pleased with how well the site balanced aesthetics and functionality. From a technical perspective, this project was a huge learning experience for me—improving my proficiency with Next.js, mastering responsive design techniques, and understanding the importance of optimization. Overall, the collaboration was a success, and it strengthened my ability to bring creative projects from concept to reality."]]
             },
             {
-                "title": "John & Gen's Wedding",
+                "title": "Wedding Website",
                 "description": "A custom wedding invitation website designed in Figma and built using Next.js for my brother and his wife.",
                 "projectUrl": "https://johnandgen.vercel.app",
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
@@ -65,14 +65,24 @@
             },
             {
                 "title": "Playxana Game Center",
-                "description": "A custom menu website with a retro theme for a game center in Erbil, Kurdistan. Built with Next.js and featuring p5.js games.",
-                "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma", "p5.js"],
+                "description": "A custom menu website with a retro theme for a game center in Erbil, Kurdistan. Built with Next.js and featuring p5.js games, OAuth for secure admin access, and Supabase for backend data storage.",
+                "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma", "p5.js", "OAuth", "Supabase"],
                 "projectUrl": "http://www.playxana.com",
                 "links": [
                     ["/playxana1.mp4", "Playxana Menu Page Demo"],
-                    ["/playxana3.mp4", "Playxana Game Section Demo"]
+                    ["/playxana3.mp4", "Playxana Game Section Demo"],
+                    ["/playxana3.jpg", "Playxana Admin Page"],
+                    ["/playxana4.jpg", "Playxana Admin Add Product Page"],
+                    ["/playxana5.jpg", "Playxana Admin Edit Product Page"]
+                    
                 ],
-                "text": [["Process","The owner and I iterated over a few different designs for the menu website. The idea was to have a retro feel/look to reflect the atmosphere of the game center. The design stage was done in Figma and then I coded the website using Next.js."],[ "Game Section","The owner of the game center wanted to have a section where customers could play some basic retro games online. I used p5.js to create a few simple games that could be played directly on the website. The games are simple and easy to play, making them perfect for a retro game center."]]
+                "text": [
+                    ["Design & Development Process","Collaborated with the client to iterate on several design concepts for the menu website, aiming for a retro aesthetic that reflects the game center's unique atmosphere. The designs were initially drafted in Figma and subsequently developed into a fully functional website using Next.js, ensuring a responsive and engaging user experience."],
+                    [ "Interactive Game Section","A key feature is the integrated game section, developed to enhance customer engagement. This section allows users to play a selection of custom-built retro games directly on the website. These simple, easy-to-play games, created with p5.js, align with the game center's nostalgic theme and provide an interactive element for visitors."],
+                    ["Admin Panel & Security", "An admin page was developed with secure user login using OAuth. This allows authorized personnel to manage the website content and view analytics, ensuring that only trusted users can make changes."],
+                    ["Customizable Product Management", "The admin panel includes an Add Product feature, enabling the owner to easily customize and add new items to their menu. This includes uploading images, setting prices, and writing descriptions, all stored efficiently in a Supabase database."],
+                    ["Dynamic Product Editing", "To maintain an up-to-date menu, an Edit Product form was created. This allows admins to modify existing product details. All changes are dynamically reflected in the Supabase database, ensuring real-time updates on the live website."]
+                ]
             }
         ]
     },
