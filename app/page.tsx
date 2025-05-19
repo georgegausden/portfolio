@@ -239,7 +239,7 @@ export default function HomePage() {
                       setHoveredSection("");
                     }}
                   >
-                    Email
+                    Email ↗
                   </motion.button>
 
                   <motion.button
@@ -250,7 +250,7 @@ export default function HomePage() {
                       setHoveredSection("");
                     }}
                   >
-                    Instagram
+                    Instagram ↗
                   </motion.button>
 
                   <motion.button
@@ -261,7 +261,7 @@ export default function HomePage() {
                       setHoveredSection("");
                     }}
                   >
-                    LinkedIn
+                    LinkedIn ↗
                   </motion.button>
                 </motion.div>
               )}
@@ -356,7 +356,7 @@ export default function HomePage() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Email
+      Email ↗
     </a>
     <a 
       id="subButton" 
@@ -365,7 +365,7 @@ export default function HomePage() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Instagram
+      Instagram ↗
     </a>
     <a 
       id="subButton" 
@@ -374,7 +374,7 @@ export default function HomePage() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      LinkedIn
+      LinkedIn ↗
     </a>
   </div>
 )}

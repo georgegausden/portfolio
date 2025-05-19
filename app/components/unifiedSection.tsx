@@ -142,7 +142,7 @@ export default function UnifiedSection({ selectedItem, setActiveSection }: Unifi
                 rel="noopener noreferrer"
                 className="inline-block text-md text-blue-500 border border-blue-500 p-2 rounded-sm hover:bg-blue-500 hover:text-white transition-colors ease-in-out duration-300"
               >
-                View Project
+                View Project ↗
               </a>
             </p>
           )}
