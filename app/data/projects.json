@@ -102,6 +102,22 @@
         "category": "Projects",
         "projects": [
             {
+                "title": "Studio NewKid Branding",
+                "description": "I worked with Studio NewKid to develop their brand image. I wanted to use tools that I was already familiar with, such as p5.js, Procreate and Photoshop to create compelling animations verging on the experimental side. During the course of my work at Studio NewKid, I was responsible for some of the photography and graphic design.",
+                "tags": ["Marketing", "Photography", "Photoshop", "p5.js", "Illustration"],
+                "links": [
+                    ["/newkid1.webp", "Studio NewKid Branding Example 1, 2024"],
+                    ["/newkid2.webp", "Studio NewKid Branding Example 2, 2024"],
+                    ["/newkid3.webp", "Studio NewKid Branding Example 3, 2024"],
+                    ["/newkid4.webp", "Studio NewKid Branding Example 4, 2024"],
+                    ["/newkid5.webp", "Studio NewKid Branding Example 5, 2024"],
+                    ["/newkidgif.gif", "Studio NewKid Animated Graphic, 2024"],
+                    ["/newkidad.gif","Studio NewKid Advertisement Animation, 2024"],
+                    ["/newkidlogo.gif", "Studio NewKid Animated Logo, 2024"]
+                ],
+                "text": [[]]
+            },
+            {
                 "title": "Performance Flow",
                 "description": "An exploration of machine learning, piano performance, and interactive gesture control using Argon Particle microcontrollers and Wekinator.",
                 "tags": ["Machine Learning", "Piano", "Performance", "Argon Particle", "Wekinator", "MaxMSP"],
@@ -137,22 +153,7 @@
                 "links": [["/geometries1.jpg", "Geometric Pattern Iteration #1, p5.js, 2023"], ["/geometries2.jpg", "Geometric Pattern Iteration #2, p5.js, 2023"], ["/geometries3.jpg", "Geometric Pattern Iteration #3, p5.js, 2023"]],
                 "text": [[]]
             },
-            {
-                "title": "Studio NewKid Branding",
-                "description": "I worked with Studio NewKid to develop their brand image. I wanted to use tools that I was already familiar with, such as p5.js, Procreate and Photoshop to create compelling animations verging on the experimental side. During the course of my work at Studio NewKid, I was responsible for some of the photography and graphic design.",
-                "tags": ["Marketing", "Photography", "Photoshop", "p5.js", "Illustration"],
-                "links": [
-                    ["/newkid1.webp", "Studio NewKid Branding Example 1, 2024"],
-                    ["/newkid2.webp", "Studio NewKid Branding Example 2, 2024"],
-                    ["/newkid3.webp", "Studio NewKid Branding Example 3, 2024"],
-                    ["/newkid4.webp", "Studio NewKid Branding Example 4, 2024"],
-                    ["/newkid5.webp", "Studio NewKid Branding Example 5, 2024"],
-                    ["/newkidgif.gif", "Studio NewKid Animated Graphic, 2024"],
-                    ["/newkidad.gif","Studio NewKid Advertisement Animation, 2024"],
-                    ["/newkidlogo.gif", "Studio NewKid Animated Logo, 2024"]
-                ],
-                "text": [[]]
-            },
+            
             {
                 "title": "3D Modelling",
                 "description": "A compilation of 3D experiments & projects created using Blender.",
