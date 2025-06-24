@@ -10,6 +10,7 @@ type TagFilterSectionProps = {
   }[];
   selectedTag: string;
   setActiveSection: (section: string) => void;
+  setActiveCategory: (category: string) => void;
 };
 
 const containerVariants = {
@@ -35,7 +36,8 @@ const itemVariants = {
 export default function TagFilterSection({ 
   allProjects, 
   selectedTag,
-  setActiveSection 
+  setActiveSection,
+  setActiveCategory
 }: TagFilterSectionProps) {
   // Get all unique tags from all projects
   const allTags = Array.from(new Set(
@@ -52,18 +54,21 @@ export default function TagFilterSection({
       project.tags.includes(selectedTag)
     ).map(project => ({
       ...project,
-      type: projectType
+      type: projectType,
+      categoryName: category.category
     }));
   });
 
   // Memoize the onClick handler for ProjectPreview
-  const handleProjectPreviewClick = useCallback((itemTitle: string) => {
+  const handleProjectPreviewClick = useCallback((itemTitle: string, categoryName: string) => {
     setActiveSection(itemTitle);
-  }, [setActiveSection]);
+    setActiveCategory(categoryName);
+  }, [setActiveSection, setActiveCategory]);
 
   const handleTagClick = useCallback((tag: string) => {
     setActiveSection(`tag-${tag}`);
-  }, [setActiveSection]);
+    setActiveCategory("");
+  }, [setActiveSection, setActiveCategory]);
 
   return (
     <div className="flex flex-col gap-10 items-start my-24">
@@ -113,7 +118,7 @@ export default function TagFilterSection({
             >
               <ProjectPreview
                 item={item}
-                onClick={() => handleProjectPreviewClick(item.title)} // Use memoized handler
+                onClick={() => handleProjectPreviewClick(item.title, item.categoryName)} // Use memoized handler
               />
             </motion.div>
           ))}

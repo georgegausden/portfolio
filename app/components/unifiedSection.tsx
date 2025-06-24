@@ -14,9 +14,10 @@ export type ContentItem = {
 type UnifiedSectionProps = {
   selectedItem: ContentItem;
   setActiveSection?: (section: string) => void;
+  setActiveCategory?: (category: string) => void;
 };
 
-export default function UnifiedSection({ selectedItem, setActiveSection }: UnifiedSectionProps) {
+export default function UnifiedSection({ selectedItem, setActiveSection, setActiveCategory }: UnifiedSectionProps) {
   if (!selectedItem || !selectedItem.links) return null;
 
   const isProjectOrWebsite = selectedItem.type === 'project' || selectedItem.type === 'website';
@@ -27,7 +28,10 @@ export default function UnifiedSection({ selectedItem, setActiveSection }: Unifi
         <div
           key={index}
           id="tag"
-          onClick={() => setActiveSection && setActiveSection(`tag-${tag}`)}
+          onClick={() => {
+            setActiveSection && setActiveSection(`tag-${tag}`);
+            setActiveCategory && setActiveCategory("");
+          }}
           className={'cursor-pointer'}
         >
           {tag}

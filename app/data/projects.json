@@ -40,6 +40,18 @@
     {
         "category": "Websites",
         "projects": [
+             {
+                "title": "Studio NewKid",
+                "projectUrl": "https://www.instagram.com/studio.newkid",
+                "description": "A custom Shopify ecommerce store development project for Studio NewKid, a Montréal-based creative studio. Built custom themes, product pages, and user experience optimizations.",
+                "tags": ["Shopify", "Ecommerce", "Web Development", "Liquid", "CSS", "JavaScript", "Theme Development"],
+                "links": [
+                    ["/newkidhomepage.jpg", "Studio NewKid Desktop Homepage, 2024"],
+                    ["/newkidproductpage.jpg", "Studio NewKid Product Page, 2024"],
+                    ["/newkidiphone.png", "Studio NewKid Mobile Homepage, 2024"]
+                ],
+                "text": [["Process","I collaborated with Studio NewKid, a creative studio based in Montreal, Canada, to develop their custom Shopify ecommerce store. The project involved creating a fully customized online shopping experience that reflected their brand identity. I worked extensively with Shopify's Liquid templating language to build custom product pages, collection layouts, and checkout flows. The development process included optimizing the store for mobile responsiveness and ensuring seamless integration with Shopify's payment and inventory systems."],[ "Challenges","Developing a custom Shopify store presented unique challenges compared to traditional web development. Working with Liquid templating required learning Shopify's specific syntax and limitations while maintaining design flexibility. One major challenge was optimizing page load speeds while incorporating custom animations and interactive elements that aligned with Studio NewKid's creative brand. Additionally, ensuring the ecommerce functionality worked flawlessly across all devices required extensive testing of the checkout process, product variants, and inventory management features. Balancing aesthetic design with Shopify's built-in ecommerce requirements demanded creative problem-solving and deep understanding of the platform's capabilities."],[ "Final Result","The final Shopify store successfully launched as a fully functional ecommerce platform that perfectly captured Studio NewKid's creative vision while providing customers with an intuitive shopping experience. The custom theme development resulted in a unique online presence that stood out from standard Shopify templates. The store features optimized product discovery, streamlined checkout processes, and mobile-responsive design that drives conversions. This project significantly expanded my expertise in ecommerce development, Shopify platform customization, and the intersection of creative design with commercial functionality. The collaboration strengthened Studio NewKid's online presence and provided them with a robust platform for their business growth."]]
+            },
             {
                 "title": "Asma's Portfolio",
                  "projectUrl": "https://www.akhanstudio.com",
@@ -126,7 +138,7 @@
                 "text": [[]]
             },
             {
-                "title": "Studio NewKid",
+                "title": "Studio NewKid Branding",
                 "description": "I worked with Studio NewKid to develop their brand image. I wanted to use tools that I was already familiar with, such as p5.js, Procreate and Photoshop to create compelling animations verging on the experimental side. During the course of my work at Studio NewKid, I was responsible for some of the photography and graphic design.",
                 "tags": ["Marketing", "Photography", "Photoshop", "p5.js", "Illustration"],
                 "links": [

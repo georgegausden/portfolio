@@ -72,6 +72,7 @@ const cardVariants: Variants = {
 export default function HomePage() {
   const [hoveredSection, setHoveredSection] = useState("");
   const [activeSection, setActiveSection] = useState("Me");
+  const [activeCategory, setActiveCategory] = useState(""); // Add category state
   const biography = projects.find((project) => project.category === "About");
   const artistStatement = projects.find(
     (project) => project.category === "About"
@@ -85,13 +86,17 @@ export default function HomePage() {
   
   const contact = projects.find((project) => project.category === "Contact");
 
-  const activeWebsite = projects
-    .find((project) => project.category === "Websites")
-    ?.projects.find((website) => website.title === activeSection);
+  const activeWebsite = activeCategory === "Websites" 
+    ? projects
+        .find((project) => project.category === "Websites")
+        ?.projects.find((website) => website.title === activeSection)
+    : undefined;
 
-  const activeProject = projects
-    .find((project) => project.category === "Projects")
-    ?.projects.find((experiment) => experiment.title === activeSection);
+  const activeProject = activeCategory === "Projects"
+    ? projects
+        .find((project) => project.category === "Projects")
+        ?.projects.find((experiment) => experiment.title === activeSection)
+    : undefined;
 
   return (
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
@@ -124,6 +129,7 @@ export default function HomePage() {
                     variants={itemVariants}
                     onClick={() => {
                       setActiveSection("Me");
+                      setActiveCategory("");
                       setHoveredSection("");
                     }}
                   >
@@ -143,6 +149,7 @@ export default function HomePage() {
                     className="lg:hidden"
                     onClick={() => {
                       setActiveSection("Email");
+                      setActiveCategory("");
                       setHoveredSection("");
                     }}
                   >
@@ -174,6 +181,7 @@ export default function HomePage() {
                       variants={itemVariants}
                       onClick={() => {
                         setActiveSection(website.title);
+                        setActiveCategory("Websites");
                         setHoveredSection("");
                       }}
                     >
@@ -206,6 +214,7 @@ export default function HomePage() {
                       variants={itemVariants}
                       onClick={() => {
                         setActiveSection(project.title);
+                        setActiveCategory("Projects");
                         setHoveredSection("");
                       }}
                     >
@@ -322,18 +331,19 @@ export default function HomePage() {
           <p className="lg:px-[20%]">{biography?.projects[1].description}</p>
         )}
 
-{activeSection === activeWebsite?.title && (
+{activeSection === activeWebsite?.title && activeCategory === "Websites" && (
   <DynamicUnifiedSection 
     selectedItem={{ ...activeWebsite, type: 'website' }}
     setActiveSection={setActiveSection}
-
+    setActiveCategory={setActiveCategory}
   />
 )}
 
-{activeSection === activeProject?.title && (
+{activeSection === activeProject?.title && activeCategory === "Projects" && (
   <DynamicUnifiedSection 
     selectedItem={{ ...activeProject, type: 'project' }}
     setActiveSection={setActiveSection}
+    setActiveCategory={setActiveCategory}
   />
 )}
 
@@ -342,6 +352,7 @@ export default function HomePage() {
     allProjects={projects}
     selectedTag={activeSection.replace('tag-', '')}
     setActiveSection={setActiveSection}
+    setActiveCategory={setActiveCategory}
   />
 )}
 
