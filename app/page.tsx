@@ -31,6 +31,7 @@ export type Project = {
   links: string[][];
   abstract?: string; // Optional property
   projectUrl?: string; // Add projectUrl here
+  backgroundColor?: string; // Add backgroundColor here
 }
 
 
@@ -89,20 +90,29 @@ export default function HomePage() {
   const activeWebsite = activeCategory === "Websites" 
     ? projects
         .find((project) => project.category === "Websites")
-        ?.projects.find((website) => website.title === activeSection)
+        ?.projects.find((website) => website.title === activeSection) as Project | undefined
     : undefined;
 
   const activeProject = activeCategory === "Projects"
     ? projects
         .find((project) => project.category === "Projects")
-        ?.projects.find((experiment) => experiment.title === activeSection)
+        ?.projects.find((experiment) => experiment.title === activeSection) as Project | undefined
     : undefined;
 
-  return (
-    <div className="flex flex-col min-h-screen max-w-7xl mx-auto ">
+  // Get background color for website projects
+  const getBackgroundStyle = () => {
+    if (activeCategory === "Websites" && activeWebsite?.backgroundColor) {
+      return { backgroundColor: activeWebsite.backgroundColor };
+    }
+    return {};
+  };
 
-      {/* <Header/> */}
-      <nav className="absolute left-1/2 transform -translate-x-1/2 pt-5 md:pt-10 lg:pt-10 top-0 z-20 text-center justify-center w-full">
+  return (
+    <div className="min-h-screen w-full" style={getBackgroundStyle()}>
+      <div className="flex flex-col min-h-screen">
+
+        {/* <Header/> */}
+        <nav className="absolute left-1/2 transform -translate-x-1/2 pt-5 md:pt-10 lg:pt-10 top-0 z-20 text-center justify-center w-full">
         <motion.div
           initial="hidden"
           animate="show"
@@ -281,7 +291,7 @@ export default function HomePage() {
 
 
       <div
-        className={`flex flex-grow justify-center items-center  px-[5%] transition-all ease-in-out duration-500 ${
+        className={`flex flex-grow justify-center items-center px-[5%] transition-all ease-in-out duration-500 max-w-7xl mx-auto w-full ${
           hoveredSection !== "" ? "blur-xl bg-white opacity-30" : ""
         }`}
         style={{ zIndex: 10 }}
@@ -392,6 +402,7 @@ export default function HomePage() {
       
 
      
+    </div>
     </div>
     </div>
   );

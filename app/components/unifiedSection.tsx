@@ -133,33 +133,27 @@ export default function UnifiedSection({ selectedItem, setActiveSection, setActi
       selectedItem.text &&
       selectedItem.text.flat().some((s) => s && s.trim() !== '');
 
-    const isWebsite = selectedItem.type === 'website';
-    const backgroundStyle = isWebsite && selectedItem.backgroundColor 
-      ? { backgroundColor: selectedItem.backgroundColor }
-      : {};
+    return (
+      <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
+        {/* Header section: Title, Description, Project URL, Tags */}
+        <div className="w-full justify-center">
+          <h1 className="text-center">{selectedItem.title}</h1>
+          <p className="text-center">{selectedItem.description}</p>
+          {selectedItem.projectUrl && (
+            <p className="text-center mt-4">
+              <a
+                href={selectedItem.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-md text-blue-500 border border-blue-500 p-2 rounded-sm hover:bg-blue-500 hover:text-white transition-colors ease-in-out duration-300"
+              >
+                View Project ↗
+              </a>
+            </p>
+          )}
+          {renderTags()}
+        </div>
 
-    const headerSection = (
-      <div className="w-full justify-center">
-        <h1 className="text-center">{selectedItem.title}</h1>
-        <p className="text-center">{selectedItem.description}</p>
-        {selectedItem.projectUrl && (
-          <p className="text-center mt-4">
-            <a
-              href={selectedItem.projectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-md text-blue-500 border border-blue-500 p-2 rounded-sm hover:bg-blue-500 hover:text-white transition-colors ease-in-out duration-300"
-            >
-              View Project ↗
-            </a>
-          </p>
-        )}
-        {renderTags()}
-      </div>
-    );
-
-    const contentSection = (
-      <div>
         {/* Content section: Media and Text */}
         {hasMeaningfulText ? (
           // If there is meaningful text, use the alternating media and text layout
@@ -212,29 +206,6 @@ export default function UnifiedSection({ selectedItem, setActiveSection, setActi
             )}
           </div>
         )}
-      </div>
-    );
-
-    // If it's a website with a background color, wrap only the content section
-    if (isWebsite && selectedItem.backgroundColor) {
-      return (
-        <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
-          {headerSection}
-          <div 
-            className="w-full px-6 py-8 rounded-lg"
-            style={backgroundStyle}
-          >
-            {contentSection}
-          </div>
-        </div>
-      );
-    }
-
-    // Default layout for projects without background
-    return (
-      <div className="flex flex-col gap-10 md:gap-20 items-start my-24">
-        {headerSection}
-        {contentSection}
       </div>
     );
   };
