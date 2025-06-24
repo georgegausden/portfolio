@@ -43,6 +43,7 @@
              {
                 "title": "Studio NewKid",
                 "projectUrl": "https://www.instagram.com/studio.newkid",
+                "backgroundColor": "#f8f4e6",
                 "description": "A custom Shopify ecommerce store development project for Studio NewKid, a Montréal-based creative studio. Built custom themes, product pages, and user experience optimizations.",
                 "tags": ["Shopify", "Ecommerce", "Web Development", "Liquid", "CSS", "JavaScript", "Theme Development"],
                 "links": [
@@ -55,6 +56,7 @@
             {
                 "title": "Asma's Portfolio",
                  "projectUrl": "https://www.akhanstudio.com",
+                "backgroundColor": "#e8f2f6",
                 "description": "A website design and development project for Montréal-based artist Asma Khan. Built with Next.js, Tailwind CSS, and Figma for design.",
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma", "Tailwind CSS"],
                 "links": [
@@ -66,6 +68,7 @@
             },
             {
                 "title": "Wedding Website",
+                "backgroundColor": "#fef0f0",
                 "description": "A custom wedding invitation website designed in Figma and built using Next.js for my brother and his wife.",
                 "projectUrl": "https://johnandgen.vercel.app",
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma"],
@@ -77,6 +80,7 @@
             },
             {
                 "title": "Playxana Game Center",
+                "backgroundColor": "#f0f8f0",
                 "description": "A custom menu website with a retro theme for a game center in Erbil, Kurdistan. Built with Next.js and featuring p5.js games, OAuth for secure admin access, and Supabase for backend data storage.",
                 "tags": ["Next.js", "Web Development", "Web Design", "React", "Figma", "p5.js", "OAuth", "Supabase"],
                 "projectUrl": "http://www.playxana.com",

@@ -251,7 +251,7 @@ export default function HomePage() {
                     Email ↗
                   </motion.button>
 
-                  <motion.button
+                  {/* <motion.button
                     variants={itemVariants}
                     id="subButton"
                     onClick={() => {
@@ -260,7 +260,7 @@ export default function HomePage() {
                     }}
                   >
                     Instagram ↗
-                  </motion.button>
+                  </motion.button> */}
 
                   <motion.button
                     variants={itemVariants}
