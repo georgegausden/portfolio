@@ -9,7 +9,7 @@
   }
 
   #tag{
-    @apply inline-block bg-gray-200 p-2 m-1 rounded-sm hover:bg-gray-300 transition-colors ease-in-out duration-500;
+    @apply inline-block p-2 m-1 rounded-sm transition-colors ease-in-out duration-500 drop-shadow-sm;
   }
 
   p{

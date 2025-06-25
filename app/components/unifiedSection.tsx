@@ -1,5 +1,24 @@
 import Image from 'next/image';
 
+// Utility function to darken a hex color
+const darkenColor = (color: string, amount: number = 0.15): string => {
+  // Remove the # if present
+  const hex = color.replace('#', '');
+  
+  // Parse the color components
+  const r = parseInt(hex.substr(0, 2), 16);
+  const g = parseInt(hex.substr(2, 2), 16);
+  const b = parseInt(hex.substr(4, 2), 16);
+  
+  // Darken each component
+  const newR = Math.floor(r * (1 - amount));
+  const newG = Math.floor(g * (1 - amount));
+  const newB = Math.floor(b * (1 - amount));
+  
+  // Convert back to hex
+  return `#${newR.toString(16).padStart(2, '0')}${newG.toString(16).padStart(2, '0')}${newB.toString(16).padStart(2, '0')}`;
+};
+
 export type ContentItem = {
     type: 'project' | 'experiment' | 'website';
     text: string[][];
@@ -23,23 +42,39 @@ export default function UnifiedSection({ selectedItem, setActiveSection, setActi
 
   const isProjectOrWebsite = selectedItem.type === 'project' || selectedItem.type === 'website';
 
-  const renderTags = () => (
-    <div className="flex flex-wrap justify-center">
-      {selectedItem.tags?.map((tag, index) => (
-        <div
-          key={index}
-          id="tag"
-          onClick={() => {
-            setActiveSection && setActiveSection(`tag-${tag}`);
-            setActiveCategory && setActiveCategory("");
-          }}
-          className={'cursor-pointer'}
-        >
-          {tag}
-        </div>
-      ))}
-    </div>
-  );
+  const renderTags = () => {
+    // Get the background color for website projects
+    const isWebsite = selectedItem.type === 'website';
+    const tagStyle = isWebsite && selectedItem.backgroundColor 
+      ? {
+          backgroundColor: darkenColor(selectedItem.backgroundColor, 0.1),
+          borderColor: darkenColor(selectedItem.backgroundColor, 0.2),
+        }
+      : {};
+
+    return (
+      <div className="flex flex-wrap justify-center">
+        {selectedItem.tags?.map((tag, index) => (
+          <div
+            key={index}
+            id="tag"
+            onClick={() => {
+              setActiveSection && setActiveSection(`tag-${tag}`);
+              setActiveCategory && setActiveCategory("");
+            }}
+            className={`cursor-pointer inline-block p-2 m-1 rounded-sm transition-colors ease-in-out duration-500 border ${
+              isWebsite && selectedItem.backgroundColor 
+                ? 'hover:opacity-80' 
+                : 'bg-gray-200 hover:bg-gray-300'
+            } `}
+            style={tagStyle}
+          >
+            {tag}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const renderMedia = (link: string[] | undefined, index: number) => {
     const baseKey = `media-${selectedItem.title}-${index}`;
@@ -145,7 +180,7 @@ export default function UnifiedSection({ selectedItem, setActiveSection, setActi
                 href={selectedItem.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-md text-blue-500 border border-blue-500 p-2 rounded-sm hover:bg-blue-500 hover:text-white transition-colors ease-in-out duration-300"
+                className="inline-block text-md  border border-blue-500 p-2 rounded-sm hover:bg-blue-500 hover:text-white transition-colors ease-in-out duration-300"
               >
                 View Project ↗
               </a>
