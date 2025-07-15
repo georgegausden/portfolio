@@ -17,7 +17,7 @@ const TypewriterTitle = () => {
     { text: "frontend developer.", pauseTime: 2000 },
     { text: "brother.", pauseTime: 2000 },
     { text: "creative developer.", pauseTime: 3000 },
-    { text: "piano lover.", pauseTime: 3000 },
+    { text: "piano player.", pauseTime: 3000 },
     { text: "friend.", pauseTime: 3000 },
   ];
 

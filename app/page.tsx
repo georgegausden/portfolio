@@ -309,7 +309,7 @@ export default function HomePage() {
       <div className="relative top-[5vh] md:top-0">
         <Image
           alt="image of me"
-          src={"/me.webp"}
+          src={"/me.jpg"}
           width={300}
           height={300}
           className="backdrop-blur-md drop-shadow-lg shadow-md"
